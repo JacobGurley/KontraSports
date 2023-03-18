@@ -14,7 +14,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(team, index) in teams" :key="index">
+            <tr v-for="(team, index) in standings" :key="index">
               <td>{{ index + 1 }}</td>
               <td>{{ team.name }}</td>
               <td>{{ team.wins }}</td>
@@ -30,36 +30,133 @@
 
 <script scoped>
 import Nav from "./NavBar.vue";
+import{ ref, onMounted, watch } from 'vue';
+import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
 
 export default {
   components: {
   Nav,
 
 },
-data(){
-  return{
-    teams: [
-      {name: "X Factors", wins: 6, losses: 1, pointDiff: 121},
-      {name: "True Grit", wins: 6, losses: 1, pointDiff: 56},
-      {name: "Mamba Mentality", wins: 6, losses: 1, pointDiff: 45},
-      {name: "60pointgame", wins: 5, losses: 2, pointDiff: 51},
-      {name: "Juss Hoop", wins: 4, losses: 3, pointDiff: 35},
-      {name: "3 & Deez Nutz", wins: 4, losses: 3, pointDiff: 19},
-      {name: "LeTeam", wins: 4, losses: 3, pointDiff: 16},
-      {name: "Shot Crew", wins: 3, losses: 3, pointDiff: 48},
-      {name: "Moon Goons", wins: 3, losses: 4, pointDiff: 3},
-      {name: "Long Beach State Rec Team", wins: 3, losses: 4, pointDiff: -4},
-      {name: "Volume 0", wins: 1, losses: 6, pointDiff: -65},
-      {name: "Primeflight", wins: 1, losses: 6, pointDiff: -75},
-      {name: "Mexipinos", wins: 1, losses: 6, pointDiff: -104},
-      {name: "Fade Away", wins: 1, losses: 6, pointDiff: -135},
-      
+setup() {
+  const db = getDatabase();
+  const standingsRef = dbRef(db, 'standingsSunC');
+  const winRef = dbRef(db, 'winsTh');
+  const lossRef = dbRef(db, 'lossTh');
+  const pdRef = dbRef(db, 'pdThur');
+  
+  const standings = ref([
+      {name: "Average Joes", wins: 0, losses: 0, pointDiff: 0},
+      {name: "OHB", wins: 0, losses: 0, pointDiff: 0},
+      {name: "Beach", wins: 0, losses: 0, pointDiff: 0},
+      {name: "TMT", wins: 0, losses: 0, pointDiff: 0},
+      {name: "LFG", wins: 0, losses: 0, pointDiff: 0},
+      {name: "Uptempo", wins: 0, losses: 0, pointDiff: 0},
+      {name: "AIM", wins: 0, losses: 0, pointDiff: 0},
+      {name: "Run it", wins: 0, losses: 0, pointDiff: 0},
+  ]);
+  const wins = ref(0);
+  const losses = ref(0);
+  const pd = ref(0);
 
-    ],
+  const updateWins = (newWins) => {
+    set(winRef, newWins.value);
   };
+  const updateLosses = (newLosses) => {
+    set(lossRef, newLosses.value);
+  }
+  const updatePd = (newPd) => {
+    set(pdRef, newPd.value);
+  }
+
+  onMounted(async () => {
+      // Check if the games have already been written to the database
+      const snapshot = await get(standingsRef);
+      if (snapshot.exists()) {
+        // The games have already been written, so we don't need to write them again
+        return;
+      }
+      // Write the games to the database
+      standings.value.forEach((standings) => {
+        const newStandingsRef = push(standingsRef);
+        set(newStandingsRef, standings);
+      });
+    });
+
+  onMounted(() => {
+      // Listen for changes in Firebase and update the roster, points and gamesPlayed variables
+      onValue(standingsRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          standings.value = Object.values(data).sort((a, b) => {
+        // Sort by win percentage (descending)
+        const aWinPct = a.wins / (a.wins + a.losses);
+        const bWinPct = b.wins / (b.wins + b.losses);
+        if (aWinPct !== bWinPct) {
+          return bWinPct - aWinPct;
+        }
+
+        // If win percentage is tied, sort by point differential (descending)
+        if (a.pointDiff !== b.pointDiff) {
+          return b.pointDiff - a.pointDiff;
+        }
+
+        // If point differential is also tied, sort alphabetically by team name (ascending)
+        return a.name.localeCompare(b.name);
+      });
+    }
+  });
+
+      onValue(winRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          wins.value = data;
+        }
+      }, {
+        onlyOnce: false //This option ensures that the callback is called everytime the data changes
+      });
+
+      onValue(lossRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          losses.value = data;
+        }
+      }, {
+        onlyOnce: false //This option ensures that the callback is called everytime the data changes
+      });
+
+      onValue(pdRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          pd.value = data;
+        }
+      }, {
+        onlyOnce: false //This option ensures that the callback is called everytime the data changes
+      });
+
+      watch(wins, (newWins) => {
+        updateWins(newWins);
+      });
+
+      watch(losses, (newLosses) => {
+        updateLosses(newLosses);
+      });
+
+      watch(pd, (newPd) => {
+        updatePd(newPd);
+      });
+    });
+    return {
+      standings,
+      wins,
+      losses,
+      pd,
+      updateWins,
+      updateLosses,
+      updatePd,
+    };
 },
 };
-
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

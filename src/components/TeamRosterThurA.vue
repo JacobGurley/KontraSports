@@ -85,6 +85,14 @@
           groupedRosters.value[roster.team].push(roster);
         });
 
+        // Sort team names by alphabetical order
+        const sortedTeams = Object.keys(groupedRosters.value).sort();
+        const sortedRosters = {};
+        sortedTeams.forEach((team) => {
+          sortedRosters[team] = groupedRosters.value[team];
+        });
+        groupedRosters.value = sortedRosters;
+
         // Listen for changes in Firebase and update the roster, points and gamesPlayed variables
         onValue(rosterRef, (snapshot) => {
           const data = snapshot.val();
