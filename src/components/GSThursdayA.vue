@@ -3,7 +3,7 @@
     <div class = "width">
         <div class = "Winter"></div>
         <div class = "ChampWrapper">
-            <div v-for="(dateGames, date) in groupedGames" :key="date">
+            <div v-for="(games, date) in groupedGames" :key="date">
                 <h2>{{ date }}</h2>
         <table class = "table">
             <thead>
@@ -15,7 +15,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr v-for="(game, index) in dateGames" :key="index">
+                <tr v-for="(game, index) in games" :key="index">
                     
                     <td>{{ game.time }}</td>
                     <td>{{ game.homeTeam }}</td>
@@ -47,25 +47,25 @@
     const scoreRef = dbRef(db, 'score');
     
 
-    const score = ref('')
+    const score = ref('');
     const games = ref([
-       { date: '01/12', time: '8:00 PM', homeTeam: 'LFG', awayTeam: 'Average Joes', score: "" },
-       { date: '01/12', time: '8:50 PM', homeTeam: 'Uptempo', awayTeam: 'Run it', score: "" },
-       { date: '01/12', time: '9:40 PM', homeTeam: 'AIM', awayTeam: 'Beach', score: "" },
-       { date: '01/19', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'AIM', score: "" },
-       { date: '01/19', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Run it', score: "" },
-       { date: '01/19', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Uptempo', score: "" }, 
-       { date: '01/19', time: '9:00 PM', homeTeam: 'OHB', awayTeam: 'TMT', score: "" }, 
-       { date: '01/26', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'TMT', score: "" }, 
-       { date: '01/26', time: '8:10 PM', homeTeam: 'AIM', awayTeam: 'Average Joes', score: "" },
-       { date: '01/26', time: '9:00 PM', homeTeam: 'Uptempo', awayTeam: 'OHB', score: "" },
-       { date: '01/26', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Run it', score: "" },
-       { date: '02/02', time: '8:10 PM', homeTeam: 'Beach', awayTeam: 'LFG', score: "" },
-       { date: '02/02', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Uptempo', score: "" },
-       { date: '02/02', time: '9:00 PM', homeTeam: 'AIM', awayTeam: 'OHB', score: "" },
-       { date: '02/02', time: '9:00 PM', homeTeam: 'TMT', awayTeam: 'Run it', score: "" },
-       { date: '02/09', time: '8:10 PM', homeTeam: 'Uptempo', awayTeam: 'LFG', score: "" },
-       { date: '02/09', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'OHB', score: "" },
+       { date: '01/12', time: '8:00 PM', homeTeam: 'LFG', awayTeam: 'Average Joes', score: '0-0' },
+       { date: '01/12', time: '8:50 PM', homeTeam: 'Uptempo', awayTeam: 'Run it', score: '0-0' },
+       { date: '01/12', time: '9:40 PM', homeTeam: 'AIM', awayTeam: 'Beach', score: '0-0' },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'AIM', score: '0-0' },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Run it', score: '0-0' },
+       { date: '01/19', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Uptempo', score: '0-0' }, 
+       { date: '01/19', time: '9:00 PM', homeTeam: 'OHB', awayTeam: 'TMT', score: '0-0' }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'TMT', score: '0-0' }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'AIM', awayTeam: 'Average Joes', score: '0-0' },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Uptempo', awayTeam: 'OHB', score: '0-0' },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Run it', score: '0-0' },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Beach', awayTeam: 'LFG', score: '0-0' },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Uptempo', score: '0-0' },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'AIM', awayTeam: 'OHB', score: '0-0' },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'TMT', awayTeam: 'Run it', score: '0-0' },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Uptempo', awayTeam: 'LFG', score: '0-0' },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'OHB', score: '0-0' },
 
     ]);
     const groupedGames = ref({});
@@ -73,6 +73,8 @@
     const updateScore = (newScore) => {
       set(scoreRef, newScore.value);
     };
+
+    
 
     onMounted(async () => {
       // Check if the games have already been written to the database
@@ -83,19 +85,19 @@
       }
 
       // Write the games to the database
-      games.value.forEach((game) => {
+      games.value.forEach((games) => {
         const newGameRef = push(gamesRef);
-        set(newGameRef, game);
+        set(newGameRef, games);
       });
     });
 
     onMounted(() => {
       // Group games by date
-      games.value.forEach((game) => {
-        if (!groupedGames.value[game.date]) {
-          groupedGames.value[game.date] = [];
+      games.value.forEach((games) => {
+        if (!groupedGames.value[games.date]) {
+          groupedGames.value[games.date] = [];
         }
-        groupedGames.value[game.date].push(game);
+        groupedGames.value[games.date].push(games);
       });
 
       // Listen for changes in Firebase and update the games and score variables
@@ -125,6 +127,7 @@
       games,
       groupedGames,
       updateScore,
+      
     };
   },
   
