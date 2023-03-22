@@ -87,7 +87,11 @@ setup() {
     onValue(gamesRef, (snapshot) => {
       const data = snapshot.val();
       if (data) {
-        games.value = Object.values(data);
+        const updatedGames = Object.values(data);
+        //Update the scores in the games array
+        updatedGames.forEach((game, index) => {
+          games.value[index].score = game.score;
+        });
       }
     });
 

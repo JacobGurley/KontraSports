@@ -49,23 +49,23 @@
 
     const score = ref('');
     const games = ref([
-       { date: '01/12', time: '8:00 PM', homeTeam: 'LFG', awayTeam: 'Average Joes', score: '0-0' },
-       { date: '01/12', time: '8:50 PM', homeTeam: 'Uptempo', awayTeam: 'Run it', score: '0-0' },
-       { date: '01/12', time: '9:40 PM', homeTeam: 'AIM', awayTeam: 'Beach', score: '0-0' },
-       { date: '01/19', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'AIM', score: '0-0' },
-       { date: '01/19', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Run it', score: '0-0' },
-       { date: '01/19', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Uptempo', score: '0-0' }, 
-       { date: '01/19', time: '9:00 PM', homeTeam: 'OHB', awayTeam: 'TMT', score: '0-0' }, 
-       { date: '01/26', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'TMT', score: '0-0' }, 
-       { date: '01/26', time: '8:10 PM', homeTeam: 'AIM', awayTeam: 'Average Joes', score: '0-0' },
-       { date: '01/26', time: '9:00 PM', homeTeam: 'Uptempo', awayTeam: 'OHB', score: '0-0' },
-       { date: '01/26', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Run it', score: '0-0' },
-       { date: '02/02', time: '8:10 PM', homeTeam: 'Beach', awayTeam: 'LFG', score: '0-0' },
-       { date: '02/02', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Uptempo', score: '0-0' },
-       { date: '02/02', time: '9:00 PM', homeTeam: 'AIM', awayTeam: 'OHB', score: '0-0' },
-       { date: '02/02', time: '9:00 PM', homeTeam: 'TMT', awayTeam: 'Run it', score: '0-0' },
-       { date: '02/09', time: '8:10 PM', homeTeam: 'Uptempo', awayTeam: 'LFG', score: '0-0' },
-       { date: '02/09', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'OHB', score: '0-0' },
+       { date: '01/12', time: '8:00 PM', homeTeam: 'LFG', awayTeam: 'Average Joes', score: "" },
+       { date: '01/12', time: '8:50 PM', homeTeam: 'Uptempo', awayTeam: 'Run it', score: "" },
+       { date: '01/12', time: '9:40 PM', homeTeam: 'AIM', awayTeam: 'Beach', score: "" },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'AIM', score: "" },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Run it', score: "" },
+       { date: '01/19', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Uptempo', score: "" }, 
+       { date: '01/19', time: '9:00 PM', homeTeam: 'OHB', awayTeam: 'TMT', score: "" }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'TMT', score: "" }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'AIM', awayTeam: 'Average Joes', score: "" },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Uptempo', awayTeam: 'OHB', score: "" },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Run it', score: "" },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Beach', awayTeam: 'LFG', score: "" },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Uptempo', score: "" },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'AIM', awayTeam: 'OHB', score: "" },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'TMT', awayTeam: 'Run it', score: "" },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Uptempo', awayTeam: 'LFG', score: "" },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'OHB', score: "" },
 
     ]);
     const groupedGames = ref({});
@@ -104,7 +104,11 @@
       onValue(gamesRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          games.value = Object.values(data);
+          const updatedGames = Object.values(data);
+        //Update the scores in the games array
+          updatedGames.forEach((game, index) => {
+            games.value[index].score = game.score;
+          });
         }
       });
 
