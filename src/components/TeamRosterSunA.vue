@@ -27,7 +27,7 @@
 <script scoped>
 import Nav from "./NavBar.vue";
 import { getDatabase, ref as dbRef, set, push, get, onValue } from 'firebase/database';
-import{ ref, onMounted, watch } from 'vue';
+import{ ref, onMounted } from 'vue';
 
 export default {
   components: {
@@ -37,104 +37,67 @@ export default {
   setup(){
     const db = getDatabase();
     const rosterRef = dbRef(db, 'rosterSunA');
-    const pointsRef = dbRef(db, 'points');
-    const gamesPlayedRef = dbRef(db, 'gamesPlayed');
-
-    const roster = ref([
-      {team: 'LFG', name: 'Billy King', points: 200, gamesPlayed: 10},
-      {team: 'LFG', name: 'David Vargas', points: 220, gamesPlayed: 10},
-      {team: 'Average Joes', name: 'Kyle Roberts', points: 100, gamesPlayed: 10},
-      {team: 'Average Joes', name: 'Dan Boah', points: 150, gamesPlayed: 10},
-    ]);
-
+    const roster = ref({});
     const groupedRosters = ref({});
-    const points = ref(0);
-    const gamesPlayed = ref(0);
-
-    const updatePoints = (newPoints) => {
-      set(pointsRef, newPoints.value);
-    };
-
-    const updateGamesPlayed = (newGamesPlayed) => {
-      set(gamesPlayedRef, newGamesPlayed.value);
-    };
+    
 
     onMounted(async () => {
       // Check if the games have already been written to the database
       const snapshot = await get(rosterRef);
-      if (snapshot.exists()) {
-        // The games have already been written, so we don't need to write them again
-        return;
+      if (!snapshot.exists()) {
+        // Write the games to the database
+        const initialRoster = [
+          {team: 'LFG', name: 'David Vargas', points: 200, gamesPlayed: 10},
+          {team: 'LFG', name: 'Billy King', points: 220, gamesPlayed: 10},
+          {team: 'Average Joes', name: 'Dan Boah', points: 100, gamesPlayed: 10},
+          {team: 'Average Joes', name: 'Kyle Roberts', points: 150, gamesPlayed: 15},
+        ];
+        initialRoster.forEach((player) => {
+          const newRosterRef = push(rosterRef);
+          set(newRosterRef, player);
+        });
+      } else {
+        // set the roster with the data from the database
+        roster.value = Object.values(snapshot.val()).sort((a, b) => b.points / b.gamesPlayed - a.points / a.gamesPlayed);
+        updateGroupedRosters();
       }
-      // Write the games to the database
-      roster.value.forEach((roster) => {
-        const newRosterRef = push(rosterRef);
-        set(newRosterRef, roster);
-      });
     });
 
-    onMounted(() => {
-      // Sort the roster array by PPG before grouping the players by team name
-      roster.value.sort((a, b) => b.points / b.gamesPlayed - a.points / a.gamesPlayed);
+    //Listen for changes in Firebase and update the roster
+    onValue(rosterRef, (snapshot) => {
+      const data = snapshot.val();
+      if (data) {
+        roster.value = Object.values(data).sort((a, b) => b.points / b.gamesPlayed - a.points / a.gamesPlayed);
+        updateGroupedRosters();
+      }
+    });
 
-      // Group roster by teamname
-      roster.value.forEach((roster) => {
-        if (!groupedRosters.value[roster.team]) {
-          groupedRosters.value[roster.team] = [];
-        }
-        groupedRosters.value[roster.team].push(roster);
+    const updateGroupedRosters = () => {
+      //Clear the groupRosters object
+      Object.keys(groupedRosters.value).forEach(key => {
+        delete groupedRosters.value[key];
       });
 
-      // Sort team names by alphabetical order
+      //Group roster by team name 
+      roster.value.forEach((player) => {
+        if (!groupedRosters.value[player.team]) {
+          groupedRosters.value[player.team] = [];
+        }
+        groupedRosters.value[player.team].push(player);
+      });
+
+      //Sort team names by alphabetical order
       const sortedTeams = Object.keys(groupedRosters.value).sort();
       const sortedRosters = {};
       sortedTeams.forEach((team) => {
         sortedRosters[team] = groupedRosters.value[team];
       });
       groupedRosters.value = sortedRosters;
-
-      // Listen for changes in Firebase and update the roster, points and gamesPlayed variables
-      onValue(rosterRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-          roster.value = Object.values(data).sort((a, b) => b.points / b.gamesPlayed - a.points / a.gamesPlayed);
-        }
-      });
-
-      onValue(pointsRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-          points.value = data;
-        }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      onValue(gamesPlayedRef, (snapshot) => {
-        const data = snapshot.val();
-        if (data) {
-          gamesPlayed.value = data;
-        }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      watch(points, (newPoints) => {
-        updatePoints(newPoints);
-      });
-
-      watch(gamesPlayed, (newGamesPlayed) => {
-        updateGamesPlayed(newGamesPlayed);
-      });
-    });
+    };
 
     return {
       roster,
       groupedRosters,
-      points,
-      gamesPlayed,
-      updatePoints,
-      updateGamesPlayed,
     };
   },
 };
