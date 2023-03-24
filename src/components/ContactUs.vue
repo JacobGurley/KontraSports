@@ -12,20 +12,24 @@
           <span class="text">(562) 852-0551</span>
         </div>
         <div class="contact-item">
-          <font-awesome-icon class="email" icon="fa-solid fa-envelope"></font-awesome-icon>
-          <a class="text" href="mailto:kontrasports360@gmail.com" target="_blank">kontrasports360@gmail.com</a>
+          <a href="mailto:kontrasports360@gmail.com" target="_blank" class="contact-item-link">
+            <font-awesome-icon class="email" icon="fa-solid fa-envelope"></font-awesome-icon>
+            <span class="text">kontrasports360@gmail.com</span>
+          </a>
         </div>
         <div class="contact-item">
-          <font-awesome-icon class="insta" icon="fa-brands fa-square-instagram"></font-awesome-icon>
-          <a class="text" href="https://www.instagram.com/kontra_sports" target="_blank">kontra_sports</a>
+          <a href="https://www.instagram.com/kontra_sports" target="_blank" class="contact-item-link">
+            <font-awesome-icon class="insta" icon="fa-brands fa-square-instagram"></font-awesome-icon>
+            <span class="text">kontra_sports</span>
+          </a>
         </div>
       </div>
       <div class="contact-form-container">
         <h2>Send us a message</h2>
-        <form class="contact-form" @submit.prevent>
-          <input type="text" placeholder="Your Name" required />
-          <input type="email" placeholder="Your Email" required />
-          <textarea placeholder="Your Message" required></textarea>
+        <form class="contact-form" @submit.prevent="submitForm">
+          <input ref="nameInput" type="text" placeholder="Your Name" required />
+          <input ref="emailInput" type="email" placeholder="Your Email" required />
+          <textarea ref="messageInput" placeholder="Your Message" required></textarea>
           <button type="submit">Submit</button>
         </form>
       </div>
@@ -35,9 +39,30 @@
 
 <script scoped>
 import Nav from "./NavBar.vue";
+import axios from "axios"; 
+
 export default {
   components: {
     Nav,
+  },
+  methods: {
+    async submitForm() {
+      const nameInput = this.$refs.nameInput.value;
+      const emailInput = this.$refs.emailInput.value;
+      const messageInput = this.$refs.messageInput.value;
+
+      try {
+        await axios.post("http://localhost:3000/send", {
+          name: nameInput,
+          email: emailInput,
+          message: messageInput,
+        });
+        alert("Email sent successfully!");
+      } catch (error) {
+        console.error("Error sending email:", error);
+        alert("Error sending email. Please try again later.");
+      }
+    },
   },
 };
 </script>
@@ -81,7 +106,15 @@ export default {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s ease-in-out;
 }
-
+.contact-item-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  color: inherit;
+}
 .contact-item:hover {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
@@ -131,16 +164,17 @@ export default {
   font-weight: bold;
   font-size: 1em;
   padding: 10px;
-  background-color: var(--accent-color);
+  background-color: #4a4a4a;
   color: white;
   border: none;
   border-radius: 5px;
   cursor: pointer;
   transition: background-color 0.3s ease-in-out;
+  margin-bottom: 30px;
 }
 
 .contact-form button:hover {
-  background-color: #e68900;
+  background-color: #0d2d5a;
 }
 
 /* Media query for mobile responsiveness */
