@@ -109,64 +109,88 @@ export default {
  <!-- Add "scoped" attribute to limit CSS to this component only -->
  <style scoped>
 
- .container {
-     width: 100%;
-     padding: 0 15px;
-     margin: 0 auto;
-     text-align: center;
-     background-color: #f5f5f5;
-     font-family: Arial, sans-serif;
-   }
- 
-   .title {
-     font-size: 28px;
-     font-weight: bold;
-     color: #0d2d5a;
-     padding: 20px 0;
-   }
- 
- .roster-wrapper {
-   border: 5px solid #0d2d5a;
-     padding: 20px;
-     background-color: white;
-     border-radius: 10px;
-     max-width: 960px;
-     margin-left: auto;
-     margin-right: auto;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
- }
- .team-title{
-   font-size: 24px;
-     color: #0d2d5a;
-     margin-bottom: 15px;
- }
- 
- .table {
-     width: 100%;
-     border-collapse: collapse;
-     font-size: 16px;
-     margin-bottom: 30px;
- }
- 
- th {
-     background-color: #0d2d5a;
-     color: white;
-     padding: 10px;
-     text-align: left;
-     font-weight: bold;
- }
- 
- td {
-     border: 1px solid #ccc;
-     padding: 10px;
- }
- 
- tr:nth-child(even) {
-     background-color: #f2f2f2;
- }
- 
- .centered {
-     text-align: center;
- }
- 
- </style>
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d2d5a;
+    padding: 20px 0;
+  }
+
+.roster-wrapper {
+  border: 5px solid #0d2d5a;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    min-width: 320px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.team-title{
+  font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #0d2d5a;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.centered {
+    text-align: center;
+}
+/* Responsive styles */
+@media (max-width: 767px) {
+    .roster-wrapper {
+      min-width: 100%;
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .team-title {
+      font-size: 20px;
+    }
+
+    .table {
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 8px;
+    }
+  }
+
+</style>

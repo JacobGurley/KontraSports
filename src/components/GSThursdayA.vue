@@ -141,7 +141,6 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  
   .container {
     width: 100%;
     padding: 0 15px;
@@ -158,11 +157,12 @@
     padding: 20px 0;
   }
 
-  .ChampWrapper{  
+  .ChampWrapper {
     border: 5px solid #0d2d5a;
     padding: 20px;
     background-color: white;
     border-radius: 10px;
+    min-width: 320px;
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
@@ -207,4 +207,28 @@
   .centered {
     text-align: center;
   }
-  </style>
+
+  /* Responsive styles */
+  @media (max-width: 767px) {
+    .ChampWrapper {
+      min-width: 100%;
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .date-title {
+      font-size: 20px;
+    }
+
+    .table {
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 8px;
+    }
+  }
+</style>

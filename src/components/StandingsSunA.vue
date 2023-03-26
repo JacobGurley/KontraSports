@@ -179,7 +179,7 @@ setup() {
  .ChampWrapper {
    border: 5px solid #0d2d5a;
    padding: 5px;
-   min-width: 992px;
+   min-width: 320px;
    max-width: 960px;
    margin-left: auto;
    margin-right: auto;
@@ -215,4 +215,21 @@ setup() {
  tr:nth-child(even) {
    background-color: #f2f2f2;
  }
+ @media (max-width: 767px) {
+     .ChampWrapper {
+       min-width: 100%;
+       padding: 10px;
+     }
+ 
+     .Winter {
+       font-size: 24px;
+     }
+     .table {
+       font-size: 14px;
+     }
+ 
+     th, td {
+       padding: 8px;
+     }
+   }
  </style>

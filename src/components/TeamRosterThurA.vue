@@ -129,6 +129,7 @@
     padding: 20px;
     background-color: white;
     border-radius: 10px;
+    min-width: 320px;
     max-width: 960px;
     margin-left: auto;
     margin-right: auto;
@@ -167,5 +168,28 @@ tr:nth-child(even) {
 .centered {
     text-align: center;
 }
+/* Responsive styles */
+@media (max-width: 767px) {
+    .roster-wrapper {
+      min-width: 100%;
+      padding: 10px;
+    }
+
+    .title {
+      font-size: 24px;
+    }
+
+    .team-title {
+      font-size: 20px;
+    }
+
+    .table {
+      font-size: 14px;
+    }
+
+    th, td {
+      padding: 8px;
+    }
+  }
 
 </style>
