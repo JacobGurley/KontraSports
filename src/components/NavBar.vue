@@ -65,22 +65,21 @@ html, body {
     left: 50%;
     transform: translate(-50%,-50%);
     height: 250px;
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: translate(-50%, -55%);
 }
 
 .navbar {
     display: flex;
     justify-content: center;
     margin-top: 0;
-    position: relative;
+    position: sticky;
+    top: 0;
     background-color: #0d2d5a;
-}
-
-.navbar {
-  display: flex;
-  justify-content: center;
-  margin-top: 0;
-  position: relative;
-  background-color: #0d2d5a;
+    z-index: 100;
 }
 
 .navbar ul {
@@ -105,7 +104,7 @@ html, body {
   font-size: 16px;
   border-radius: 5px;
   padding: 8px 16px;
-  transition: background-color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 .navbar a:hover {
