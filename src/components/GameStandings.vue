@@ -41,12 +41,14 @@ export default {
 
 .ChampWrapper {
   background-color: #f5f5f5;
+  border: 5px solid #0d2d5a;
   border-radius: 10px;
   padding: 20px;
   display: inline-block;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .schedule-link {

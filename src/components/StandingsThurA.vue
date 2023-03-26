@@ -1,31 +1,30 @@
 <template>
-    <Nav />
-    <div class = "width">
-        <div class = "Winter"></div>
-        <div class = "ChampWrapper">
-          <table class="table">
-            <thead>
-              <tr>
-                <th class="centered">Rank</th>
-                <th class="centered">Team</th>
-                <th class="centered">Wins</th>
-                <th class="centered">Losses</th>
-                <th class="centered">PD</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr v-for="(team, index) in standings" :key="index">
-                <td>{{ index + 1 }}</td>
-                <td>{{ team.name }}</td>
-                <td>{{ team.wins }}</td>
-                <td>{{ team.losses }}</td>
-                <td>{{ team.pointDiff }}</td>
-              </tr>
-            </tbody>
-          </table>
-            
+  <Nav />
+  <div class="width">
+    <h1 class="Winter">Standings</h1>
+    <div class="ChampWrapper">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="centered">Rank</th>
+            <th class="centered">Team</th>
+            <th class="centered">Wins</th>
+            <th class="centered">Losses</th>
+            <th class="centered">PD</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(team, index) in standings" :key="index">
+            <td>{{ index + 1 }}</td>
+            <td>{{ team.name }}</td>
+            <td>{{ team.wins }}</td>
+            <td>{{ team.losses }}</td>
+            <td>{{ team.pointDiff }}</td>
+          </tr>
+        </tbody>
+      </table>
     </div>
-    </div>
+  </div>
 </template>
 
 <script scoped>
@@ -160,38 +159,40 @@
   </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style>
-  
-  .width{
-  width:100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
+  <style scoped>
+.width {
+  width: 100%;
+  padding: 0 15px;
+  margin: 0 auto;
   text-align: center;
+  background-color: #f5f5f5;
+  font-family: Arial, sans-serif;
 }
 
+.Winter {
+  font-size: 28px;
+    font-weight: bold;
+    color: #0d2d5a;
+    padding: 20px 0;
+}
 
-
-.ChampWrapper{  
+.ChampWrapper {
   border: 5px solid #0d2d5a;
   padding: 5px;
   min-width: 992px;
   max-width: 960px;
   margin-left: auto;
   margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: white;
 }
 
-.Winter{
-  text-align: center;
-  
-  margin-bottom: 30px;
-}
-
-.table{
+.table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 14px;
+  font-size: 16px;
+  margin-bottom: 30px;
 }
 
 th {
@@ -199,6 +200,7 @@ th {
   color: white;
   padding: 10px;
   text-align: left;
+  font-weight: bold;
 }
 
 td {
@@ -206,13 +208,11 @@ td {
   padding: 10px;
 }
 
-.centered{
-    text-align: center;
+.centered {
+  text-align: center;
 }
 
 tr:nth-child(even) {
   background-color: #f2f2f2;
 }
-
-
-  </style>
+</style>

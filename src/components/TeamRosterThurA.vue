@@ -1,27 +1,29 @@
 <template>
-    <Nav />
-    <div class = "width">
-        <div class = "Winter"></div>
-        <div class = "ChampWrapper">
-          <div v-for="(teamRoster, team) in groupedRosters" :key="team">
-            <h2>{{ team }}</h2>
-            <table class="table">
-              <thead>
-                <tr>
-                  <th class="centered">Name</th>
-                  <th class="centered">PPG</th> 
-                </tr>
-              </thead>
-              <tbody>
-                <tr v-for="(player, index) in teamRoster" :key="index">
-                    <td>{{ player.name }}</td>
-                    <td>{{ (player.points / player.gamesPlayed).toFixed(1) }}</td>
-                </tr>
-            </tbody>
-            </table>
-          </div>      
-    </div>
-    </div>
+  <Nav />
+  <div class="container">
+      <div class="title">
+          <h1>Rosters</h1>
+      </div>
+      <div class="roster-wrapper">
+        <div v-for="(teamRoster, team) in groupedRosters" :key="team">
+          <h2 class="team-title">{{ team }}</h2>
+          <table class="table">
+            <thead>
+              <tr>
+                <th class="centered">Name</th>
+                <th class="centered">PPG</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr v-for="(player, index) in teamRoster" :key="index">
+                  <td>{{ player.name }}</td>
+                  <td>{{ (player.points / player.gamesPlayed).toFixed(1) }}</td>
+              </tr>
+          </tbody>
+          </table>
+        </div>      
+      </div>
+  </div>
 </template>
 
 <script scoped>
@@ -104,58 +106,66 @@
 </script>
 
   <!-- Add "scoped" attribute to limit CSS to this component only -->
-  <style>
-  
-  .width{
-  width:100%;
-  padding-right: 15px;
-  padding-left: 15px;
-  margin-right: auto;
-  margin-left: auto;
-  text-align: center;
-}
+<style scoped>
 
-.ChampWrapper{  
+.container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: #f5f5f5;
+    font-family: Arial, sans-serif;
+  }
+
+  .title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #0d2d5a;
+    padding: 20px 0;
+  }
+
+.roster-wrapper {
   border: 5px solid #0d2d5a;
-  padding: 5px;
-  min-width: 992px;
-  max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    max-width: 960px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.team-title{
+  font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
 }
 
-.Winter{
-  text-align: center;
-  
-  margin-bottom: 30px;
-}
-
-
-
-.table{
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 14px;
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 16px;
+    margin-bottom: 30px;
 }
 
 th {
-  background-color: #333;
-  color: white;
-  padding: 10px;
-  text-align: left;
+    background-color: #0d2d5a;
+    color: white;
+    padding: 10px;
+    text-align: left;
+    font-weight: bold;
 }
 
 td {
-  border: 1px solid #ccc;
-  padding: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+    background-color: #f2f2f2;
 }
 
-.centered{
+.centered {
     text-align: center;
 }
 
-  </style>
+</style>
