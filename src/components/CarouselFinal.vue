@@ -119,4 +119,10 @@ export default {
   height: 600px;
   overflow: hidden;
 }
+@media (max-width: 768px) {
+  .carousel-inner {
+    width: 100%;
+    height: auto;
+  }
+}
 </style>

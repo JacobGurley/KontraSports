@@ -43,6 +43,26 @@ export default {
   text-align: center;
 }
 
+@media (max-width: 768px) {
+  .container {
+    max-width: 90%;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  li {
+    font-size: 1rem;
+  }
+}
+
 h1 {
   font-family: "Helvetica", sans-serif;
   font-weight: bold;
