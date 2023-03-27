@@ -2,8 +2,17 @@
   <Nav />
   <div class="container">
       <div class="title">Game Schedule</div>
+      <div class="search-wrapper">
+      <input
+        type="text"
+        v-model="searchDate"
+        class="search-input"
+        placeholder="Search by date (MM/DD)"
+      />
+      
+    </div>
       <div class="ChampWrapper">
-          <div v-for="(games, date) in groupedGames" :key="date">
+          <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
       <table class="table">
           <thead>
@@ -33,7 +42,7 @@
   
   <script scoped>
   import Nav from "./NavBar.vue";
-  import{ ref, onMounted, watch } from 'vue';
+  import{ ref, onMounted, watch, computed } from 'vue';
   import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
   
   export default {
@@ -69,6 +78,22 @@
 
     ]);
     const groupedGames = ref({});
+    const searchDate = ref("");
+
+    // Add a computed property to filter the games based on the search input
+    const filteredGroupedGames = computed(() => {
+      if (searchDate.value === "") {
+        return groupedGames.value;
+      } else {
+        const filtered = {};
+        Object.entries(groupedGames.value).forEach(([date, games]) => {
+          if (date.includes(searchDate.value)) {
+            filtered[date] = games;
+          }
+        });
+        return filtered;
+      }
+    });
 
     const updateScore = (newScore) => {
       set(scoreRef, newScore.value);
@@ -127,6 +152,8 @@
     });
 
     return {
+      searchDate,
+      filteredGroupedGames,
       score,
       games,
       groupedGames,
@@ -207,6 +234,35 @@
   .centered {
     text-align: center;
   }
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .search-input {
+    width: 50%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .search-input::placeholder {
+    color: #888;
+  }
+
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-color: #0d2d5a;
+  }
+
+  
+
 
   /* Responsive styles */
   @media (max-width: 767px) {
@@ -229,6 +285,10 @@
 
     th, td {
       padding: 8px;
+    }
+    .search-input {
+      width: 90%;
+      font-size: 14px;
     }
   }
 </style>

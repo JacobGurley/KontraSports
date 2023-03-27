@@ -2,8 +2,17 @@
   <Nav />
   <div class="container">
       <div class="title">Game Schedule</div>
+      <div class="search-wrapper">
+      <input
+        type="text"
+        v-model="searchDate"
+        class="search-input"
+        placeholder="Search by date (MM/DD)"
+      />
+      
+    </div>
       <div class="ChampWrapper">
-          <div v-for="(games, date) in groupedGames" :key="date">
+          <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
       <table class="table">
           <thead>
@@ -30,98 +39,135 @@
 </div>
 
 </template>
-
-<script scoped>
-import Nav from "./NavBar.vue";
-import{ ref, onMounted, watch } from 'vue';
-import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
-
-export default {
-  components: {
-  Nav,
-
-},
-setup() {
-  const db = getDatabase();
-  const gamesRef = dbRef(db, 'gamesSunB');
-  const scoreRef = dbRef(db, 'score');
-
-  const score = ref('')
-  const games = ref([
-     { date: '01/16', time: '8:00 PM', homeTeam: 'UFO', awayTeam: 'TDE', score: "" },
-     { date: '01/20', time: '8:00 PM', homeTeam: 'Muk', awayTeam: 'Top', score: "" },
+  
+  <script scoped>
+  import Nav from "./NavBar.vue";
+  import{ ref, onMounted, watch, computed } from 'vue';
+  import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
+  
+  export default {
+    components: {
+    Nav,
+  
+  },
+  setup() {
+    const db = getDatabase();
+    const gamesRef = dbRef(db, 'gamesSunB');
+    const scoreRef = dbRef(db, 'score');
     
 
-  ]);
-  const groupedGames = ref({});
+    const score = ref('');
+    const games = ref([
+       { date: '01/12', time: '8:00 PM', homeTeam: 'LFG', awayTeam: 'Average Joes', score: "" },
+       { date: '01/12', time: '8:50 PM', homeTeam: 'Uptempo', awayTeam: 'Run it', score: "" },
+       { date: '01/12', time: '9:40 PM', homeTeam: 'AIM', awayTeam: 'Beach', score: "" },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'AIM', score: "" },
+       { date: '01/19', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Run it', score: "" },
+       { date: '01/19', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Uptempo', score: "" }, 
+       { date: '01/19', time: '9:00 PM', homeTeam: 'OHB', awayTeam: 'TMT', score: "" }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'LFG', awayTeam: 'TMT', score: "" }, 
+       { date: '01/26', time: '8:10 PM', homeTeam: 'AIM', awayTeam: 'Average Joes', score: "" },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Uptempo', awayTeam: 'OHB', score: "" },
+       { date: '01/26', time: '9:00 PM', homeTeam: 'Beach', awayTeam: 'Run it', score: "" },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Beach', awayTeam: 'LFG', score: "" },
+       { date: '02/02', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'Uptempo', score: "" },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'AIM', awayTeam: 'OHB', score: "" },
+       { date: '02/02', time: '9:00 PM', homeTeam: 'TMT', awayTeam: 'Run it', score: "" },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Uptempo', awayTeam: 'LFG', score: "" },
+       { date: '02/09', time: '8:10 PM', homeTeam: 'Average Joes', awayTeam: 'OHB', score: "" },
 
-  const updateScore = (newScore) => {
-    set(scoreRef, newScore.value);
-  };
+    ]);
+    const groupedGames = ref({});
+    const searchDate = ref("");
 
-  onMounted(async () => {
-    // Check if the games have already been written to the database
-    const snapshot = await get(gamesRef);
-    if (snapshot.exists()) {
-    // The games have already been written, so we don't need to write them again
-      return;
-    }
-
-    // Write the games to the database
-    games.value.forEach((game) => {
-      const newGameRef = push(gamesRef);
-      set(newGameRef, game);
-    });
-  });
-
-  onMounted(() => {
-    // Group games by date
-    games.value.forEach((game) => {
-      if (!groupedGames.value[game.date]) {
-        groupedGames.value[game.date] = [];
-      }
-      groupedGames.value[game.date].push(game);
-    });
-
-    // Listen for changes in Firebase and update the games and score variables
-    onValue(gamesRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        const updatedGames = Object.values(data);
-        //Update the scores in the games array
-        updatedGames.forEach((game, index) => {
-          games.value[index].score = game.score;
+    // Add a computed property to filter the games based on the search input
+    const filteredGroupedGames = computed(() => {
+      if (searchDate.value === "") {
+        return groupedGames.value;
+      } else {
+        const filtered = {};
+        Object.entries(groupedGames.value).forEach(([date, games]) => {
+          if (date.includes(searchDate.value)) {
+            filtered[date] = games;
+          }
         });
+        return filtered;
       }
     });
 
-    onValue(scoreRef, (snapshot) => {
-      const data = snapshot.val();
-      if (data) {
-        score.value = data;
+    const updateScore = (newScore) => {
+      set(scoreRef, newScore.value);
+    };
+
+    
+
+    onMounted(async () => {
+      // Check if the games have already been written to the database
+      const snapshot = await get(gamesRef);
+      if (snapshot.exists()) {
+      // The games have already been written, so we don't need to write them again
+        return;
       }
-    }, {
-      onlyOnce: false //This option ensures that the callback is called everytime the data changes
+
+      // Write the games to the database
+      games.value.forEach((games) => {
+        const newGameRef = push(gamesRef);
+        set(newGameRef, games);
+      });
     });
 
-    watch(score, (newScore) => {
-      updateScore(newScore);
-    });
-  });
+    onMounted(() => {
+      // Group games by date
+      games.value.forEach((games) => {
+        if (!groupedGames.value[games.date]) {
+          groupedGames.value[games.date] = [];
+        }
+        groupedGames.value[games.date].push(games);
+      });
 
-  return {
-    score,
-    games,
-    groupedGames,
-    updateScore,
+      // Listen for changes in Firebase and update the games and score variables
+      onValue(gamesRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          const updatedGames = Object.values(data);
+        //Update the scores in the games array
+          updatedGames.forEach((game, index) => {
+            games.value[index].score = game.score;
+          });
+        }
+      });
+
+      onValue(scoreRef, (snapshot) => {
+        const data = snapshot.val();
+        if (data) {
+          score.value = data;
+        }
+      }, {
+        onlyOnce: false //This option ensures that the callback is called everytime the data changes
+      });
+
+      watch(score, (newScore) => {
+        updateScore(newScore);
+      });
+    });
+
+    return {
+      searchDate,
+      filteredGroupedGames,
+      score,
+      games,
+      groupedGames,
+      updateScore,
+      
+    };
+  },
+  
   };
-},
-
-};
-
-</script>
-
-<style scoped>
+  
+  </script>
+  
+  <!-- Add "scoped" attribute to limit CSS to this component only -->
+  <style scoped>
   .container {
     width: 100%;
     padding: 0 15px;
@@ -188,6 +234,35 @@ setup() {
   .centered {
     text-align: center;
   }
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .search-input {
+    width: 50%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .search-input::placeholder {
+    color: #888;
+  }
+
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-color: #0d2d5a;
+  }
+
+  
+
 
   /* Responsive styles */
   @media (max-width: 767px) {
@@ -210,6 +285,10 @@ setup() {
 
     th, td {
       padding: 8px;
+    }
+    .search-input {
+      width: 90%;
+      font-size: 14px;
     }
   }
 </style>
