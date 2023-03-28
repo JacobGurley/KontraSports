@@ -70,10 +70,12 @@ export default {
       if (!snapshot.exists()) {
         // Write the games to the database
         const initialRoster = [
-          {team: 'LFG', name: 'David Vargas', points: 200, gamesPlayed: 10},
-          {team: 'LFG', name: 'Billy King', points: 220, gamesPlayed: 10},
-          {team: 'Average Joes', name: 'Dan Boah', points: 100, gamesPlayed: 10},
-          {team: 'Average Joes', name: 'Kyle Roberts', points: 150, gamesPlayed: 15},
+          {team: 'Strap City', name: 'Chris Gipson', points: 0, gamesPlayed: 1},
+          {team: 'Strap City', name: 'Ruben Jefferson', points: 0, gamesPlayed: 1},
+          {team: 'Strap City', name: 'Jordan Jefferson ', points: 0, gamesPlayed: 1},
+          {team: 'Strap City', name: 'Tommie Flanagan', points: 0, gamesPlayed: 1},
+          {team: 'Strap City', name: 'Myles Smith', points: 0, gamesPlayed: 1},
+          {team: 'Strap City', name: 'Chris Smith', points: 0, gamesPlayed: 1},
         ];
         initialRoster.forEach((player) => {
           const newRosterRef = push(rosterRef);

@@ -17,7 +17,7 @@
                   <router-link to="standings">Standings</router-link>
               </li>
               <li>
-                  <router-link to="rosters">Rosters</router-link>
+                  <router-link to="rosters">Rosters/Stats</router-link>
               </li>
               <li>
                   <router-link to="rules">Rules</router-link>
