@@ -3,13 +3,17 @@
   <div class="container">
     <h1>Welcome to the Spring 2023 Season!</h1>
     <section class="champions-section">
-      <h2>Congratulations to the 2022 Summer Champions!</h2>
+      <h2>Congratulations to the Winter 2023 Champions!</h2>
       <ul>
-        <li>Thursday Night Champs: LFG</li>
-        <li>Sunday Night Div A Champs: Practice Squad</li>
-        <li>Sunday Night Div B Champs: 9-5ers</li>
+        <li>Thursday Div A Champs: Beach</li>
+        <li>Sunday Div A Champs: Strap City</li>
+        <li>Sunday Div B Champs: Trailblazians</li>
+        <li>Sunday Div C Champs: Mamba Mentality</li>
       </ul>
     </section>
+    <div class="ChampWrapper">
+      <router-link class="halloffame-link" to="/hallOfFame">Hall of Fame</router-link>
+    </div>
     <div class="carousel-wrapper">
       <carousel :slides="slides" :interval="3000" controls indicators></carousel>
     </div>
@@ -27,9 +31,10 @@ export default {
 
   data: () => ({
     slides: [
-      require("../assets/thursday.jpg"),
-      require("../assets/sundaydivA.jpg"),
-      require("../assets/sundaydivB.jpg"),
+      require("../assets/ThurWinterChamps.jpg"),
+      require("../assets/SunAWinterChamps.jpg"),
+      require("../assets/SunBWinterChamps.jpg"),
+      require("../assets/SunCWinterChamps.jpg"),
     ],
   }),
 };
@@ -61,8 +66,39 @@ export default {
   li {
     font-size: 1rem;
   }
+  .ChampWrapper {
+    padding: 10px;
+  }
+
+  .halloffame-link {
+    font-size: 1rem;
+  }
+}
+.ChampWrapper{
+  border: 5px solid #0d2d5a;
+  padding: 1rem;
+  margin-bottom: 30px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
+.halloffame-link{
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: none;
+  color: #0d2d5a;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.halloffame-link:hover {
+  color: #1a73e8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
 h1 {
   font-family: "Helvetica", sans-serif;
   font-weight: bold;

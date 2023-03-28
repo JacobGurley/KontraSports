@@ -16,6 +16,7 @@ import TeamRosterThurA from '../components/TeamRosterThurA.vue';
 import TeamRosterSunA from '../components/TeamRosterSunA.vue';
 import TeamRosterSunB from '../components/TeamRosterSunB.vue';
 import TeamRosterSunC from '../components/TeamRosterSunC.vue';
+import HallOfFame from '../components/HallOfFame.vue';
 
 import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
@@ -39,6 +40,7 @@ const routes = [
   {path: '/teamRosterSunA', component: TeamRosterSunA},
   {path: '/teamRosterSunB', component: TeamRosterSunB},
   {path: '/teamRosterSunC', component: TeamRosterSunC},
+  {path: '/hallOfFame', component: HallOfFame},
 ]
 
 const router = createRouter({
