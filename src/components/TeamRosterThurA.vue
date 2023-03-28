@@ -4,8 +4,16 @@
       <div class="title">
           <h1>Rosters</h1>
       </div>
+      <div class="search-wrapper">
+      <input
+        type="text"
+        v-model="searchTeam"
+        class="search-input"
+        placeholder="Search by Team Name"
+      />
+      </div>
       <div class="roster-wrapper">
-        <div v-for="(teamRoster, team) in groupedRosters" :key="team">
+        <div v-for="(teamRoster, team) in filteredRosters" :key="team">
           <h2 class="team-title">{{ team }}</h2>
           <table class="table">
             <thead>
@@ -29,7 +37,7 @@
 <script scoped>
   import Nav from "./NavBar.vue";
   import { getDatabase, ref as dbRef, set, push, get, onValue } from 'firebase/database';
-  import{ ref, onMounted } from 'vue';
+  import{ ref, onMounted, computed } from 'vue';
   
   export default {
     components: {
@@ -41,6 +49,19 @@
       const rosterRef = dbRef(db, 'rosterTh');
       const roster = ref({});
       const groupedRosters = ref({});
+      const searchTeam = ref('');
+
+       // Create a computed property that filters the rosters based on the search query
+       const filteredRosters = computed(() => {
+        if (!searchTeam.value) {
+          return groupedRosters.value;
+        }
+        return Object.fromEntries(
+          Object.entries(groupedRosters.value).filter(([team]) =>
+            team.toLowerCase().includes(searchTeam.value.toLowerCase())
+          )
+        );
+      });
       
 
       onMounted(async () => {
@@ -98,6 +119,8 @@
       };
 
       return {
+        searchTeam,
+        filteredRosters,
         roster,
         groupedRosters,
       };
@@ -168,6 +191,32 @@ tr:nth-child(even) {
 .centered {
     text-align: center;
 }
+.search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
+
+  .search-input {
+    width: 50%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
+
+  .search-input::placeholder {
+    color: #888;
+  }
+
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-color: #0d2d5a;
+  }
 /* Responsive styles */
 @media (max-width: 767px) {
     .roster-wrapper {
@@ -189,6 +238,10 @@ tr:nth-child(even) {
 
     th, td {
       padding: 8px;
+    }
+    .search-input {
+      width: 90%;
+      font-size: 14px;
     }
   }
 
