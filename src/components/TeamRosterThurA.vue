@@ -118,6 +118,22 @@
             {team: 'Beach', name: 'Garret', points: 0, gamesPlayed: 1},
             {team: 'Beach', name: 'David', points: 0, gamesPlayed: 1},
             {team: 'Beach', name: 'Craig', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Derek Vernon', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Tre Jefferson', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Victor Ramirez', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Steven Royal', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Markieth Taylor', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Nate Jordan', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Anthony Howard', points: 0, gamesPlayed: 1},
+            {team: 'OHB', name: 'Cristian Acevedo', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Gary Bardales', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Cristian Butler', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Joseph Jamrozik', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'John Gallegos', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Jaxson Lee', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Isaac Richards', points: 0, gamesPlayed: 1},
+            {team: 'AIM', name: 'Karrey Johnson', points: 0, gamesPlayed: 1},
+
 
           ];
           initialRoster.forEach((player) => {

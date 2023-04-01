@@ -125,6 +125,16 @@ export default {
             {team: 'Uncle Drews', name: 'Hector', points: 0, gamesPlayed: 1},
             {team: 'Uncle Drews', name: 'Ankur Tailor', points: 0, gamesPlayed: 1},
             {team: 'Uncle Drews', name: 'James Mendoza', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Jesse Khat', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Alan Seang', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Keith Lewis', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Bobby Yon', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Alex Kouch', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Ryan Brang', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Jonathan Sa', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Rocky Avelino', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Kenneth Hoang', points: 0, gamesPlayed: 1},
+            {team: 'Hooligans', name: 'Jimmy So', points: 0, gamesPlayed: 1},
         ];
         initialRoster.forEach((player) => {
           const newRosterRef = push(rosterRef);

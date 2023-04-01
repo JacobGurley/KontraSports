@@ -51,6 +51,8 @@
         {name: "Young Bucs", wins: 1, losses: 1, pointDiff: 1},
         {name: "Elements", wins: 1, losses: 1, pointDiff: 1},
         {name: "Beach", wins: 1, losses: 1, pointDiff: 1},
+        {name: "AIM", wins: 1, losses: 1, pointDiff: 1},
+        {name: "OHB", wins: 1, losses: 1, pointDiff: 1},
     ]);
     const wins = ref(0);
     const losses = ref(0);

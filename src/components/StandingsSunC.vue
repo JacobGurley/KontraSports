@@ -54,6 +54,9 @@
         {name: "60pointgame", wins: 1, losses: 1, pointDiff: 1},
         {name: "Mexipinos", wins: 1, losses: 1, pointDiff: 1},
         {name: "Shot Crew", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Gold Hillz Ballers", wins: 1, losses: 1, pointDiff: 1},
+        {name: "True Grit", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Moons Goons", wins: 1, losses: 1, pointDiff: 1},
     ]);
     const wins = ref(0);
     const losses = ref(0);
