@@ -24,6 +24,9 @@
           </a>
         </div>
       </div>
+      <div class="carousel-wrapper">
+      <img src="@/assets/contactus.jpg" alt="Contact Us" class="contact-us-image" />
+    </div>
     </div>
   </div>
 </template>
@@ -103,6 +106,17 @@ export default {
   color: black;
   font-weight: bold;
   font-size: 1.1em;
+}
+.contact-us-image {
+  width: 100%;
+  max-width: 600px; /* Limit the maximum width of the image */
+  height: auto; /* Maintain the aspect ratio */
+  margin-top: 20px;
+}
+.carousel-wrapper {
+  border: 5px solid #0d2d5a;
+  padding: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 /* Media query for mobile responsiveness */
