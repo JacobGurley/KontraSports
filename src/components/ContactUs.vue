@@ -111,7 +111,7 @@ export default {
   width: 100%;
   max-width: 600px; /* Limit the maximum width of the image */
   height: auto; /* Maintain the aspect ratio */
-  margin-top: 20px;
+  
 }
 .carousel-wrapper {
   border: 5px solid #0d2d5a;
