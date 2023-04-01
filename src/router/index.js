@@ -17,7 +17,9 @@ import TeamRosterSunA from '../components/TeamRosterSunA.vue';
 import TeamRosterSunB from '../components/TeamRosterSunB.vue';
 import TeamRosterSunC from '../components/TeamRosterSunC.vue';
 import HallOfFame from '../components/HallOfFame.vue';
-
+import GSWednesday from '../components/GSWednesday.vue';
+import StandingsWed from '../components/StandingsWed';
+import TeamRosterWed from '../components/TeamRosterWed.vue';
 import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {path: '/', component: Home},
@@ -28,14 +30,17 @@ const routes = [
   {path: '/rosters', component: TeamRosters},
   {path: '/rules', component: LeagueRules},
   {path: '/contact', component: ContactUs},
+  {path: '/wednesdayGameSchedule', component: GSWednesday},
   {path: '/thursdayAGameSchedule', component: GSThursdayA},
   {path: '/sundayAGameSchedule', component: GSSundayA},
   {path: '/sundayBGameSchedule', component: GSSundayB},
   {path: '/sundayCGameSchedule', component: GSSundayC},
+  {path: '/standingsWed', component: StandingsWed},
   {path: '/standingsThurA', component: StandingsThurA},
   {path: '/standingsSunA', component: StandingsSunA},
   {path: '/standingsSunB', component: StandingsSunB},
   {path: '/standingsSunC', component: StandingsSunC},
+  {path: '/teamRosterWed', component: TeamRosterWed},
   {path: '/teamRosterThurA', component: TeamRosterThurA},
   {path: '/teamRosterSunA', component: TeamRosterSunA},
   {path: '/teamRosterSunB', component: TeamRosterSunB},
