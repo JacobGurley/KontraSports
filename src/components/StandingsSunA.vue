@@ -49,6 +49,7 @@
         {name: "Light em up", wins: 1, losses: 1, pointDiff: 1},
         {name: "FBG", wins: 1, losses: 1, pointDiff: 1},
         {name: "OHB", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Practice Squad", wins: 1, losses: 1, pointDiff: 1},
     ]);
     const wins = ref(0);
     const losses = ref(0);

@@ -99,6 +99,13 @@ export default {
           {team: 'OHB', name: 'Zeshare Walkins', points: 0, gamesPlayed: 1},
           {team: 'OHB', name: 'Rob Shannon', points: 0, gamesPlayed: 1},
           {team: 'OHB', name: 'Chris Luna', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Drew', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Casey', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Dupree', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Dre', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Jeremy', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Kyle', points: 0, gamesPlayed: 1},
+          {team: 'Practice Squad', name: 'Quan', points: 0, gamesPlayed: 1},
         ];
         initialRoster.forEach((player) => {
           const newRosterRef = push(rosterRef);

@@ -52,7 +52,7 @@
         {name: "Volume 0", wins: 1, losses: 1, pointDiff: 1},
         {name: "Mamba Mentality", wins: 1, losses: 1, pointDiff: 1},
         {name: "60pointgame", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Mexipinos", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Bad Boy Mafia", wins: 1, losses: 1, pointDiff: 1},
         {name: "Shot Crew", wins: 1, losses: 1, pointDiff: 1},
         {name: "Gold Hillz Ballers", wins: 1, losses: 1, pointDiff: 1},
         {name: "True Grit", wins: 1, losses: 1, pointDiff: 1},
