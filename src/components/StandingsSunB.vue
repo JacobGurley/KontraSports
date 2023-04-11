@@ -52,6 +52,8 @@
         {name: "Rudeboyz", wins: 1, losses: 1, pointDiff: 1},
         {name: "Uncle Drews", wins: 1, losses: 1, pointDiff: 1},
         {name: "Hooligans", wins: 1, losses: 1, pointDiff: 1},
+        {name: "9-5erz", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Living Grace", wins: 1, losses: 1, pointDiff: 1},
     ]);
     const wins = ref(0);
     const losses = ref(0);

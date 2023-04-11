@@ -5,7 +5,7 @@
       <div class="icon-text-container">
         <div class="contact-item">
           <font-awesome-icon class="user" icon="fa-solid fa-user"></font-awesome-icon>
-          <span class="text">Alec Feliciano</span>
+          <span class="text">Alec</span>
         </div>
         <div class="contact-item">
           <font-awesome-icon class="phone" icon="fa-solid fa-phone"></font-awesome-icon>
@@ -53,7 +53,10 @@ export default {
 .container {
   font-family: var(--font-family);
   background-color: var(--secondary-color);
-  padding: 0 1rem;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 15px;
+  text-align: center;
 }
 
 .content {
@@ -123,6 +126,9 @@ export default {
 @media screen and (max-width: 768px) {
   .icon-text-container {
     flex-direction: column;
+  }
+  .container{
+    max-width: 90%;
   }
 }
 </style>

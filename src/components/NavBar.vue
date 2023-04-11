@@ -1,10 +1,12 @@
 <template>
   <div class="header-container">
       <div class="color-bar"></div>
+      <div class="header-content">
       <img class="header-image" src="../assets/banner.png" />
       <router-link to="home">
           <img src="../assets/Button_1.png" class="logo">
       </router-link>
+    </div>
       <nav class="navbar">
           <ul>
               <li>
@@ -34,6 +36,9 @@
 html, body {
     padding: 0px;
     margin: 0px;
+}
+.header-content{
+  position: relative;
 }
 
 .header-container{
@@ -127,6 +132,13 @@ html, body {
     display: block;
     width: 100%;
     text-align: center;
+  }
+  .header-image{
+    height: 150px;
+  }
+  .logo{
+    height: 150px;
+    top: 40%;
   }
 }
 

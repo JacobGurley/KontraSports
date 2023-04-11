@@ -49,7 +49,7 @@
           {name: "BBQ Chicken", wins: 1, losses: 1, pointDiff: 1},
           {name: "All PGs", wins: 1, losses: 1, pointDiff: 1},
           {name: "TUBT", wins: 1, losses: 1, pointDiff: 1},
-          {name: "Tita Slaya", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Tita Slayerz", wins: 1, losses: 1, pointDiff: 1},
           {name: "Practice Squad", wins: 1, losses: 1, pointDiff: 1},
       ]);
       const wins = ref(0);

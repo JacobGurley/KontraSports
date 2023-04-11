@@ -115,14 +115,14 @@ export default {
 }
 .carousel-inner {
   position: relative;
-  width: 900px;
-  height: 600px;
+  width: 100%;
+  height: 0;
+  padding-bottom: 85%;
   overflow: hidden;
 }
 @media (max-width: 768px) {
   .carousel-inner {
-    width: 100%;
-    height: auto;
+    padding-bottom: 90%;
   }
 }
 </style>

@@ -6,7 +6,7 @@
         @mouseenter="$emit('mouseenter')"
         @mouseout="$emit('mouseout')"
       >
-        <img :src="slide" />
+        <img :src="slide" class="carousel-image" alt="Slide image"/>
       </div>
     </transition>
   </template>
@@ -30,6 +30,11 @@
     left: 0;
     right: 0;
     bottom: 0;
+  }
+  .carousel-image{
+    width:100%;
+    height:100%;
+    object-fit: cover;
   }
   .slide-in-enter-active,
   .slide-in-leave-active,

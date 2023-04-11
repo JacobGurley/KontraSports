@@ -3,25 +3,26 @@
     <div class="rules-container">
       <h2>KONTRA IMPORTANT RULES</h2>
       <ul>
-    <li>All players must have filled out a waiver either online or in person or they will not be allowed to play.</li>
-    <li>Only the Captain or chosen representative from the team will be allowed to sign in players and they must do this before game time.</li>
-    <li>Game fees ($45) must be paid in full before the game starts.</li>
-    <li>Clock will start at the scheduled game time.</li>
-    <li>For every minute a team is late, 1 point will be added for the other team.</li>
-    <li>Once a game ends, there will be 2 minutes put on the clock before the next game starts.</li>
-    <li>Jersey Rule: By the third week of the season every player needs to have a jersey with a number on it.</li>
+    <li>1) All players must have filled out a waiver either online or in person or they will not be allowed to play.</li>
+    <li>2) Only the Captain or chosen representative from the team will be allowed to sign in players and they must do this before game time.</li>
+    <li>3) Game fees ($45) must be paid in full before the game starts.</li>
+    <li>4) Clock will start at the scheduled game time.</li>
+    <li>5) For every minute a team is late, 1 point will be added for the other team.</li>
+    <li>6) Once a game ends, there will be 2 minutes put on the clock before the next game starts.</li>
+    <li>7) Jersey Rule: By the third week of the season every player needs to have a jersey with a number on it.</li>
     </ul>
     <p class="additional-notes">Additional Notes:</p>
     <ol>
       <li>1) If players on the same team have the same number it is a technical foul and 1 Free Throw.</li>
       <li>2) If a player does not have a jersey they will not be allowed to play.</li>
       <li>3) Jerseys will be available for purchase.</li>
-    </ol>
-    <p>Overtime is RUNNING CLOCK and one timeout per Overtime.</p>
-    <p>Once a game ends, there will be 2 minutes put on the clock before the next game starts.</p>
-    <p>When a game ends Please clear the bench so the next team can sit down for their game.</p>
-    <p>Please do your best to let us know if there are any spills on your court or on the bench and throw away your bottles at the end of the game.</p>
-    <p>Game clock does not stop after a made basket under 2 minutes if the game is within 8 points.</p>
+    
+    <li>4) Overtime is RUNNING CLOCK and one timeout per Overtime.</li>
+    <li>5) Once a game ends, there will be 2 minutes put on the clock before the next game starts.</li>
+    <li>6) When a game ends Please clear the bench so the next team can sit down for their game.</li>
+    <li>7) Please do your best to let us know if there are any spills on your court or on the bench and throw away your bottles at the end of the game.</li>
+    <li>8) Game clock does not stop after a made basket under 2 minutes if the game is within 8 points.</li>
+  </ol>
     <h2>Kontra Basketball League Rules</h2>
     <ol>
       <li>1) If a player commits 5 personal fouls in a game, they will Foul Out of that game.</li>
@@ -40,9 +41,13 @@
       <li>14) Blood: Any player bleeding, must leave the game immediately. The player may return to the game once the bleeding has stopped and has been checked by the Referee. Clothes that contains blood must be removed or replaced before entering the game.</li>
     </ol>
     <h2>Qualifications:</h2>
-    <p>Must be at least 18 or over to play.</p>
+    <ol>
+    <li>Must be at least 18 or over to play.</li>
+  </ol>
     <h2>Playoff Qualifications:</h2>
-    <p>In order to be eligible for the playoff games a player must have played at least 3 of the scheduled regular season games(2 of the 5 scheduled for half seasons). </p>
+    <ol>
+    <li>In order to be eligible for the playoff games a player must have played at least 3 of the scheduled regular season games(2 of the 5 scheduled for half seasons). </li>
+  </ol>
     <h2>IMPORTANT ADDITIONAL RULES:</h2>
     <ol>
       <li>
@@ -64,11 +69,12 @@
         6) Conduct: Team Players, Coaches, and fans must always conduct themselves in a respectful manner. Bad/Hostile Conduct is not allowed in KONTRA. Teams, Coaches, and Fans who cannot conduct themselves in a respectful manner will be immediately escorted out of the gym, with their team subject to forfeiting the game.
       </li>
       <li>
-        7) Refunds: Full Refunds will only be made prior to the season starting. Partial Refunds will be given to the amount of games left in the season. A Refund of 30 dollars will be given for each game.
+        7) Refunds: Full Refunds will only be made prior to the season starting. Partial Refunds will be given if reason is valid or deemed necessary/urgent. A Refund of 30 dollars will be given for each game. No Refunds allowed after 3 games played in that season.
       </li>
       <li>
         8) HOME AND VISITOR: The HOME team shall wear white or light colored uniforms and the VISITING team shall wear dark uniforms.
       </li>
+      <li>9) Refs have full jurisdiction on if a game needs to be called if in the event there is conflict that can not be resolved in a short period of time. If a league commissioner is not present at the time, Refs will follow our guidelines and make their decision if the game should proceed or not. Refunds will not be given out if the game ends early. The game will be cancelled and the league will review based on what transpired to give both teams a loss or determine who will receive a win.</li>
     </ol>
   </div> 
 </template>
@@ -84,41 +90,54 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  
   .rules-container {
-  font-family: Arial, sans-serif;
-  max-width: 800px;
-  padding: 1rem;
-  margin: 0 auto;
-  line-height: 1.6;
-}
-
-h2 {
-  font-size: 1.5rem;
-  margin: 2rem 0 1rem;
-  font-weight: bold;
-  text-align: center;
-}
-
-ul, ol {
-  padding-left: 1rem;
-}
-
-li {
-  margin-bottom: 0.5rem;
-}
-
-.bold {
-  font-weight: bold;
-}
-
-.additional-notes {
-  margin-top: 1.5rem;
-}
-
-@media (max-width: 767px) {
-  h2 {
-    font-size: 1.25rem;
+    font-family: "Roboto", sans-serif;
+    max-width: 800px;
+    padding: 1rem;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   }
-}
-  </style>
+
+  h2 {
+    font-size: 1.75rem;
+    margin: 2rem 0 1rem;
+    font-weight: bold;
+    text-align: center;
+    color: #0a558c;
+  }
+
+  ul, ol {
+    padding-left: 1rem;
+    list-style-position: inside;
+  }
+
+  li {
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+  }
+
+  .additional-notes {
+    margin-top: 1.5rem;
+    font-weight: bold;
+    font-size: 1.25rem;
+    color: #0a558c;
+  }
+
+  p, li {
+    text-align: justify;
+  }
+
+  @media (max-width: 767px) {
+    h2 {
+      font-size: 1.5rem;
+    }
+
+    .additional-notes {
+      font-size: 1.1rem;
+    }
+  }
+</style>

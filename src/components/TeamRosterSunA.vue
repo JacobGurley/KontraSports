@@ -106,6 +106,14 @@ export default {
           {team: 'Practice Squad', name: 'Jeremy', points: 0, gamesPlayed: 1},
           {team: 'Practice Squad', name: 'Kyle', points: 0, gamesPlayed: 1},
           {team: 'Practice Squad', name: 'Quan', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Marlon Gojit', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Ronnie Tribble', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Ray Tribble', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Donald Tribble', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Jeremy Labuguen', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Jeremy Williams', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Kano Orozco', points: 0, gamesPlayed: 1},
+          {team: 'FrontPage', name: 'Shaheed Muhammad', points: 0, gamesPlayed: 1},
         ];
         initialRoster.forEach((player) => {
           const newRosterRef = push(rosterRef);
