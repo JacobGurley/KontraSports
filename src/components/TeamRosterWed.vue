@@ -116,8 +116,10 @@
             {team: 'Practice Squad', name: 'Dupree', points: 0, gamesPlayed: 1},
             {team: 'Practice Squad', name: 'Dre', points: 0, gamesPlayed: 1},
             {team: 'Practice Squad', name: 'Jeremy', points: 0, gamesPlayed: 1},
-            {team: 'Practice Squad', name: 'Kyle', points: 0, gamesPlayed: 1},
+            {team: 'Practice Squad', name: 'Kyle S', points: 0, gamesPlayed: 1},
             {team: 'Practice Squad', name: 'Quan', points: 0, gamesPlayed: 1},
+            {team: 'Practice Squad', name: 'Sal', points: 0, gamesPlayed: 1},
+            {team: 'Practice Squad', name: 'Kyle', points: 0, gamesPlayed: 1},
             
           ];
           initialRoster.forEach((player) => {

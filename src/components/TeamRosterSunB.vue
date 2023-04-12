@@ -90,7 +90,7 @@ export default {
             {team: 'Dawgs', name: 'Edwin Mayo', points: 0, gamesPlayed: 1},
             {team: 'BBQ Chicken', name: 'Kyle', points: 0, gamesPlayed: 1},
             {team: 'BBQ Chicken', name: 'Sherwin', points: 0, gamesPlayed: 1},
-            {team: 'BBQ Chicken', name: 'Aaron', points: 0, gamesPlayed: 1},
+            {team: 'BBQ Chicken', name: 'Matt A', points: 0, gamesPlayed: 1},
             {team: 'BBQ Chicken', name: 'Chris', points: 0, gamesPlayed: 1},
             {team: 'BBQ Chicken', name: 'Peter', points: 0, gamesPlayed: 1},
             {team: 'BBQ Chicken', name: 'Matt', points: 0, gamesPlayed: 1},
