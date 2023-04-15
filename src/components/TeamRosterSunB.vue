@@ -100,7 +100,7 @@ export default {
             {team: 'BBQ Chicken', name: 'Ajay', points: 0, gamesPlayed: 1},
             {team: 'Trailblazians', name: 'Sam Shin', points: 0, gamesPlayed: 1},
             {team: 'Trailblazians', name: 'Simeon Lam', points: 0, gamesPlayed: 1},
-            {team: 'Trailblazians', name: 'Brandon Hino', points: 0, gamesPlayed: 1},
+            {team: 'Trailblazians', name: 'Ethan Leimel', points: 0, gamesPlayed: 1},
             {team: 'Trailblazians', name: 'Shawn Deluz', points: 0, gamesPlayed: 1},
             {team: 'Trailblazians', name: 'Kyle Wright', points: 0, gamesPlayed: 1},
             {team: 'Trailblazians', name: 'Anthony En', points: 0, gamesPlayed: 1},

@@ -101,6 +101,7 @@ export default {
             {team: 'Volume 0', name: 'Caleb Kulwitzky', points: 0, gamesPlayed: 1},
             {team: 'Volume 0', name: 'Kade West', points: 0, gamesPlayed: 1},
             {team: 'Volume 0', name: 'Beto Martinez', points: 0, gamesPlayed: 1},
+            {team: 'Volume 0', name: 'Justin Garcia', points: 0, gamesPlayed: 1},
             {team: 'Mamba Mentality', name: 'Diego Carrillo', points: 0, gamesPlayed: 1},
             {team: 'Mamba Mentality', name: 'Hansel Portillo', points: 0, gamesPlayed: 1},
             {team: 'Mamba Mentality', name: 'Ivan Ramon', points: 0, gamesPlayed: 1},
