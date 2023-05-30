@@ -115,6 +115,14 @@ export default {
           {team: 'FrontPage', name: 'Jeremy Williams', points: 0, gamesPlayed: 1},
           {team: 'FrontPage', name: 'Kano Orozco', points: 0, gamesPlayed: 1},
           {team: 'FrontPage', name: 'Shaheed Muhammad', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Mike', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Brandon', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Paolo', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Renz', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'RJ', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Rich', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'Brandon', points: 0, gamesPlayed: 1},
+          {team: 'Tita Slayerz', name: 'James', points: 0, gamesPlayed: 1},
         ];
         initialRoster.forEach((player) => {
           const newRosterRef = push(rosterRef);

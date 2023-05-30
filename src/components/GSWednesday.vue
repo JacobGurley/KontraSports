@@ -58,28 +58,11 @@
   
       const score = ref('');
       const games = ref([
-         { date: '04/05', time: '8:00 PM', homeTeam: 'Practice Squad', awayTeam: 'All PGs', score: "" },
-         { date: '04/05', time: '8:45 PM', homeTeam: 'Tita Slayerz', awayTeam: 'OC Ballers', score: "" },
-         { date: '04/05', time: '9:30 PM', homeTeam: 'TUBT', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '04/12', time: '8:00 PM', homeTeam: 'All PGs', awayTeam: 'OC Ballers', score: "" },
-         { date: '04/12', time: '8:45 PM', homeTeam: 'Practice Squad', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '04/12', time: '9:30 PM', homeTeam: 'TUBT', awayTeam: 'Tita Slayerz', score: "" },
-         { date: '04/19', time: '8:00 PM', homeTeam: 'OC Ballers', awayTeam: 'Practice Squad', score: "" },
-         { date: '04/19', time: '8:45 PM', homeTeam: 'TUBT', awayTeam: 'All PGs', score: "" },
-         { date: '04/19', time: '9:30 PM', homeTeam: 'BBQ Chicken', awayTeam: 'Tita Slayerz', score: "" },
-         { date: '04/26', time: '8:00 PM', homeTeam: 'Practice Squad', awayTeam: 'Tita Slayerz', score: "" },
-         { date: '04/26', time: '8:45 PM', homeTeam: 'All PGs', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '04/26', time: '9:30 PM', homeTeam: 'TUBT', awayTeam: 'OC Ballers', score: "" },
-         { date: '05/03', time: '8:00 PM', homeTeam: 'TUBT', awayTeam: 'Practice Squad', score: "" },
-         { date: '05/03', time: '8:45 PM', homeTeam: 'All PGs', awayTeam: 'Tita Slayerz', score: "" },
-         { date: '05/03', time: '9:30 PM', homeTeam: 'OC Ballers', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '05/10', time: '8:00 PM', homeTeam: 'TUBT', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '05/10', time: '8:45 PM', homeTeam: 'Tita Slayerz', awayTeam: 'OC Ballers', score: "" },
-         { date: '05/10', time: '9:30 PM', homeTeam: 'Practice Squad', awayTeam: 'All PGs', score: "" },
-         { date: '05/17', time: '8:00 PM', homeTeam: 'All PGs', awayTeam: 'OC Ballers', score: "" },
-         { date: '05/17', time: '8:45 PM', homeTeam: 'TUBT', awayTeam: 'Tita Slayerz', score: "" },
-         { date: '05/17', time: '9:30 PM', homeTeam: 'Practice Squad', awayTeam: 'BBQ Chicken', score: "" },
-         
+         { date: '05/24', time: '8:20 PM', homeTeam: '#4 OC Ballers', awayTeam: '#5 TUBT', score: "" },
+         { date: '05/24', time: '9:10 PM', homeTeam: '#3 BBQ Chicken', awayTeam: '#6 Tita Slayerz', score: "" },
+         { date: '05/31', time: '8:00 PM', homeTeam: '#1 Practice Squad', awayTeam: 'Winner of #4/#5', score: "" },
+         { date: '05/31', time: '8:50 PM', homeTeam: '#2 All PGs', awayTeam: 'Winner of #3/#6', score: "" },
+         { date: '06/07', time: '8:30 PM', homeTeam: 'CHAMPIONSHIP', awayTeam: 'CHAMPIONSHIP', score: "" },
   
       ]);
       const groupedGames = ref({});

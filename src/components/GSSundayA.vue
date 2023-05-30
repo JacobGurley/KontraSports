@@ -58,7 +58,31 @@
 
     const score = ref('');
     const games = ref([
-       { date: '04/16', time: 'TBD', homeTeam: 'TBD', awayTeam: 'TBD', score: "" },
+       { date: '04/16', time: '7:30 PM', homeTeam: 'Practice Squad', awayTeam: 'Tita Slayerz', score: "" },
+       { date: '04/16', time: '8:20 PM', homeTeam: 'OHB', awayTeam: 'FBG', score: "" },
+       { date: '04/16', time: '9:10 PM', homeTeam: 'FrontPage', awayTeam: 'Light em up', score: "" },
+       { date: '04/30', time: '6:50 PM', homeTeam: 'Strap City', awayTeam: 'FBG', score: "" },
+       { date: '04/30', time: '7:40 PM', homeTeam: 'Practice Squad', awayTeam: 'FrontPage', score: "" },
+       { date: '04/30', time: '8:30 PM', homeTeam: 'Tita Slayerz', awayTeam: 'OHB', score: "" },
+       { date: '05/07', time: '7:40 PM', homeTeam: 'Practice Squad', awayTeam: 'Strap City', score: "" },
+       { date: '05/07', time: '8:30 PM', homeTeam: 'OHB', awayTeam: 'Light em up', score: "" },
+       { date: '05/07', time: '8:30 PM', homeTeam: 'FBG', awayTeam: 'FrontPage', score: "" },
+       { date: '05/07', time: '9:20 PM', homeTeam: 'Tita Slayerz', awayTeam: '9-5erz', score: "" },
+       { date: '05/21', time: '8:50 PM', homeTeam: 'Light em up', awayTeam: 'Practice Squad', score: "" },
+       { date: '05/21', time: '9:40 PM', homeTeam: 'FrontPage', awayTeam: 'Strap City', score: "" },
+       { date: '05/21', time: '9:40 PM', homeTeam: 'FBG', awayTeam: 'Tita Slayerz', score: "" },
+       { date: '06/04', time: '7:40 PM', homeTeam: 'Tita Slayerz', awayTeam: 'Strap City', score: "" },
+       { date: '06/04', time: '8:30 PM', homeTeam: 'FBG', awayTeam: 'Light em up', score: "" },
+       { date: '06/04', time: '8:30 PM', homeTeam: 'OHB', awayTeam: 'FrontPage', score: "" },
+       { date: '06/04', time: '9:20 PM', homeTeam: 'OHB', awayTeam: 'Practice Squad', score: "" },
+       { date: '06/11', time: '8:30 PM', homeTeam: 'Strap City', awayTeam: 'Light em up', score: "" },
+       { date: '06/11', time: '8:30 PM', homeTeam: 'Practice Squad', awayTeam: 'FBG', score: "" },
+       { date: '06/11', time: '9:20 PM', homeTeam: 'OHB', awayTeam: 'Strap City', score: "" },
+       { date: '06/11', time: '9:20 PM', homeTeam: 'FrontPage', awayTeam: 'Tita Slayerz', score: "" },
+       { date: '06/18', time: '6:50 PM', homeTeam: 'Practice Squad', awayTeam: 'Light em up', score: "" },
+       { date: '06/18', time: '8:30 PM', homeTeam: 'Tita Slayerz', awayTeam: 'Light em up', score: "" },
+       { date: '06/18', time: '9:20 PM', homeTeam: 'Strap City', awayTeam: 'FrontPage', score: "" },
+       { date: '06/18', time: '9:20 PM', homeTeam: 'FBG', awayTeam: 'OHB', score: "" },
        
        
 

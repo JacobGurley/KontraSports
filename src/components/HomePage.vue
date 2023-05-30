@@ -2,6 +2,9 @@
   <Nav />
   <div class="container">
     <h1>Welcome to the Spring 2023 Season!</h1>
+    <p class="reg">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFf5LLBdEczbvR1P7r2PWZduvRzwC_UxZwDzxe2AGMk0fhYA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2023 Summer Registration </a>
+    </p>
     <p class="location">
       <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
     </p>
@@ -79,6 +82,9 @@ export default {
   .location {
     font-size: 1rem;
   }
+  .reg {
+    font-size: 1rem;
+  }
   .carousel-wrapper{
     width: 100%;
     overflow: hidden;
@@ -123,6 +129,25 @@ export default {
   transition: all 0.3s;
 }
 .location:hover{
+  color: #1a73e8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.reg{
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: none;
+  color: #0d2d5a;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.reg:hover{
   color: #1a73e8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
