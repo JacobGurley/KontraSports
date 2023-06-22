@@ -39,22 +39,21 @@
   },
   setup() {
     const db = getDatabase();
-    const standingsRef = dbRef(db, 'standingsTh');
+    const standingsRef = dbRef(db, 'standingsThurA');
     const winRef = dbRef(db, 'winsTh');
     const lossRef = dbRef(db, 'lossTh');
     const pdRef = dbRef(db, 'pdThur');
     
     const standings = ref([
         {name: "LFG", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Dale Gas", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Hands Down Man Down", wins: 1, losses: 1, pointDiff: 1},
         {name: "Uptempo", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Young Bucs", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Elements", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Clippers", wins: 1, losses: 1, pointDiff: 1},
+        {name: "The Chicano Crew", wins: 1, losses: 1, pointDiff: 1},
         {name: "Beach", wins: 1, losses: 1, pointDiff: 1},
-        {name: "AIM", wins: 1, losses: 1, pointDiff: 1},
-        {name: "DEATH ROW", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Strap City", wins: 1, losses: 1, pointDiff: 1},
         {name: "1UP", wins: 1, losses: 1, pointDiff: 1},
-        {name: "DragonBallerZ", wins: 1, losses: 1, pointDiff: 1},
+        
     ]);
     const wins = ref(0);
     const losses = ref(0);

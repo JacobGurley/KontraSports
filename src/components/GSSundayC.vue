@@ -7,17 +7,19 @@
         type="text"
         v-model="searchDate"
         class="search-input"
-        placeholder="Search by date (MM/DD)"
+        placeholder="Search by date (MM-DD)"
       />
       
     </div>
       <div class="ChampWrapper">
           <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
+              <h4 class="location-title">{{ locations[date] || 'No location provided' }}</h4>
       <table class="table">
           <thead>
               <tr>
                   <th class="centered">Time</th>
+                  <th class="centered">Court</th>
                   <th class="centered">Home Team</th>
                   <th class="centered">Away Team</th>
                   <th class="centered">Score</th>
@@ -27,6 +29,7 @@
               <tr v-for="(game, index) in games" :key="index">
                   
                   <td>{{ game.time }}</td>
+                  <td>{{ game.courtNumber }}</td>
                   <td>{{ game.homeTeam }}</td>
                   <td>{{ game.awayTeam }}</td>
                   <td>{{ game.score }}</td>
@@ -42,7 +45,7 @@
   
   <script scoped>
   import Nav from "./NavBar.vue";
-  import{ ref, onMounted, watch, computed } from 'vue';
+  import { ref, onMounted, computed } from 'vue';
   import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
   
   export default {
@@ -53,61 +56,30 @@
   setup() {
     const db = getDatabase();
     const gamesRef = dbRef(db, 'gamesSunC');
-    const scoreRef = dbRef(db, 'score');
-    
-
-    const score = ref('');
+    const locationsRef = dbRef(db, 'locationsSunC');
     const games = ref([
-       { date: '04/16', time: '6:30 PM', homeTeam: '60pointgame', awayTeam: 'Moons Goons', score: "" },
-       { date: '04/16', time: '6:30 PM', homeTeam: 'Primeflight', awayTeam: 'LBSU Rec', score: "" },
-       { date: '04/16', time: '7:20 PM', homeTeam: 'Volume 0', awayTeam: 'True Grit', score: "" },
-       { date: '04/16', time: '8:10 PM', homeTeam: 'Gold Hillz Ballers', awayTeam: 'Joakim Around', score: "" },
-       { date: '04/16', time: '8:10 PM', homeTeam: 'Bad Boy Mafia', awayTeam: 'Kool Aid Jammers', score: "" },
-       { date: '04/30', time: '6:00 PM', homeTeam: 'Moons Goons', awayTeam: 'LBSU Rec', score: "" },
-       { date: '04/30', time: '6:00 PM', homeTeam: '60pointgame', awayTeam: 'Gold Hillz Ballers', score: "" },
-       { date: '04/30', time: '6:50 PM', homeTeam: 'Primeflight', awayTeam: 'Kool Aid Jammers', score: "" },
-       { date: '04/30', time: '6:50 PM', homeTeam: 'Shrimp Gang', awayTeam: 'True Grit', score: "" },
-       { date: '04/30', time: '7:40 PM', homeTeam: 'Shrimp Gang', awayTeam: 'Bad Boy Mafia', score: "" },
-       { date: '04/30', time: '7:40 PM', homeTeam: 'Shot Crew', awayTeam: 'Joakim Around', score: "" },
-       { date: '04/30', time: '8:30 PM', homeTeam: 'Volume 0', awayTeam: 'Mamba Mentality', score: "" },
-       { date: '05/07', time: '6:50 PM', homeTeam: 'LBSU Rec', awayTeam: '60pointgame', score: "" },
-       { date: '05/07', time: '6:50 PM', homeTeam: 'Bad Boy Mafia', awayTeam: 'Gold Hillz Ballers', score: "" },
-       { date: '05/07', time: '6:50 PM', homeTeam: 'Shot Crew', awayTeam: 'Primeflight', score: "" },
-       { date: '05/07', time: '7:40 PM', homeTeam: 'Kool Aid Jammers', awayTeam: 'Volume 0', score: "" },
-       { date: '05/07', time: '8:30 PM', homeTeam: 'Joakim Around', awayTeam: 'Shot Crew', score: "" },
-       { date: '05/07', time: '8:30 PM', homeTeam: 'True Grit', awayTeam: 'Moons Goons', score: "" },
-       { date: '05/07', time: '9:20 PM', homeTeam: 'Mamba Mentality', awayTeam: 'Shrimp Gang', score: "" },
-       { date: '05/21', time: '6:50 PM', homeTeam: 'True Grit', awayTeam: 'Primeflight', score: "" },
-       { date: '05/21', time: '6:50 PM', homeTeam: 'Kool Aid Jammers', awayTeam: 'Gold Hillz Ballers', score: "" },
-       { date: '05/21', time: '7:40 PM', homeTeam: 'LBSU Rec', awayTeam: 'Joakim Around', score: "" },
-       { date: '05/21', time: '8:50 PM', homeTeam: 'Volume 0', awayTeam: 'Shot Crew', score: "" },
-       { date: '05/21', time: '9:20 PM', homeTeam: 'Mamba Mentality', awayTeam: '60pointgame', score: "" },
-       { date: '05/21', time: '9:40 PM', homeTeam: 'Moons Goons', awayTeam: 'Shrimp Gang', score: "" },
-       { date: '05/21', time: '10:10 PM', homeTeam: 'Mamba Mentality', awayTeam: 'Bad Boy Mafia', score: "" },
-       { date: '06/04', time: '6:50 PM', homeTeam: 'Gold Hillz Ballers', awayTeam: 'Shrimp Gang', score: "" },
-       { date: '06/04', time: '6:50 PM', homeTeam: 'Mamba Mentality', awayTeam: 'Primeflight', score: "" },
-       { date: '06/04', time: '7:40 PM', homeTeam: 'Bad Boy Mafia', awayTeam: 'Volume 0', score: "" },
-       { date: '06/04', time: '7:40 PM', homeTeam: 'True Grit', awayTeam: '60pointgame', score: "" },
-       { date: '06/04', time: '7:40 PM', homeTeam: 'Moons Goons', awayTeam: 'Shot Crew', score: "" },
-       { date: '06/04', time: '8:30 PM', homeTeam: 'Kool Aid Jammers', awayTeam: 'Joakim Around', score: "" },
-       { date: '06/11', time: '6:50 PM', homeTeam: 'Primeflight', awayTeam: 'Moons Goons', score: "" },
-       { date: '06/11', time: '6:50 PM', homeTeam: '60pointgame', awayTeam: 'Shrimp Gang', score: "" },
-       { date: '06/11', time: '6:50 PM', homeTeam: 'Shot Crew', awayTeam: 'LBSU Rec', score: "" },
-       { date: '06/11', time: '7:40 PM', homeTeam: 'LBSU Rec', awayTeam: 'Kool Aid Jammers', score: "" },
-       { date: '06/11', time: '7:40 PM', homeTeam: 'True Grit', awayTeam: 'Bad Boy Mafia', score: "" },
-       { date: '06/11', time: '7:40 PM', homeTeam: 'Volume 0', awayTeam: 'Gold Hillz Ballers', score: "" },
-       { date: '06/11', time: '9:20 PM', homeTeam: 'Joakim Around', awayTeam: 'Mamba Mentality', score: "" },
-       { date: '06/18', time: '6:50 PM', homeTeam: 'Uncle Drews', awayTeam: 'Primeflight', score: "" },
-       { date: '06/18', time: '6:50 PM', homeTeam: 'Gold Hillz Ballers', awayTeam: 'Mamba Mentality', score: "" },
-       { date: '06/18', time: '6:50 PM', homeTeam: 'LBSU Rec', awayTeam: 'Volume 0', score: "" },
-       { date: '06/18', time: '7:40 PM', homeTeam: 'Joakim Around', awayTeam: '60pointgame', score: "" },
-       { date: '06/18', time: '7:40 PM', homeTeam: 'Bad Boy Mafia', awayTeam: 'Shot Crew', score: "" },
-       { date: '06/18', time: '8:30 PM', homeTeam: 'True Grit', awayTeam: 'Moons Goons', score: "" },
-       { date: '06/18', time: '8:30 PM', homeTeam: 'Shrimp Gang', awayTeam: 'Kool Aid Jammers', score: "" },
+       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#8 60pointgame', awayTeam: '#9 Bad Boy Mafia', score: "" },
+       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#5 Shot Crew', awayTeam: '#12 Primeflight', score: "" },
+       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#4 Kool Aid Jammers', awayTeam: '#13 Gold Hillz Ballers', score: "" },
+       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#6 LBSU Rec', awayTeam: '#11 Volume 0', score: "" },
+       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#7 Joakim Around', awayTeam: '#10 Moons Goons', score: "" },
+       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: '#3 Shrimp Gang', awayTeam: 'Winner of #6-#11', score: "" },
+       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #5-#12', awayTeam: 'Winner of #4-#13', score: "" },
+       { date: '07-09', time: '7:40 PM', courtNumber: "", homeTeam: '#2 True Grit', awayTeam: 'Winner of #7-#10', score: "" },
+       { date: '07-09', time: '7:40 PM', courtNumber: "", homeTeam: '#1 Mamba Mentality', awayTeam: 'Winner of #8-#9', score: "" },
+       { date: '07-09', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of G1', awayTeam: 'Winner of G3', score: "" },
+       { date: '07-09', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of G4', awayTeam: 'Winner of G2', score: "" },
+       { date: '07-16', time: '6:50 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+        
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
+    const locations = ref({
+      '06-25': 'Location 1',
+      '07-09': 'Location 2',
+      '07-16': 'Location 3',
+    });
 
     // Add a computed property to filter the games based on the search input
     const filteredGroupedGames = computed(() => {
@@ -124,26 +96,24 @@
       }
     });
 
-    const updateScore = (newScore) => {
-      set(scoreRef, newScore.value);
-    };
-
-    
-
-    onMounted(async () => {
-      // Check if the games have already been written to the database
-      const snapshot = await get(gamesRef);
-      if (snapshot.exists()) {
-      // The games have already been written, so we don't need to write them again
-        return;
-      }
-
-      // Write the games to the database
-      games.value.forEach((games) => {
-        const newGameRef = push(gamesRef);
-        set(newGameRef, games);
+  onMounted(async () => {
+    // Check if the games have already been written to the database
+    const snapshot = await get(gamesRef);
+    if (!snapshot.exists()) {
+      // The games have not been written yet, write them to the database
+      games.value.forEach((game) => {
+          const newGameRef = push(gamesRef);
+          set(newGameRef, game);
       });
-    });
+    }
+
+    // Check if the locations have already been written to the database
+    const snapshotLocations = await get(locationsRef);
+    if (!snapshotLocations.exists()) {
+      // The locations have not been written yet, write them to the database
+      set(locationsRef, locations.value);
+    }
+  });
 
     onMounted(() => {
       // Group games by date
@@ -159,42 +129,35 @@
         const data = snapshot.val();
         if (data) {
           const updatedGames = Object.values(data);
-        //Update the scores in the games array
-          updatedGames.forEach((game, index) => {
-            games.value[index].score = game.score;
-          });
+          updatedGames.forEach((updatedGame, index) => {
+          games.value[index].score = updatedGame.score;
+          games.value[index].time = updatedGame.time;
+          games.value[index].courtNumber = updatedGame.courtNumber;
+          games.value[index].homeTeam = updatedGame.homeTeam;
+          games.value[index].awayTeam = updatedGame.awayTeam;
+        });
         }
       });
-
-      onValue(scoreRef, (snapshot) => {
+      onValue(locationsRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          score.value = data;
+          locations.value = data;
         }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      watch(score, (newScore) => {
-        updateScore(newScore);
       });
     });
 
     return {
       searchDate,
       filteredGroupedGames,
-      score,
       games,
       groupedGames,
-      updateScore,
-      
+      locations, 
     };
   },
-  
-  };
+};
   
   </script>
-  
+
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   .container {
@@ -226,6 +189,12 @@
   }
 
   .date-title {
+    font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+  }
+
+  .location-title {
     font-size: 24px;
     color: #0d2d5a;
     margin-bottom: 15px;
@@ -290,9 +259,6 @@
     border-color: #0d2d5a;
   }
 
-  
-
-
   /* Responsive styles */
   @media (max-width: 767px) {
     .ChampWrapper {
@@ -306,6 +272,10 @@
 
     .date-title {
       font-size: 20px;
+    }
+
+    .location-title{
+      font-size: 20px; 
     }
 
     .table {

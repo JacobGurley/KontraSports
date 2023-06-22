@@ -7,17 +7,19 @@
         type="text"
         v-model="searchDate"
         class="search-input"
-        placeholder="Search by date (MM/DD)"
+        placeholder="Search by date (MM-DD)"
       />
       
     </div>
       <div class="ChampWrapper">
           <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
+              <h4 class="location-title">{{ locations[date] || 'No location provided' }}</h4>
       <table class="table">
           <thead>
               <tr>
                   <th class="centered">Time</th>
+                  <th class="centered">Court</th>
                   <th class="centered">Home Team</th>
                   <th class="centered">Away Team</th>
                   <th class="centered">Score</th>
@@ -27,6 +29,7 @@
               <tr v-for="(game, index) in games" :key="index">
                   
                   <td>{{ game.time }}</td>
+                  <td>{{ game.courtNumber }}</td>
                   <td>{{ game.homeTeam }}</td>
                   <td>{{ game.awayTeam }}</td>
                   <td>{{ game.score }}</td>
@@ -42,7 +45,7 @@
   
   <script scoped>
   import Nav from "./NavBar.vue";
-  import{ ref, onMounted, watch, computed } from 'vue';
+  import { ref, onMounted, computed } from 'vue';
   import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
   
   export default {
@@ -53,42 +56,24 @@
   setup() {
     const db = getDatabase();
     const gamesRef = dbRef(db, 'gamesSunA');
-    const scoreRef = dbRef(db, 'score');
-    
-
-    const score = ref('');
+    const locationsRef = dbRef(db, 'locationsSunA');
     const games = ref([
-       { date: '04/16', time: '7:30 PM', homeTeam: 'Practice Squad', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '04/16', time: '8:20 PM', homeTeam: 'OHB', awayTeam: 'FBG', score: "" },
-       { date: '04/16', time: '9:10 PM', homeTeam: 'FrontPage', awayTeam: 'Light em up', score: "" },
-       { date: '04/30', time: '6:50 PM', homeTeam: 'Strap City', awayTeam: 'FBG', score: "" },
-       { date: '04/30', time: '7:40 PM', homeTeam: 'Practice Squad', awayTeam: 'FrontPage', score: "" },
-       { date: '04/30', time: '8:30 PM', homeTeam: 'Tita Slayerz', awayTeam: 'OHB', score: "" },
-       { date: '05/07', time: '7:40 PM', homeTeam: 'Practice Squad', awayTeam: 'Strap City', score: "" },
-       { date: '05/07', time: '8:30 PM', homeTeam: 'OHB', awayTeam: 'Light em up', score: "" },
-       { date: '05/07', time: '8:30 PM', homeTeam: 'FBG', awayTeam: 'FrontPage', score: "" },
-       { date: '05/07', time: '9:20 PM', homeTeam: 'Tita Slayerz', awayTeam: '9-5erz', score: "" },
-       { date: '05/21', time: '8:50 PM', homeTeam: 'Light em up', awayTeam: 'Practice Squad', score: "" },
-       { date: '05/21', time: '9:40 PM', homeTeam: 'FrontPage', awayTeam: 'Strap City', score: "" },
-       { date: '05/21', time: '9:40 PM', homeTeam: 'FBG', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '06/04', time: '7:40 PM', homeTeam: 'Tita Slayerz', awayTeam: 'Strap City', score: "" },
-       { date: '06/04', time: '8:30 PM', homeTeam: 'FBG', awayTeam: 'Light em up', score: "" },
-       { date: '06/04', time: '8:30 PM', homeTeam: 'OHB', awayTeam: 'FrontPage', score: "" },
-       { date: '06/04', time: '9:20 PM', homeTeam: 'OHB', awayTeam: 'Practice Squad', score: "" },
-       { date: '06/11', time: '8:30 PM', homeTeam: 'Strap City', awayTeam: 'Light em up', score: "" },
-       { date: '06/11', time: '8:30 PM', homeTeam: 'Practice Squad', awayTeam: 'FBG', score: "" },
-       { date: '06/11', time: '9:20 PM', homeTeam: 'OHB', awayTeam: 'Strap City', score: "" },
-       { date: '06/11', time: '9:20 PM', homeTeam: 'FrontPage', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '06/18', time: '6:50 PM', homeTeam: 'Practice Squad', awayTeam: 'Light em up', score: "" },
-       { date: '06/18', time: '8:30 PM', homeTeam: 'Tita Slayerz', awayTeam: 'Light em up', score: "" },
-       { date: '06/18', time: '9:20 PM', homeTeam: 'Strap City', awayTeam: 'FrontPage', score: "" },
-       { date: '06/18', time: '9:20 PM', homeTeam: 'FBG', awayTeam: 'OHB', score: "" },
-       
-       
+       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#3 Practice Squad', awayTeam: '#6 FBG', score: "" },
+       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#2 Strap City', awayTeam: '#7 FrontPage', score: "" },
+       { date: '06-25', time: '9:20 PM', courtNumber: "", homeTeam: '#4 Tita Slayerz', awayTeam: '#5 OHB', score: "" },
+       { date: '07-09', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of #4-#5', awayTeam: '#1 Light em up', score: "" },
+       { date: '07-09', time: '9:20 PM', courtNumber: "", homeTeam: 'Winner of #3-#6', awayTeam: 'Winner of #2-7', score: "" },
+       { date: '07-16', time: '7:40 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+        
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
+    const locations = ref({
+      '06-25': 'Location 1',
+      '07-09': 'Location 2',
+      '07-16': 'Location 3',
+    });
 
     // Add a computed property to filter the games based on the search input
     const filteredGroupedGames = computed(() => {
@@ -105,26 +90,24 @@
       }
     });
 
-    const updateScore = (newScore) => {
-      set(scoreRef, newScore.value);
-    };
-
-    
-
-    onMounted(async () => {
-      // Check if the games have already been written to the database
-      const snapshot = await get(gamesRef);
-      if (snapshot.exists()) {
-      // The games have already been written, so we don't need to write them again
-        return;
-      }
-
-      // Write the games to the database
-      games.value.forEach((games) => {
-        const newGameRef = push(gamesRef);
-        set(newGameRef, games);
+  onMounted(async () => {
+    // Check if the games have already been written to the database
+    const snapshot = await get(gamesRef);
+    if (!snapshot.exists()) {
+      // The games have not been written yet, write them to the database
+      games.value.forEach((game) => {
+          const newGameRef = push(gamesRef);
+          set(newGameRef, game);
       });
-    });
+    }
+
+    // Check if the locations have already been written to the database
+    const snapshotLocations = await get(locationsRef);
+    if (!snapshotLocations.exists()) {
+      // The locations have not been written yet, write them to the database
+      set(locationsRef, locations.value);
+    }
+  });
 
     onMounted(() => {
       // Group games by date
@@ -140,42 +123,35 @@
         const data = snapshot.val();
         if (data) {
           const updatedGames = Object.values(data);
-        //Update the scores in the games array
-          updatedGames.forEach((game, index) => {
-            games.value[index].score = game.score;
-          });
+          updatedGames.forEach((updatedGame, index) => {
+          games.value[index].score = updatedGame.score;
+          games.value[index].time = updatedGame.time;
+          games.value[index].courtNumber = updatedGame.courtNumber;
+          games.value[index].homeTeam = updatedGame.homeTeam;
+          games.value[index].awayTeam = updatedGame.awayTeam;
+        });
         }
       });
-
-      onValue(scoreRef, (snapshot) => {
+      onValue(locationsRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          score.value = data;
+          locations.value = data;
         }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      watch(score, (newScore) => {
-        updateScore(newScore);
       });
     });
 
     return {
       searchDate,
       filteredGroupedGames,
-      score,
       games,
       groupedGames,
-      updateScore,
-      
+      locations, 
     };
   },
-  
-  };
+};
   
   </script>
-  
+
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   .container {
@@ -207,6 +183,12 @@
   }
 
   .date-title {
+    font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+  }
+
+  .location-title {
     font-size: 24px;
     color: #0d2d5a;
     margin-bottom: 15px;
@@ -271,9 +253,6 @@
     border-color: #0d2d5a;
   }
 
-  
-
-
   /* Responsive styles */
   @media (max-width: 767px) {
     .ChampWrapper {
@@ -287,6 +266,10 @@
 
     .date-title {
       font-size: 20px;
+    }
+
+    .location-title{
+      font-size: 20px; 
     }
 
     .table {

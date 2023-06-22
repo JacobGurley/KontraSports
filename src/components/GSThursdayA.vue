@@ -7,17 +7,19 @@
         type="text"
         v-model="searchDate"
         class="search-input"
-        placeholder="Search by date (MM/DD)"
+        placeholder="Search by date (MM-DD)"
       />
       
     </div>
       <div class="ChampWrapper">
           <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
+              <h4 class="location-title">{{ locations[date] || 'No location provided' }}</h4>
       <table class="table">
           <thead>
               <tr>
                   <th class="centered">Time</th>
+                  <th class="centered">Court</th>
                   <th class="centered">Home Team</th>
                   <th class="centered">Away Team</th>
                   <th class="centered">Score</th>
@@ -27,6 +29,7 @@
               <tr v-for="(game, index) in games" :key="index">
                   
                   <td>{{ game.time }}</td>
+                  <td>{{ game.courtNumber }}</td>
                   <td>{{ game.homeTeam }}</td>
                   <td>{{ game.awayTeam }}</td>
                   <td>{{ game.score }}</td>
@@ -42,7 +45,7 @@
   
   <script scoped>
   import Nav from "./NavBar.vue";
-  import{ ref, onMounted, watch, computed } from 'vue';
+  import { ref, onMounted, computed } from 'vue';
   import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
   
   export default {
@@ -52,27 +55,61 @@
   },
   setup() {
     const db = getDatabase();
-    const gamesRef = dbRef(db, 'gamesTh');
-    const scoreRef = dbRef(db, 'score');
-    
-
-    const score = ref('');
+    const gamesRef = dbRef(db, 'gamesThurA');
+    const locationsRef = dbRef(db, 'locationsThurA');
     const games = ref([
-       { date: '05/25', time: '8:10 PM', homeTeam: '#7 DragonBallerZ', awayTeam: '#10 Young Bucs', score: "" },
-       { date: '05/25', time: '8:20 PM', homeTeam: '#8 DEATH ROW', awayTeam: '#9 Elements', score: "" },
-       { date: '05/25', time: '8:20 PM', homeTeam: '#3 LFG', awayTeam: '#6 Uptempo', score: "" },
-       { date: '05/25', time: '8:50 PM', homeTeam: '#2 Beach', awayTeam: 'Winner of #7/#10', score: "" },
-       { date: '05/25', time: '9:10 PM', homeTeam: '#4 1UP', awayTeam: '#5 AIM', score: "" },
-       { date: '05/25', time: '9:10 PM', homeTeam: '#1 Dale Gas', awayTeam: 'Winner of #8/#9', score: "" },
-       { date: '06/01', time: '8:00 PM', homeTeam: 'Winner of Quarters G4', awayTeam: 'Winner of Quarters G3', score: "" },
-       { date: '06/01', time: '8:50 PM', homeTeam: 'Winners of Quarters G1', awayTeam: 'Winners of Quarters G2', score: "" },
-       { date: '06/08', time: '8:30 PM', homeTeam: 'CHAMPIONSHIP', awayTeam: 'CHAMPIONSHIP', score: "" },
-       
-       
+       { date: '06-22', time: '8:00 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'Hands Down Man Down', score: "" },
+       { date: '06-22', time: '8:50 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'LFG', score: "" },
+       { date: '06-22', time: '9:40 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'Beach', score: "" },
+       { date: '06-29', time: '7:50 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Strap City', score: "" },
+       { date: '06-29', time: '8:40 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: '1UP', score: "" },
+       { date: '06-29', time: '8:40 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'The Chicano Crew', score: "" },
+       { date: '06-29', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'Uptempo', score: "" },
+       { date: '07-13', time: '7:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Hands Down Man Down', score: "" },
+       { date: '07-13', time: '8:40 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'LFG', score: "" },
+       { date: '07-13', time: '9:30 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'Clippers', score: "" },
+       { date: '07-13', time: '9:30 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'The Chicano Crew', score: "" },
+       { date: '07-20', time: '7:50 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: '1UP', score: "" },
+       { date: '07-20', time: '8:40 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Uptempo', score: "" },
+       { date: '07-20', time: '9:30 PM', courtNumber: "", homeTeam: 'The Chicano Crew', awayTeam: 'Strap City', score: "" },
+       { date: '07-20', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'Beach', score: "" },
+       { date: '07-27', time: '8:00 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: '1UP', score: "" },
+       { date: '07-27', time: '8:00 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'The Chicano Crew', score: "" },
+       { date: '07-27', time: '8:40 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Clippers', score: "" },
+       { date: '07-27', time: '8:50 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'The Chicano Crew', score: "" },
+       { date: '07-27', time: '8:50 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'LFG', score: "" },
+       { date: '08-03', time: '7:50 PM', courtNumber: "", homeTeam: 'The Chicano Crew', awayTeam: 'Hands Down Man Down', score: "" },
+       { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'Clippers', score: "" },
+       { date: '08-03', time: '9:30 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'Strap City', score: "" },
+       { date: '08-03', time: '9:30 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Beach', score: "" },
+       { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Uptempo', score: "" },
+       { date: '08-10', time: '8:40 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: '1UP', score: "" },
+       { date: '08-10', time: '8:40 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'LFG', score: "" },
+       { date: '08-10', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'The Chicano Crew', score: "" },
+       { date: '08-17', time: '7:30 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
+       { date: '08-17', time: '8:20 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
+       { date: '08-17', time: '9:10 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#8', score: "" },
+       { date: '08-17', time: '9:10 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
+       { date: '08-24', time: '7:30 PM', courtNumber: "", homeTeam: 'Winner of #1-#8', awayTeam: 'Winner of #4-#5', score: "" },
+       { date: '08-24', time: '9:10 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
+       { date: '08-31', time: '8:30 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+        
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
+    const locations = ref({
+      '06-22': 'Location 1',
+      '06-29': 'Location 2',
+      '07-13': 'Location 3',
+      '07-20': 'Location 4',
+      '07-27': 'Location 5',
+      '08-03': 'Location 6',
+      '08-10': 'Location 7',
+      '08-17': 'Location 8',
+      '08-24': 'Location 9',
+      '08-31': 'Location 10'
+    });
 
     // Add a computed property to filter the games based on the search input
     const filteredGroupedGames = computed(() => {
@@ -89,26 +126,24 @@
       }
     });
 
-    const updateScore = (newScore) => {
-      set(scoreRef, newScore.value);
-    };
-
-    
-
-    onMounted(async () => {
-      // Check if the games have already been written to the database
-      const snapshot = await get(gamesRef);
-      if (snapshot.exists()) {
-      // The games have already been written, so we don't need to write them again
-        return;
-      }
-
-      // Write the games to the database
-      games.value.forEach((games) => {
-        const newGameRef = push(gamesRef);
-        set(newGameRef, games);
+  onMounted(async () => {
+    // Check if the games have already been written to the database
+    const snapshot = await get(gamesRef);
+    if (!snapshot.exists()) {
+      // The games have not been written yet, write them to the database
+      games.value.forEach((game) => {
+          const newGameRef = push(gamesRef);
+          set(newGameRef, game);
       });
-    });
+    }
+
+    // Check if the locations have already been written to the database
+    const snapshotLocations = await get(locationsRef);
+    if (!snapshotLocations.exists()) {
+      // The locations have not been written yet, write them to the database
+      set(locationsRef, locations.value);
+    }
+  });
 
     onMounted(() => {
       // Group games by date
@@ -124,42 +159,35 @@
         const data = snapshot.val();
         if (data) {
           const updatedGames = Object.values(data);
-        //Update the scores in the games array
-          updatedGames.forEach((game, index) => {
-            games.value[index].score = game.score;
-          });
+          updatedGames.forEach((updatedGame, index) => {
+          games.value[index].score = updatedGame.score;
+          games.value[index].time = updatedGame.time;
+          games.value[index].courtNumber = updatedGame.courtNumber;
+          games.value[index].homeTeam = updatedGame.homeTeam;
+          games.value[index].awayTeam = updatedGame.awayTeam;
+        });
         }
       });
-
-      onValue(scoreRef, (snapshot) => {
+      onValue(locationsRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          score.value = data;
+          locations.value = data;
         }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      watch(score, (newScore) => {
-        updateScore(newScore);
       });
     });
 
     return {
       searchDate,
       filteredGroupedGames,
-      score,
       games,
       groupedGames,
-      updateScore,
-      
+      locations, 
     };
   },
-  
-  };
+};
   
   </script>
-  
+
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   .container {
@@ -191,6 +219,12 @@
   }
 
   .date-title {
+    font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+  }
+
+  .location-title {
     font-size: 24px;
     color: #0d2d5a;
     margin-bottom: 15px;
@@ -255,9 +289,6 @@
     border-color: #0d2d5a;
   }
 
-  
-
-
   /* Responsive styles */
   @media (max-width: 767px) {
     .ChampWrapper {
@@ -271,6 +302,10 @@
 
     .date-title {
       font-size: 20px;
+    }
+
+    .location-title{
+      font-size: 20px; 
     }
 
     .table {

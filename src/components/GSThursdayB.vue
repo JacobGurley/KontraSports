@@ -55,51 +55,43 @@
     },
     setup() {
       const db = getDatabase();
-      const gamesRef = dbRef(db, 'gamesWed');
-      const locationsRef = dbRef(db, 'locationsWed');
+      const gamesRef = dbRef(db, 'gamesThurB');
+      const locationsRef = dbRef(db, 'locationsThurB');
       const games = ref([
-         { date: '06-21', time: '8:00 PM', courtNumber: "", homeTeam: 'BBQ Chicken', awayTeam: 'ALL PGs', score: "" },
-         { date: '06-21', time: '8:45 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'L.A Hoopers', score: "" },
-         { date: '06-21', time: '9:30 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'TUBT', score: "" },
-         { date: '06-28', time: '8:00 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'ALL PGs', score: "" },
-         { date: '06-28', time: '8:45 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '06-28', time: '9:30 PM', courtNumber: "", homeTeam: 'L.A Hoopers', awayTeam: 'TUBT', score: "" },
-         { date: '07-12', time: '8:00 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '07-12', time: '8:45 PM', courtNumber: "", homeTeam: 'ALL PGs', awayTeam: 'L.A Hoopers', score: "" },
-         { date: '07-12', time: '9:30 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'TUBT', score: "" },
-         { date: '07-19', time: '8:00 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'Practice Squad', score: "" },
-         { date: '07-19', time: '8:45 PM', courtNumber: "", homeTeam: 'L.A Hoopers', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '07-19', time: '9:30 PM', courtNumber: "", homeTeam: 'ALL PGs', awayTeam: 'TUBT', score: "" },
-         { date: '07-26', time: '8:00 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'ALL PGs', score: "" },
-         { date: '07-26', time: '8:45 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'L.A Hoopers', score: "" },
-         { date: '07-26', time: '9:30 PM', courtNumber: "", homeTeam: 'BBQ Chicken', awayTeam: 'TUBT', score: "" },
-         { date: '08-02', time: '8:00 PM', courtNumber: "", homeTeam: 'BBQ Chicken', awayTeam: 'ALL PGs', score: "" },
-         { date: '08-02', time: '8:45 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'L.A Hoopers', score: "" },
-         { date: '08-02', time: '9:30 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'TUBT', score: "" },
-         { date: '08-09', time: '8:00 PM', courtNumber: "", homeTeam: 'Practice Squad', awayTeam: 'ALL PGs', score: "" },
-         { date: '08-09', time: '8:45 PM', courtNumber: "", homeTeam: 'Quality Hoops', awayTeam: 'BBQ Chicken', score: "" },
-         { date: '08-09', time: '9:30 PM', courtNumber: "", homeTeam: 'L.A Hoopers', awayTeam: 'TUBT', score: "" },
-         { date: '08-16', time: '8:20 PM', courtNumber: "", homeTeam: '#3 Seed', awayTeam: '#6 Seed', score: "" },
-         { date: '08-16', time: '9:10 PM', courtNumber: "", homeTeam: '#4 Seed', awayTeam: '#5 Seed', score: "" },
-         { date: '08-23', time: '8:00 PM', courtNumber: "", homeTeam: '#1 Seed', awayTeam: 'Winner of #4-#5', score: "" },
-         { date: '08-23', time: '8:50 PM', courtNumber: "", homeTeam: '#2 Seed', awayTeam: 'Winner of #3-#6', score: "" },
-         { date: '08-30', time: '8:30 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+         { date: '06-22', time: '8:00 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Voltron', score: "" },
+         { date: '06-22', time: '8:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Yomato', score: "" },
+         { date: '06-29', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Young Bucs', score: "" },
+         { date: '06-29', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Yomato', score: "" },
+         { date: '07-13', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Yomato', score: "" },
+         { date: '07-13', time: '8:40 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Young Bucs', score: "" },
+         { date: '07-20', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'DEATH ROW', score: "" },
+         { date: '07-20', time: '8:40 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
+         { date: '07-27', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Young Bucs', score: "" },
+         { date: '07-27', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Yomato', score: "" },
+         { date: '08-03', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Yomato', score: "" },
+         { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Young Bucs', score: "" },
+         { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
+         { date: '08-10', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Voltron', score: "" },
+         { date: '08-17', time: '7:30 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#4', score: "" },
+         { date: '08-17', time: '8:20 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#3', score: "" },
+         { date: '08-24', time: '8:20 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+         
+         
           
   
       ]);
       const groupedGames = ref({});
       const searchDate = ref("");
       const locations = ref({
-        '06-21': 'Location 1',
-        '06-28': 'Location 2',
-        '07-12': 'Location 3',
-        '07-19': 'Location 4',
-        '07-26': 'Location 5',
-        '08-02': 'Location 6',
-        '08-09': 'Location 7',
-        '08-16': 'Location 8',
-        '08-23': 'Location 9',
-        '08-30': 'Location 10'
+        '06-22': 'Location 1',
+        '06-29': 'Location 2',
+        '07-13': 'Location 3',
+        '07-20': 'Location 4',
+        '07-27': 'Location 5',
+        '08-03': 'Location 6',
+        '08-10': 'Location 7',
+        '08-17': 'Location 8',
+        '08-24': 'Location 9',
       });
   
       // Add a computed property to filter the games based on the search input
@@ -127,7 +119,7 @@
             set(newGameRef, game);
         });
       }
-
+  
       // Check if the locations have already been written to the database
       const snapshotLocations = await get(locationsRef);
       if (!snapshotLocations.exists()) {
@@ -175,10 +167,10 @@
         locations, 
       };
     },
-};
+  };
     
     </script>
-
+  
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped>
     .container {
@@ -214,7 +206,7 @@
       color: #0d2d5a;
       margin-bottom: 15px;
     }
-
+  
     .location-title {
       font-size: 24px;
       color: #0d2d5a;
@@ -279,7 +271,7 @@
       box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
       border-color: #0d2d5a;
     }
-
+  
     /* Responsive styles */
     @media (max-width: 767px) {
       .ChampWrapper {
@@ -294,7 +286,7 @@
       .date-title {
         font-size: 20px;
       }
-
+  
       .location-title{
         font-size: 20px; 
       }

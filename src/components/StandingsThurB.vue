@@ -39,18 +39,17 @@
     },
     setup() {
       const db = getDatabase();
-      const standingsRef = dbRef(db, 'standingsWed');
+      const standingsRef = dbRef(db, 'standingsThurB');
       const winRef = dbRef(db, 'winsTh');
       const lossRef = dbRef(db, 'lossTh');
       const pdRef = dbRef(db, 'pdThur');
       
       const standings = ref([
-          {name: "L.A Hoopers", wins: 1, losses: 1, pointDiff: 1},
-          {name: "BBQ Chicken", wins: 1, losses: 1, pointDiff: 1},
-          {name: "All PGs", wins: 1, losses: 1, pointDiff: 1},
-          {name: "TUBT", wins: 1, losses: 1, pointDiff: 1},
-          {name: "Quality Hoops", wins: 1, losses: 1, pointDiff: 1},
-          {name: "Practice Squad", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Young Bucs", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Yomato", wins: 1, losses: 1, pointDiff: 1},
+          {name: "DEATH ROW", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Voltron", wins: 1, losses: 1, pointDiff: 1},
+          
       ]);
       const wins = ref(0);
       const losses = ref(0);

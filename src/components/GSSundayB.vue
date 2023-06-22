@@ -7,17 +7,19 @@
         type="text"
         v-model="searchDate"
         class="search-input"
-        placeholder="Search by date (MM/DD)"
+        placeholder="Search by date (MM-DD)"
       />
       
     </div>
       <div class="ChampWrapper">
           <div v-for="(games, date) in filteredGroupedGames" :key="date">
               <h2 class="date-title">{{ date }}</h2>
+              <h4 class="location-title">{{ locations[date] || 'No location provided' }}</h4>
       <table class="table">
           <thead>
               <tr>
                   <th class="centered">Time</th>
+                  <th class="centered">Court</th>
                   <th class="centered">Home Team</th>
                   <th class="centered">Away Team</th>
                   <th class="centered">Score</th>
@@ -27,6 +29,7 @@
               <tr v-for="(game, index) in games" :key="index">
                   
                   <td>{{ game.time }}</td>
+                  <td>{{ game.courtNumber }}</td>
                   <td>{{ game.homeTeam }}</td>
                   <td>{{ game.awayTeam }}</td>
                   <td>{{ game.score }}</td>
@@ -42,7 +45,7 @@
   
   <script scoped>
   import Nav from "./NavBar.vue";
-  import{ ref, onMounted, watch, computed } from 'vue';
+  import { ref, onMounted, computed } from 'vue';
   import { getDatabase, ref as dbRef, set, onValue, push, get } from 'firebase/database';
   
   export default {
@@ -53,48 +56,26 @@
   setup() {
     const db = getDatabase();
     const gamesRef = dbRef(db, 'gamesSunB');
-    const scoreRef = dbRef(db, 'score');
-    
-
-    const score = ref('');
+    const locationsRef = dbRef(db, 'locationsSunB');
     const games = ref([
-       { date: '04/16', time: '7:20 PM', homeTeam: 'Rudeboyz', awayTeam: 'Dawgs', score: "" },
-       { date: '04/16', time: '7:30 PM', homeTeam: 'Trailblazians', awayTeam: '9-5erz', score: "" },
-       { date: '04/16', time: '8:20 PM', homeTeam: 'Living Grace', awayTeam: 'Hooligans', score: "" },
-       { date: '04/16', time: '9:10 PM', homeTeam: 'Alcoholics', awayTeam: 'Uncle Drews', score: "" },
-       { date: '04/30', time: '6:00 PM', homeTeam: 'Hooligans', awayTeam: 'Dawgs', score: "" },
-       { date: '04/30', time: '6:50 PM', homeTeam: 'Trailblazians', awayTeam: 'Alcoholics', score: "" },
-       { date: '04/30', time: '7:40 PM', homeTeam: 'BBQ Chicken', awayTeam: 'Rudeboyz', score: "" },
-       { date: '04/30', time: '8:30 PM', homeTeam: 'Uncle Drews', awayTeam: 'Living Grace', score: "" },
-       { date: '04/30', time: '8:30 PM', homeTeam: '9-5erz', awayTeam: 'BBQ Chicken', score: "" },
-       { date: '05/07', time: '6:50 PM', homeTeam: 'Dawgs', awayTeam: 'Rudeboyz', score: "" },
-       { date: '05/07', time: '7:40 PM', homeTeam: 'Living Grace', awayTeam: 'Alcoholics', score: "" },
-       { date: '05/07', time: '7:40 PM', homeTeam: 'Uncle Drews', awayTeam: 'Trailblazians', score: "" },
-       { date: '05/07', time: '9:20 PM', homeTeam: 'Hooligans', awayTeam: 'BBQ Chicken', score: "" },
-       { date: '05/07', time: '9:20 PM', homeTeam: 'Tita Slayerz', awayTeam: '9-5erz', score: "" },
-       { date: '05/21', time: '7:40 PM', homeTeam: 'Trailblazians', awayTeam: 'Hooligans', score: "" },
-       { date: '05/21', time: '8:30 PM', homeTeam: 'Rudeboyz', awayTeam: '9-5erz', score: "" },
-       { date: '05/21', time: '8:30 PM', homeTeam: 'Living Grace', awayTeam: 'Trailblazians', score: "" },
-       { date: '05/21', time: '8:50 PM', homeTeam: 'Alcoholics', awayTeam: 'Dawgs', score: "" },
-       { date: '05/21', time: '9:20 PM', homeTeam: 'BBQ Chicken', awayTeam: 'Uncle Drews', score: "" },
-       { date: '06/04', time: '6:50 PM', homeTeam: 'Uncle Drews', awayTeam: 'Rudeboyz', score: "" },
-       { date: '06/04', time: '6:50 PM', homeTeam: 'Living Grace', awayTeam: 'Hooligans', score: "" },
-       { date: '06/04', time: '8:30 PM', homeTeam: 'BBQ Chicken', awayTeam: 'Dawgs', score: "" },
-       { date: '06/04', time: '9:20 PM', homeTeam: 'Alcoholics', awayTeam: '9-5erz', score: "" },
-       { date: '06/11', time: '6:50 PM', homeTeam: 'Hooligans', awayTeam: '9-5erz', score: "" },
-       { date: '06/11', time: '7:40 PM', homeTeam: 'TBD', awayTeam: 'Living Grace', score: "" },
-       { date: '06/11', time: '8:30 PM', homeTeam: 'BBQ Chicken', awayTeam: 'Trailblazians', score: "" },
-       { date: '06/11', time: '8:30 PM', homeTeam: 'Rudeboyz', awayTeam: 'Alcoholics', score: "" },
-       { date: '06/11', time: '9:20 PM', homeTeam: 'Dawgs', awayTeam: 'Uncle Drews', score: "" },
-       { date: '06/18', time: '6:50 PM', homeTeam: 'Uncle Drews', awayTeam: 'Primeflight', score: "" },
-       { date: '06/18', time: '7:40 PM', homeTeam: 'Hooligans', awayTeam: 'Alcoholics', score: "" },
-       { date: '06/18', time: '7:40 PM', homeTeam: 'Rudeboyz', awayTeam: 'Trailblazians', score: "" },
-       { date: '06/18', time: '8:30 PM', homeTeam: 'Dawgs', awayTeam: '9-5erz', score: "" },
-       { date: '06/18', time: '9:20 PM', homeTeam: 'Living Grace', awayTeam: 'BBQ Chicken', score: "" },
+       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#3 Uncle Drews', awayTeam: '#6 Alcoholics', score: "" },
+       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#8 Living Grace', awayTeam: '#9 Dawgs', score: "" },
+       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#4 Hooligans', awayTeam: '#5 9-5erz', score: "" },
+       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#1 Trailblazians', awayTeam: 'Winner of #8-#9', score: "" },
+       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#2 Rudeboyz', awayTeam: '#7 BBQ Chicken', score: "" },
+       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
+       { date: '07-09', time: '9:20 PM', courtNumber: "", homeTeam: 'Winer of #1 vs #8-#9', awayTeam: 'Winner of #4-#5', score: "" },
+       { date: '07-16', time: '8:30 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+        
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
+    const locations = ref({
+      '06-25': 'Location 1',
+      '07-09': 'Location 2',
+      '07-16': 'Location 3',
+    });
 
     // Add a computed property to filter the games based on the search input
     const filteredGroupedGames = computed(() => {
@@ -111,26 +92,24 @@
       }
     });
 
-    const updateScore = (newScore) => {
-      set(scoreRef, newScore.value);
-    };
-
-    
-
-    onMounted(async () => {
-      // Check if the games have already been written to the database
-      const snapshot = await get(gamesRef);
-      if (snapshot.exists()) {
-      // The games have already been written, so we don't need to write them again
-        return;
-      }
-
-      // Write the games to the database
-      games.value.forEach((games) => {
-        const newGameRef = push(gamesRef);
-        set(newGameRef, games);
+  onMounted(async () => {
+    // Check if the games have already been written to the database
+    const snapshot = await get(gamesRef);
+    if (!snapshot.exists()) {
+      // The games have not been written yet, write them to the database
+      games.value.forEach((game) => {
+          const newGameRef = push(gamesRef);
+          set(newGameRef, game);
       });
-    });
+    }
+
+    // Check if the locations have already been written to the database
+    const snapshotLocations = await get(locationsRef);
+    if (!snapshotLocations.exists()) {
+      // The locations have not been written yet, write them to the database
+      set(locationsRef, locations.value);
+    }
+  });
 
     onMounted(() => {
       // Group games by date
@@ -146,42 +125,35 @@
         const data = snapshot.val();
         if (data) {
           const updatedGames = Object.values(data);
-        //Update the scores in the games array
-          updatedGames.forEach((game, index) => {
-            games.value[index].score = game.score;
-          });
+          updatedGames.forEach((updatedGame, index) => {
+          games.value[index].score = updatedGame.score;
+          games.value[index].time = updatedGame.time;
+          games.value[index].courtNumber = updatedGame.courtNumber;
+          games.value[index].homeTeam = updatedGame.homeTeam;
+          games.value[index].awayTeam = updatedGame.awayTeam;
+        });
         }
       });
-
-      onValue(scoreRef, (snapshot) => {
+      onValue(locationsRef, (snapshot) => {
         const data = snapshot.val();
         if (data) {
-          score.value = data;
+          locations.value = data;
         }
-      }, {
-        onlyOnce: false //This option ensures that the callback is called everytime the data changes
-      });
-
-      watch(score, (newScore) => {
-        updateScore(newScore);
       });
     });
 
     return {
       searchDate,
       filteredGroupedGames,
-      score,
       games,
       groupedGames,
-      updateScore,
-      
+      locations, 
     };
   },
-  
-  };
+};
   
   </script>
-  
+
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
   .container {
@@ -213,6 +185,12 @@
   }
 
   .date-title {
+    font-size: 24px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+  }
+
+  .location-title {
     font-size: 24px;
     color: #0d2d5a;
     margin-bottom: 15px;
@@ -277,9 +255,6 @@
     border-color: #0d2d5a;
   }
 
-  
-
-
   /* Responsive styles */
   @media (max-width: 767px) {
     .ChampWrapper {
@@ -293,6 +268,10 @@
 
     .date-title {
       font-size: 20px;
+    }
+
+    .location-title{
+      font-size: 20px; 
     }
 
     .table {
