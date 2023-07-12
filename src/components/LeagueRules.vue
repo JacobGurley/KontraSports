@@ -10,6 +10,7 @@
     <li>5) For every minute a team is late, 1 point will be added for the other team.</li>
     <li>6) Once a game ends, there will be 2 minutes put on the clock before the next game starts.</li>
     <li>7) Jersey Rule: By the third week of the season every player needs to have a jersey with a number on it.</li>
+    <li>8) All Championship Winners must move up to the next Division for the upcoming season (if applicable)</li>
     </ul>
     <p class="additional-notes">Additional Notes:</p>
     <ol>

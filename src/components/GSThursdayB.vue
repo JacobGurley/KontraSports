@@ -58,23 +58,32 @@
       const gamesRef = dbRef(db, 'gamesThurB');
       const locationsRef = dbRef(db, 'locationsThurB');
       const games = ref([
-         { date: '06-22', time: '8:00 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Voltron', score: "" },
+         { date: '06-22', time: '8:00 PM', courtNumber: "", homeTeam: 'Alcoholics', awayTeam: 'Voltron', score: "" },
          { date: '06-22', time: '8:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Yomato', score: "" },
-         { date: '06-29', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Young Bucs', score: "" },
-         { date: '06-29', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Yomato', score: "" },
-         { date: '07-13', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Yomato', score: "" },
-         { date: '07-13', time: '8:40 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Young Bucs', score: "" },
-         { date: '07-20', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'DEATH ROW', score: "" },
-         { date: '07-20', time: '8:40 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
-         { date: '07-27', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Young Bucs', score: "" },
-         { date: '07-27', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Yomato', score: "" },
-         { date: '08-03', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Yomato', score: "" },
-         { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Young Bucs', score: "" },
-         { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
-         { date: '08-10', time: '9:30 PM', courtNumber: "", homeTeam: 'DEATH ROW', awayTeam: 'Voltron', score: "" },
-         { date: '08-17', time: '7:30 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#4', score: "" },
-         { date: '08-17', time: '8:20 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#3', score: "" },
-         { date: '08-24', time: '8:20 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+         { date: '06-29', time: '8:00 PM', courtNumber: "", homeTeam: 'Alcoholics', awayTeam: 'Yomato', score: "" },
+         { date: '06-29', time: '8:00 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Voltron', score: "" },
+         { date: '06-29', time: '8:50 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Young Bucs', score: "" },
+         { date: '07-13', time: '8:00 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Yomato', score: "" },
+         { date: '07-13', time: '8:00 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Day Ones', score: "" },
+         { date: '07-13', time: '8:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Alcoholics', score: "" },
+         { date: '07-20', time: '8:00 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Young Bucs', score: "" },
+         { date: '07-20', time: '8:50 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Day Ones', score: "" },
+         { date: '07-20', time: '8:50 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Alcoholics', score: "" },
+         { date: '07-27', time: '7:30 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Kaizen', score: "" },
+         { date: '07-27', time: '8:20 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Alcoholics', score: "" },
+         { date: '07-27', time: '9:10 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Yomato', score: "" },
+         { date: '07-27', time: '9:10 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Day Ones', score: "" },
+         { date: '08-03', time: '7:50 PM', courtNumber: "", homeTeam: 'Voltron', awayTeam: 'Alcoholics', score: "" },
+         { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
+         { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Day Ones', score: "" },
+         { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Young Bucs', score: "" },
+         { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Kaizen', awayTeam: 'Voltron', score: "" },
+         { date: '08-10', time: '8:40 PM', courtNumber: "", homeTeam: 'Alcoholics', awayTeam: 'Day Ones', score: "" },
+         { date: '08-17', time: '7:30 PM', courtNumber: "", homeTeam: '#5', awayTeam: '#4', score: "" },
+         { date: '08-17', time: '8:20 PM', courtNumber: "", homeTeam: '#6', awayTeam: '#3', score: "" },
+         { date: '08-24', time: '8:00 PM', courtNumber: "", homeTeam: '#1', awayTeam: 'Winner of #4-#5', score: "" },
+         { date: '08-24', time: '8:00 PM', courtNumber: "", homeTeam: '#2', awayTeam: 'Winner of #3-#6', score: "" },
+         { date: '08-31', time: '8:00 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
          
          
           
@@ -92,6 +101,7 @@
         '08-10': 'Location 7',
         '08-17': 'Location 8',
         '08-24': 'Location 9',
+        '08-31': 'Location 10',
       });
   
       // Add a computed property to filter the games based on the search input

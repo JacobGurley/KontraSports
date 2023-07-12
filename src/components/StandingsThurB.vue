@@ -47,8 +47,10 @@
       const standings = ref([
           {name: "Young Bucs", wins: 1, losses: 1, pointDiff: 1},
           {name: "Yomato", wins: 1, losses: 1, pointDiff: 1},
-          {name: "DEATH ROW", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Alcoholics", wins: 1, losses: 1, pointDiff: 1},
           {name: "Voltron", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Day Ones", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Kaizen", wins: 1, losses: 1, pointDiff: 1},
           
       ]);
       const wins = ref(0);
