@@ -58,23 +58,17 @@
     const gamesRef = dbRef(db, 'gamesSunB');
     const locationsRef = dbRef(db, 'locationsSunB');
     const games = ref([
-       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#3 Uncle Drews', awayTeam: '#6 Alcoholics', score: "" },
-       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#8 Living Grace', awayTeam: '#9 Dawgs', score: "" },
-       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#4 Hooligans', awayTeam: '#5 9-5erz', score: "" },
-       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#1 Trailblazians', awayTeam: 'Winner of #8-#9', score: "" },
-       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#2 Rudeboyz', awayTeam: '#7 BBQ Chicken', score: "" },
-       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
-       { date: '07-09', time: '9:20 PM', courtNumber: "", homeTeam: 'Winer of #1 vs #8-#9', awayTeam: 'Winner of #4-#5', score: "" },
-       { date: '07-16', time: '8:30 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+       { date: '07-16', time: '7:20 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Peters Team', score: "" },
+       { date: '07-16', time: '8:10 PM', courtNumber: "", homeTeam: '#1 Trailblazians', awayTeam: '#2 RudeBoyz', score: "" },
+       { date: '07-16', time: '9:00 PM', courtNumber: "", homeTeam: 'Mukboys', awayTeam: 'Troy Warriors', score: "" },
+       
         
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '06-25': 'Location 1',
-      '07-09': 'Location 2',
-      '07-16': 'Location 3',
+      '07-16': 'Location 1',
     });
 
     // Add a computed property to filter the games based on the search input

@@ -58,27 +58,20 @@
     const gamesRef = dbRef(db, 'gamesSunC');
     const locationsRef = dbRef(db, 'locationsSunC');
     const games = ref([
-       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#8 60pointgame', awayTeam: '#9 Bad Boy Mafia', score: "" },
-       { date: '06-25', time: '6:50 PM', courtNumber: "", homeTeam: '#5 Shot Crew', awayTeam: '#12 Primeflight', score: "" },
-       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#4 Kool Aid Jammers', awayTeam: '#13 Gold Hillz Ballers', score: "" },
-       { date: '06-25', time: '7:40 PM', courtNumber: "", homeTeam: '#6 LBSU Rec', awayTeam: '#11 Volume 0', score: "" },
-       { date: '06-25', time: '8:30 PM', courtNumber: "", homeTeam: '#7 Joakim Around', awayTeam: '#10 Moons Goons', score: "" },
-       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: '#3 Shrimp Gang', awayTeam: 'Winner of #6-#11', score: "" },
-       { date: '07-09', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #5-#12', awayTeam: 'Winner of #4-#13', score: "" },
-       { date: '07-09', time: '7:40 PM', courtNumber: "", homeTeam: '#2 True Grit', awayTeam: 'Winner of #7-#10', score: "" },
-       { date: '07-09', time: '7:40 PM', courtNumber: "", homeTeam: '#1 Mamba Mentality', awayTeam: 'Winner of #8-#9', score: "" },
-       { date: '07-09', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of G1', awayTeam: 'Winner of G3', score: "" },
-       { date: '07-09', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of G4', awayTeam: 'Winner of G2', score: "" },
-       { date: '07-16', time: '6:50 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+       { date: '07-16', time: '6:30 PM', courtNumber: "", homeTeam: 'Juss Hoop', awayTeam: 'Living Grace', score: "" },
+       { date: '07-16', time: '6:30 PM', courtNumber: "", homeTeam: 'True Grit', awayTeam: 'Adobros', score: "" },
+       { date: '07-16', time: '6:30 PM', courtNumber: "", homeTeam: 'Shoot em up!', awayTeam: 'Shot Crew', score: "" },
+       { date: '07-16', time: '7:20 PM', courtNumber: "", homeTeam: '#1 Mamba Mentality', awayTeam: '#3 Shrimp Gang', score: "" },
+       { date: '07-16', time: '7:20 PM', courtNumber: "", homeTeam: 'Rattatas', awayTeam: 'LBSU Rec', score: "" },
+       { date: '07-16', time: '8:10 PM', courtNumber: "", homeTeam: 'BBQ Chicken', awayTeam: 'Bad Boy Mafia', score: "" },
+       { date: '07-16', time: '8:10 PM', courtNumber: "", homeTeam: 'Deafies', awayTeam: 'BJB', score: "" },
         
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '06-25': 'Location 1',
-      '07-09': 'Location 2',
-      '07-16': 'Location 3',
+      '07-16': 'Location 1',
     });
 
     // Add a computed property to filter the games based on the search input

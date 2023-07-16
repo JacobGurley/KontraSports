@@ -45,19 +45,21 @@
     const pdRef = dbRef(db, 'pdThur');
     
     const standings = ref([
-        {name: "Joakim Around", wins: 1, losses: 1, pointDiff: 1},
         {name: "Shrimp Gang", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Kool Aid Jammers", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Volume 0", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Mamba Mentality", wins: 1, losses: 1, pointDiff: 1},
-        {name: "60pointgame", wins: 1, losses: 1, pointDiff: 1},
+        {name: "BJB", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Deafies", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Adobros", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Volume Up", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Juss Hoop", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Rattatas", wins: 1, losses: 1, pointDiff: 1},
         {name: "Bad Boy Mafia", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Shot Crew", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Gold Hillz Ballers", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Shoot em up!", wins: 1, losses: 1, pointDiff: 1},
+        {name: "BBQ Chicken", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Living Grace", wins: 1, losses: 1, pointDiff: 1},
         {name: "True Grit", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Moons Goons", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Primeflight", wins: 1, losses: 1, pointDiff: 1},
         {name: "LBSU Rec", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Shot Crew", wins: 1, losses: 1, pointDiff: 1},
+        
     ]);
     const wins = ref(0);
     const losses = ref(0);
