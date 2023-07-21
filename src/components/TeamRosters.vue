@@ -9,6 +9,7 @@
       <router-link class="schedule-link sunA" to="/teamRosterSunA">Sunday Division A Rosters</router-link>
       <router-link class="schedule-link sunB" to="/teamRosterSunB">Sunday Division B Rosters</router-link>
       <router-link class="schedule-link sunC" to="/teamRosterSunC">Sunday Division C Rosters</router-link>
+      <router-link class="schedule-link sunD" to="/teamRosterSunD">Sunday Division D Rosters</router-link>
     </div>
   </div>
 </template>

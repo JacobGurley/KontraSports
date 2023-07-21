@@ -49,8 +49,12 @@
         {name: "The Redeem Team", wins: 1, losses: 1, pointDiff: 1},
         {name: "Uncle Drews", wins: 1, losses: 1, pointDiff: 1},
         {name: "Troy Warriors", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Mukboys", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Mamba Mentality", wins: 1, losses: 1, pointDiff: 1},
         {name: "Los Veteranos", wins: 1, losses: 1, pointDiff: 1},
+        {name: "RudeBoyz", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Trailblazians", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Shotz Fired", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Good Luck", wins: 1, losses: 1, pointDiff: 1},
     ]);
     const wins = ref(0);
     const losses = ref(0);

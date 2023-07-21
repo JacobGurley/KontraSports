@@ -9,6 +9,13 @@
         <li>Sunday Night Div A Champs: Practice Squad</li>
         <li>Sunday Night Div B Champs: 9-5ers</li>
       </ul>
+      <h2>Winter 2023 Champions</h2>
+      <ul>
+        <li>Thursday Div A Champs: Beach</li>
+        <li>Sunday Div A Champs: Strap City</li>
+        <li>Sunday Div B Champs: Trailblazians</li>
+        <li>Sunday Div C Champs: Mamba Mentality</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <carousel :slides="slides" :interval="3000" controls indicators></carousel>
@@ -29,6 +36,10 @@ export default{
       require("../assets/thursday.jpg"),
       require("../assets/sundaydivA.jpg"),
       require("../assets/sundaydivB.jpg"),
+      require("../assets/ThurWinterChamps.jpg"),
+      require("../assets/SunAWinterChamps.jpg"),
+      require("../assets/SunBWinterChamps.jpg"),
+      require("../assets/SunCWinterChamps.jpg"),
     ],
   }),
 };
@@ -65,6 +76,7 @@ h2 {
 ul {
   list-style: none;
   padding: 0;
+  margin-bottom: 15px;
 }
 
 li {

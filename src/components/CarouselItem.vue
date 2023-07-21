@@ -34,7 +34,7 @@
   .carousel-image{
     width:100%;
     height:100%;
-    object-fit: cover;
+    object-fit: contain;
   }
   .slide-in-enter-active,
   .slide-in-leave-active,

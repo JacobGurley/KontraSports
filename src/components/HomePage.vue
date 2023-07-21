@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="container">
-    <h1>Welcome to the Spring 2023 Season!</h1>
+    <h1>Welcome to the Summer 2023 Season!</h1>
     <p class="reg">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFf5LLBdEczbvR1P7r2PWZduvRzwC_UxZwDzxe2AGMk0fhYA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2023 Summer Registration </a>
     </p>
@@ -12,11 +12,12 @@
       <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
     </p>
     <section class="champions-section">
-      <h2>Congratulations to the Winter 2023 Champions!</h2>
+      <h2>Congratulations to the Spring 2023 Champions!</h2>
       <ul>
+        <li>Wednesday Div A Champs: Practice Squad</li>
         <li>Thursday Div A Champs: Beach</li>
         <li>Sunday Div A Champs: Strap City</li>
-        <li>Sunday Div B Champs: Trailblazians</li>
+        <li>Sunday Div B Champs: Rudeboyz</li>
         <li>Sunday Div C Champs: Mamba Mentality</li>
       </ul>
     </section>
@@ -40,10 +41,11 @@ export default {
 
   data: () => ({
     slides: [
-      require("../assets/ThurWinterChamps.jpg"),
-      require("../assets/SunAWinterChamps.jpg"),
-      require("../assets/SunBWinterChamps.jpg"),
-      require("../assets/SunCWinterChamps.jpg"),
+      require("../assets/WedSpringChamps.jpg"),
+      require("../assets/ThursdayASpringChamps.jpg"),
+      require("../assets/SunASpringChamps.jpg"),
+      require("../assets/SunBSpringChamps.jpg"),
+      require("../assets/SunCSpringChamps.jpg"),
     ],
   }),
 };

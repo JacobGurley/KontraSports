@@ -9,6 +9,7 @@
       <router-link class="schedule-link sunA" to="/standingsSunA">Sunday Division A Standings</router-link>
       <router-link class="schedule-link sunB" to="/standingsSunB">Sunday Division B Standings</router-link>
       <router-link class="schedule-link sunC" to="/standingsSunC">Sunday Division C Standings</router-link>
+      <router-link class="schedule-link sunD" to="/standingsSunD">Sunday Division D Standings</router-link>
     </div>
 </div>
 </template>

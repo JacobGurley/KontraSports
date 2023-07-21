@@ -58,10 +58,51 @@
     const gamesRef = dbRef(db, 'gamesSunB');
     const locationsRef = dbRef(db, 'locationsSunB');
     const games = ref([
-       { date: '07-16', time: '7:20 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Peters Team', score: "" },
-       { date: '07-16', time: '8:10 PM', courtNumber: "", homeTeam: '#1 Trailblazians', awayTeam: '#2 RudeBoyz', score: "" },
+       { date: '07-16', time: '7:20 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'The Redeem Team', score: "" },
        { date: '07-16', time: '9:00 PM', courtNumber: "", homeTeam: 'Mukboys', awayTeam: 'Troy Warriors', score: "" },
-       
+       { date: '07-23', time: '6:00 PM', courtNumber: "", homeTeam: 'RudeBoyz', awayTeam: 'Mamba Mentality', score: "" },
+       { date: '07-23', time: '6:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Troy Warriors', score: "" },
+       { date: '07-23', time: '6:50 PM', courtNumber: "", homeTeam: 'Shotz Fired', awayTeam: 'Good Luck', score: "" },
+       { date: '07-23', time: '7:50 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Trailblazians', score: "" },
+       { date: '07-23', time: '8:40 PM', courtNumber: "", homeTeam: 'The Redeem Team', awayTeam: 'Los Veteranos', score: "" },
+       { date: '07-30', time: '6:50 PM', courtNumber: "", homeTeam: 'Troy Warriors', awayTeam: 'Good Luck', score: "" },
+       { date: '07-30', time: '6:50 PM', courtNumber: "", homeTeam: 'Los Veteranos', awayTeam: 'Trailblazians', score: "" },
+       { date: '07-30', time: '7:40 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Mamba Mentality', score: "" },
+       { date: '07-30', time: '7:40 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'The Redeem Team', score: "" },
+       { date: '07-30', time: '8:30 PM', courtNumber: "", homeTeam: 'RudeBoyz', awayTeam: 'Shotz Fired', score: "" },
+       { date: '08-06', time: '6:00 PM', courtNumber: "", homeTeam: 'Troy Warriors', awayTeam: 'Shotz Fired', score: "" },
+       { date: '08-06', time: '6:50 PM', courtNumber: "", homeTeam: 'Mamba Mentality', awayTeam: 'The Redeem Team', score: "" },
+       { date: '08-06', time: '6:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Los Veteranos', score: "" },
+       { date: '08-06', time: '8:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'RudeBoyz', score: "" },
+       { date: '08-06', time: '9:20 PM', courtNumber: "", homeTeam: 'Trailblazians', awayTeam: 'Good Luck', score: "" },
+       { date: '08-13', time: '6:00 PM', courtNumber: "", homeTeam: 'Mamba Mentality', awayTeam: 'Shotz Fired', score: "" },
+       { date: '08-13', time: '6:00 PM', courtNumber: "", homeTeam: 'Los Veteranos', awayTeam: 'Good Luck', score: "" },
+       { date: '08-13', time: '6:50 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Los Veteranos', score: "" },
+       { date: '08-13', time: '6:50 PM', courtNumber: "", homeTeam: 'Shotz Fired', awayTeam: 'Trailblazians', score: "" },
+       { date: '08-13', time: '7:40 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Good Luck', score: "" },
+       { date: '08-13', time: '7:40 PM', courtNumber: "", homeTeam: 'Trailblazians', awayTeam: 'RudeBoyz', score: "" },
+       { date: '08-13', time: '8:30 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'RudeBoyz', score: "" },
+       { date: '08-13', time: '9:20 PM', courtNumber: "", homeTeam: 'Troy Warriors', awayTeam: 'The Redeem Team', score: "" },
+       { date: '08-20', time: '6:00 PM', courtNumber: "", homeTeam: 'Good Luck', awayTeam: 'RudeBoyz', score: "" },
+       { date: '08-20', time: '6:50 PM', courtNumber: "", homeTeam: 'Shotz Fired', awayTeam: 'Young Bucs', score: "" },
+       { date: '08-20', time: '6:50 PM', courtNumber: "", homeTeam: 'The Redeem Team', awayTeam: 'Trailblazians', score: "" },
+       { date: '08-20', time: '7:40 PM', courtNumber: "", homeTeam: 'True Grit', awayTeam: 'Mamba Mentality', score: "" },
+       { date: '08-20', time: '8:30 PM', courtNumber: "", homeTeam: 'Mamba Mentality', awayTeam: 'Los Veteranos', score: "" },
+       { date: '08-20', time: '9:20 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Troy Warriors', score: "" },
+       { date: '08-27', time: '6:30 PM', courtNumber: "", homeTeam: 'Good Luck', awayTeam: 'Mamba Mentality', score: "" },
+       { date: '08-27', time: '6:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Young Bucs', score: "" },
+       { date: '08-27', time: '6:50 PM', courtNumber: "", homeTeam: 'Troy Warriors', awayTeam: 'Trailblazians', score: "" },
+       { date: '08-27', time: '7:20 PM', courtNumber: "", homeTeam: 'Shotz Fired', awayTeam: 'Los Veteranos', score: "" },
+       { date: '08-27', time: '7:40 PM', courtNumber: "", homeTeam: 'RudeBoyz', awayTeam: 'The Redeem Team', score: "" },
+       { date: '09-10', time: '6:00 PM', courtNumber: "", homeTeam: '#7', awayTeam: '#10', score: "" },
+       { date: '09-10', time: '6:00 PM', courtNumber: "", homeTeam: '#8', awayTeam: '#9', score: "" },
+       { date: '09-10', time: '7:40 PM', courtNumber: "", homeTeam: '#1', awayTeam: 'Winner of #8-#9', score: "" },
+       { date: '09-10', time: '7:40 PM', courtNumber: "", homeTeam: '#2', awayTeam: 'Winner of #7-#10', score: "" },
+       { date: '09-10', time: '8:30 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
+       { date: '09-10', time: '8:30 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
+       { date: '09-17', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #2-#7 v #10', awayTeam: 'Winner of #3-6', score: "" },
+       { date: '09-17', time: '7:40 PM', courtNumber: "", homeTeam: 'Winner of #1-#8 v #9', awayTeam: 'Winner of #4-#5', score: "" },
+       { date: '09-24', time: '7:00 PM', courtNumber: "", homeTeam: 'Finals', awayTeam: 'Finals', score: "" },
         
 
     ]);
@@ -69,6 +110,15 @@
     const searchDate = ref("");
     const locations = ref({
       '07-16': 'Location 1',
+      '07-23': 'Location 2',
+      '07-30': 'Location 3',
+      '08-06': 'Location 4',
+      '08-13': 'Location 5',
+      '08-20': 'Location 6',
+      '08-27': 'Location 7',
+      '09-10': 'Location 8',
+      '09-17': 'Location 9',
+      '09-24': 'Location 10',
     });
 
     // Add a computed property to filter the games based on the search input
