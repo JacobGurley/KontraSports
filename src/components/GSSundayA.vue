@@ -58,32 +58,10 @@
     const gamesRef = dbRef(db, 'gamesSunA');
     const locationsRef = dbRef(db, 'locationsSunA');
     const games = ref([
-       { date: '07-16', time: '9:00 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'FBG', score: "" },
-       { date: '07-23', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Strap City', score: "" },
-       { date: '07-23', time: '7:50 PM', courtNumber: "", homeTeam: 'Tita Slayerz', awayTeam: 'Too Good to Be Jrue', score: "" },
-       { date: '07-23', time: '9:30 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'TUBT', score: "" },
-       { date: '07-30', time: '6:00 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'TBD', score: "" },
-       { date: '07-30', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '07-30', time: '8:30 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'FBG', score: "" },
-       { date: '08-06', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Strap City', score: "" },
-       { date: '08-06', time: '7:40 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '08-06', time: '8:30 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'TBD', score: "" },
-       { date: '08-13', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'TBD', score: "" },
-       { date: '08-13', time: '8:30 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'Strap City', score: "" },
-       { date: '08-13', time: '9:20 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '08-20', time: '6:50 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'TUBT', score: "" },
-       { date: '08-20', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '08-20', time: '7:40 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'FBG', score: "" },
-       { date: '08-20', time: '8:30 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'TBD', score: "" },
-       { date: '08-27', time: '7:20 PM', courtNumber: "", homeTeam: 'Too Good to Be Jrue', awayTeam: 'TBD', score: "" },
-       { date: '08-27', time: '8:10 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'FBG', score: "" },
-       { date: '08-27', time: '8:10 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'Tita Slayerz', score: "" },
-       { date: '08-27', time: '9:00 PM', courtNumber: "", homeTeam: 'Tita Slayerz', awayTeam: 'TBD', score: "" },
-       { date: '09-10', time: '6:50 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
-       { date: '09-10', time: '6:50 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
-       { date: '09-17', time: '6:00 PM', courtNumber: "", homeTeam: 'Winner of #3-#6', awayTeam: '#2', score: "" },
-       { date: '09-17', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of #4-#5', awayTeam: '#1', score: "" },
-       { date: '09-24', time: '8:00 PM', courtNumber: "", homeTeam: 'Finals', awayTeam: 'Finals', score: "" },
+       { date: '09-17', time: '7:40 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
+       { date: '09-24', time: '6:00 PM', courtNumber: "", homeTeam: '#6 Mixed Bag', awayTeam: '#2', score: "" },
+       { date: '09-24', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of #4-#5', awayTeam: '#1', score: "" },
+       { date: '10-01', time: '8:00 PM', courtNumber: "", homeTeam: 'Finals', awayTeam: 'Finals', score: "" },
        
         
 
@@ -91,16 +69,9 @@
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '07-16': 'Location 1',
-      '07-23': 'Location 2',
-      '07-30': 'Location 3',
-      '08-06': 'Location 4',
-      '08-13': 'Location 5',
-      '08-20': 'Location 6',
-      '08-27': 'Location 7',
-      '09-10': 'Location 8',
-      '09-17': 'Location 9',
-      '09-24': 'Location 10',
+      '09-17': 'Location 1',
+      '09-24': 'Location 2',
+      '10-01': 'Location 3',
     });
 
     // Add a computed property to filter the games based on the search input

@@ -3,7 +3,7 @@
   <div class="container">
     <h1>Welcome to the Summer 2023 Season!</h1>
     <p class="reg">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdFf5LLBdEczbvR1P7r2PWZduvRzwC_UxZwDzxe2AGMk0fhYA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2023 Summer Registration </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeBYtjq5T7bRNOyA-sH_psU9WuDwGdWcZ6fD8bKwAOEOzCq9w/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2023 Fall Registration </a>
     </p>
     <p class="waiver">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>

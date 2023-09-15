@@ -64,7 +64,7 @@
         4) Uniform/Jewelry/Eye-wear: Every player must use Basketball Attire at all time while playing. The commissioner will have final authority on what is and what is not basketball attire. Absolutely no jewelry is allowed during games. Sports Goggles is the only piece of eye wear allowed.
       </li>
       <li>
-        5) Forfeit / Points: It will be dash an automatic loss for teams who forfeit a game. Winning team will receive a win and +25 on point differential. Losing team will receive -25 on point differential. Must give 24 hour notice to avoid paying forfeit fee (65$), if failed to do so team must pay forfeit fee or they won't qualify for postseason play if we can't find a replacement team to play in their place.
+        5) Forfeit / Points: It will be dash an automatic loss for teams who forfeit a game. Winning team will receive a win and +25 on point differential. Losing team will receive -25 on point differential. Must give 24 hour notice to avoid paying forfeit fee (90$), if failed to do so team must pay forfeit fee or they won't qualify for postseason play if we can't find a replacement team to play in their place.
       </li>
       <li>
         6) Conduct: Team Players, Coaches, and fans must always conduct themselves in a respectful manner. Bad/Hostile Conduct is not allowed in KONTRA. Teams, Coaches, and Fans who cannot conduct themselves in a respectful manner will be immediately escorted out of the gym, with their team subject to forfeiting the game.
