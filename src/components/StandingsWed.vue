@@ -45,12 +45,12 @@
       const pdRef = dbRef(db, 'pdThur');
       
       const standings = ref([
-          {name: "L.A Hoopers", wins: 1, losses: 1, pointDiff: 1},
-          {name: "BBQ Chicken", wins: 1, losses: 1, pointDiff: 1},
-          {name: "All PGs", wins: 1, losses: 1, pointDiff: 1},
           {name: "TUBT", wins: 1, losses: 1, pointDiff: 1},
           {name: "Quality Hoops", wins: 1, losses: 1, pointDiff: 1},
           {name: "Practice Squad", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Shotz Fired", wins: 1, losses: 1, pointDiff: 1},
+          {name: "The Crew", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Hands Down Man Down", wins: 1, losses: 1, pointDiff: 1},
       ]);
       const wins = ref(0);
       const losses = ref(0);

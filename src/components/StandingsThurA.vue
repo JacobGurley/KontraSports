@@ -45,13 +45,10 @@
     const pdRef = dbRef(db, 'pdThur');
     
     const standings = ref([
-        {name: "Death Row", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Hands Down Man Down", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Uptempo", wins: 1, losses: 1, pointDiff: 1},
-        {name: "The Chicano Crew", wins: 1, losses: 1, pointDiff: 1},
+        {name: "LFG", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Day Ones", wins: 1, losses: 1, pointDiff: 1},
+        {name: "AIM BLOCC", wins: 1, losses: 1, pointDiff: 1},
         {name: "Beach", wins: 1, losses: 1, pointDiff: 1},
-        {name: "Strap City", wins: 1, losses: 1, pointDiff: 1},
-        {name: "1UP", wins: 1, losses: 1, pointDiff: 1},
         
     ]);
     const wins = ref(0);

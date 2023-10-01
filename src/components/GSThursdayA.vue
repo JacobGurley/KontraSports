@@ -58,57 +58,16 @@
     const gamesRef = dbRef(db, 'gamesThurA');
     const locationsRef = dbRef(db, 'locationsThurA');
     const games = ref([
-       { date: '06-22', time: '8:00 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'Hands Down Man Down', score: "" },
-       { date: '06-22', time: '8:50 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'LFG', score: "" },
-       { date: '06-22', time: '9:40 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'Beach', score: "" },
-       { date: '06-29', time: '7:50 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Strap City', score: "" },
-       { date: '06-29', time: '8:40 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: '1UP', score: "" },
-       { date: '06-29', time: '8:40 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'The Chicano Crew', score: "" },
-       { date: '06-29', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'Uptempo', score: "" },
-       { date: '07-13', time: '7:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Hands Down Man Down', score: "" },
-       { date: '07-13', time: '8:40 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'LFG', score: "" },
-       { date: '07-13', time: '9:30 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'Clippers', score: "" },
-       { date: '07-13', time: '9:30 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'The Chicano Crew', score: "" },
-       { date: '07-20', time: '7:50 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: '1UP', score: "" },
-       { date: '07-20', time: '8:40 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Uptempo', score: "" },
-       { date: '07-20', time: '9:30 PM', courtNumber: "", homeTeam: 'The Chicano Crew', awayTeam: 'Strap City', score: "" },
-       { date: '07-20', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'Beach', score: "" },
-       { date: '07-27', time: '8:00 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: '1UP', score: "" },
-       { date: '07-27', time: '8:00 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'The Chicano Crew', score: "" },
-       { date: '07-27', time: '8:40 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Clippers', score: "" },
-       { date: '07-27', time: '8:50 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'The Chicano Crew', score: "" },
-       { date: '07-27', time: '8:50 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: 'LFG', score: "" },
-       { date: '08-03', time: '7:50 PM', courtNumber: "", homeTeam: 'The Chicano Crew', awayTeam: 'Hands Down Man Down', score: "" },
-       { date: '08-03', time: '8:40 PM', courtNumber: "", homeTeam: '1UP', awayTeam: 'Clippers', score: "" },
-       { date: '08-03', time: '9:30 PM', courtNumber: "", homeTeam: 'Uptempo', awayTeam: 'Strap City', score: "" },
-       { date: '08-03', time: '9:30 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Beach', score: "" },
-       { date: '08-10', time: '7:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Uptempo', score: "" },
-       { date: '08-10', time: '8:40 PM', courtNumber: "", homeTeam: 'Strap City', awayTeam: '1UP', score: "" },
-       { date: '08-10', time: '8:40 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'LFG', score: "" },
-       { date: '08-10', time: '9:30 PM', courtNumber: "", homeTeam: 'Clippers', awayTeam: 'The Chicano Crew', score: "" },
-       { date: '08-17', time: '7:30 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
-       { date: '08-17', time: '8:20 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
-       { date: '08-17', time: '9:10 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#8', score: "" },
-       { date: '08-17', time: '9:10 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
-       { date: '08-24', time: '7:30 PM', courtNumber: "", homeTeam: 'Winner of #1-#8', awayTeam: 'Winner of #4-#5', score: "" },
-       { date: '08-24', time: '9:10 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
-       { date: '08-31', time: '8:30 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
-        
+       { date: '09-28', time: '8:20 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'AIM BLOCC', score: "" },
+       { date: '09-28', time: '8:50 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Beach', score: "" },
+       
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '06-22': 'Location 1',
-      '06-29': 'Location 2',
-      '07-13': 'Location 3',
-      '07-20': 'Location 4',
-      '07-27': 'Location 5',
-      '08-03': 'Location 6',
-      '08-10': 'Location 7',
-      '08-17': 'Location 8',
-      '08-24': 'Location 9',
-      '08-31': 'Location 10'
+      '09-28': 'Location 1',
+      
     });
 
     // Add a computed property to filter the games based on the search input

@@ -3,7 +3,7 @@
   <div class="container">
     <div class="title">Rosters</div>
     <div class="ChampWrapper">
-      <router-link class="schedule-link wed" to="/teamRosterWed">Wednesday Division 6'3 Rosters</router-link>
+      <router-link class="schedule-link wed" to="/teamRosterWed">Wednesday Division 6'2 Rosters</router-link>
       <router-link class="schedule-link thurs" to="/teamRosterThurA">Thursday Division 6'3 Rosters</router-link>
       <router-link class="schedule-link thursB" to="/teamRosterThurB">Thursday Division 6'1 Rosters</router-link>
       <router-link class="schedule-link sunA" to="/teamRosterSunA">Sunday Division A Rosters</router-link>
