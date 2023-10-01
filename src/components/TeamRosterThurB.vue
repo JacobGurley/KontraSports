@@ -110,6 +110,16 @@
               {team: 'Why Not', name: 'Player 8', points: 0, gamesPlayed: 1},
               {team: 'Why Not', name: 'Player 9', points: 0, gamesPlayed: 1},
               {team: 'Why Not', name: 'Player 10', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 1', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 2', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 3', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 4', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 5', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 6', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 7', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 8', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 9', points: 0, gamesPlayed: 1},
+              {team: 'Alcoholics', name: 'Player 10', points: 0, gamesPlayed: 1},
               
               
   

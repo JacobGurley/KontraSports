@@ -49,6 +49,7 @@
         {name: "Day Ones", wins: 1, losses: 1, pointDiff: 1},
         {name: "AIM BLOCC", wins: 1, losses: 1, pointDiff: 1},
         {name: "Beach", wins: 1, losses: 1, pointDiff: 1},
+        {name: "Sigue Adelante", wins: 1, losses: 1, pointDiff: 1},
         
     ]);
     const wins = ref(0);

@@ -49,6 +49,7 @@
           {name: "Yomato", wins: 1, losses: 1, pointDiff: 1},
           {name: "Why Not", wins: 1, losses: 1, pointDiff: 1},
           {name: "Hands Down Man Down", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Alcoholics", wins: 1, losses: 1, pointDiff: 1},
           
       ]);
       const wins = ref(0);

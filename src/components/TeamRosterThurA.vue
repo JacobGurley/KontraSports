@@ -110,6 +110,16 @@
             {team: 'LFG', name: 'Player 8', points: 0, gamesPlayed: 1},
             {team: 'LFG', name: 'Player 9', points: 0, gamesPlayed: 1},
             {team: 'LFG', name: 'Player 10', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 1', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 2', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 3', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 4', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 5', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 6', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 7', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 8', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 9', points: 0, gamesPlayed: 1},
+            {team: 'Sigue Adelante', name: 'Player 10', points: 0, gamesPlayed: 1},
             
 
           ];
