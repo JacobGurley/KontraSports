@@ -58,22 +58,16 @@
       const gamesRef = dbRef(db, 'gamesSunD');
       const locationsRef = dbRef(db, 'locationsSunD');
       const games = ref([
-         { date: '09-17', time: '6:50 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#8', score: "" },
-         { date: '09-17', time: '7:40 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
-         { date: '09-17', time: '7:40 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
-         { date: '09-17', time: '8:30 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
-         { date: '09-24', time: '6:00 PM', courtNumber: "", homeTeam: 'Winner of #1-#8', awayTeam: 'Winner of #4-#5', score: "" },
-         { date: '09-24', time: '6:50 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
-         { date: '10-01', time: '7:00 PM', courtNumber: "", homeTeam: 'Finals', awayTeam: 'Finals', score: "" },
+         { date: '10-01', time: '6:30 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'Volume 0', score: "" },
+         { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Mukboys', score: "" },
+         { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: '(Finals) Adobros', awayTeam: '(Finals) LBSU Rec', score: "" },
           
   
       ]);
       const groupedGames = ref({});
       const searchDate = ref("");
       const locations = ref({
-        '09-17': 'Location 1',
-        '09-24': 'Location 2',
-        '10-01': 'Location 3',
+        '10-01': 'Location 1',
       });
   
       // Add a computed property to filter the games based on the search input

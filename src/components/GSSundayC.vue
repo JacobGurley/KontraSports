@@ -58,22 +58,15 @@
     const gamesRef = dbRef(db, 'gamesSunC');
     const locationsRef = dbRef(db, 'locationsSunC');
     const games = ref([
-       { date: '09-17', time: '6:50 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
-       { date: '09-17', time: '7:40 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#8', score: "" },
-       { date: '09-17', time: '8:30 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
-       { date: '09-17', time: '8:30 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
-       { date: '09-24', time: '7:40 PM', courtNumber: "", homeTeam: 'Winner of #1-#8', awayTeam: 'Winner of #4-#5', score: "" },
-       { date: '09-24', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
-       { date: '10-01', time: '8:00 PM', courtNumber: "", homeTeam: 'Finals', awayTeam: 'Finals', score: "" },
+       { date: '09-17', time: '6:30 PM', courtNumber: "", homeTeam: '(Finals) Shoot em up!', awayTeam: '(Finals) Shot Crew', score: "" },
+       { date: '09-17', time: '8:10 PM', courtNumber: "", homeTeam: 'Juss Hoop', awayTeam: 'True Grit', score: "" },
         
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '09-17': 'Location 8',
-      '09-24': 'Location 9',
-      '10-01': 'Location 10',
+      '10-01': 'Location 1',
     });
 
     // Add a computed property to filter the games based on the search input
