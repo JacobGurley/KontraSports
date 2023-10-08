@@ -60,7 +60,10 @@
     const games = ref([
        { date: '10-01', time: '6:30 PM', courtNumber: "", homeTeam: 'Hooligans', awayTeam: 'LA Dreamers', score: "" },
        { date: '10-01', time: '8:10 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Team 1UP', score: "" },
-       { date: '10-01', time: '8:10 PM', courtNumber: "", homeTeam: '(Finals) Rudeboyz', awayTeam: '(Finals) Uncle Drews', score: "" },
+       { date: '10-08', time: '6:50 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Hooligans', score: "" },
+       { date: '10-08', time: '6:50 PM', courtNumber: "", homeTeam: 'Mamba Mentality', awayTeam: 'The Redeem Team', score: "" },
+       { date: '10-08', time: '7:40 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'Team 1UP', score: "" },
+       { date: '10-08', time: '8:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Mixed Bag', score: "" },
        
         
 
@@ -69,6 +72,7 @@
     const searchDate = ref("");
     const locations = ref({
       '10-01': 'Location 1',
+      '10-08': 'Location 2',
     });
 
     // Add a computed property to filter the games based on the search input

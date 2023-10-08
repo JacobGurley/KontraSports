@@ -60,7 +60,9 @@
       const games = ref([
          { date: '10-01', time: '6:30 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'Volume 0', score: "" },
          { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Mukboys', score: "" },
-         { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: '(Finals) Adobros', awayTeam: '(Finals) LBSU Rec', score: "" },
+         { date: '10-08', time: '8:30 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'LBSU Rec', score: "" },
+         { date: '10-08', time: '9:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Huggies', score: "" },
+         { date: '10-08', time: '9:20 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'Volume 0', score: "" },
           
   
       ]);
@@ -68,6 +70,7 @@
       const searchDate = ref("");
       const locations = ref({
         '10-01': 'Location 1',
+        '10-08': 'Location 2',
       });
   
       // Add a computed property to filter the games based on the search input
