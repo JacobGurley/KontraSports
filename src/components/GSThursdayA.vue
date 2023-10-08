@@ -60,6 +60,9 @@
     const games = ref([
        { date: '09-28', time: '8:20 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'AIM BLOCC', score: "" },
        { date: '09-28', time: '8:50 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Beach', score: "" },
+       { date: '10-05', time: '7:30 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Sigue Adelante', score: "" },
+       { date: '10-05', time: '8:20 PM', courtNumber: "", homeTeam: 'Why Not', awayTeam: 'LFG', score: "" },
+       { date: '10-05', time: '8:50 PM', courtNumber: "", homeTeam: 'AIM BLOCC', awayTeam: 'Day Ones', score: "" },
        
 
     ]);
@@ -67,6 +70,7 @@
     const searchDate = ref("");
     const locations = ref({
       '09-28': 'Location 1',
+      '10-05': 'Location 2',
       
     });
 

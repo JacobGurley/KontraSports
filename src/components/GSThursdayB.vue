@@ -61,6 +61,8 @@
          { date: '09-28', time: '7:30 PM', courtNumber: "", homeTeam: 'Alcoholics', awayTeam: 'Hands Down Man Down', score: "" },
          { date: '09-28', time: '8:00 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Why Not', score: "" },
          { date: '09-28', time: '9:10 PM', courtNumber: "", homeTeam: 'Alcoholics', awayTeam: 'Young Bucs', score: "" },
+         { date: '10-05', time: '8:00 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Hands Down Man Down', score: "" },
+         { date: '10-05', time: '9:10 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
          
          
           
@@ -70,6 +72,7 @@
       const searchDate = ref("");
       const locations = ref({
         '09-28': 'Location 1',
+        '10-05': 'Location 2',
         
       });
   
