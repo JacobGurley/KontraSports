@@ -16,6 +16,14 @@
         <li>Sunday Div B Champs: Trailblazians</li>
         <li>Sunday Div C Champs: Mamba Mentality</li>
       </ul>
+      <h2>Spring 2023 Champions</h2>
+      <ul>
+        <li>Wednesday Div A Champs: Practice Squad</li>
+        <li>Thursday Div A Champs: Beach</li>
+        <li>Sunday Div A Champs: Strap City</li>
+        <li>Sunday Div B Champs: Rudeboyz</li>
+        <li>Sunday Div C Champs: Mamba Mentality</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <carousel :slides="slides" :interval="3000" controls indicators></carousel>
@@ -40,6 +48,11 @@ export default{
       require("../assets/SunAWinterChamps.jpg"),
       require("../assets/SunBWinterChamps.jpg"),
       require("../assets/SunCWinterChamps.jpg"),
+      require("../assets/WedSpringChamps.jpg"),
+      require("../assets/ThursdayASpringChamps.jpg"),
+      require("../assets/SunASpringChamps.jpg"),
+      require("../assets/SunBSpringChamps.jpg"),
+      require("../assets/SunCSpringChamps.jpg"),
     ],
   }),
 };
