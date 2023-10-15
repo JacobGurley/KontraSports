@@ -63,6 +63,9 @@
        { date: '10-05', time: '7:30 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Sigue Adelante', score: "" },
        { date: '10-05', time: '8:20 PM', courtNumber: "", homeTeam: 'Why Not', awayTeam: 'LFG', score: "" },
        { date: '10-05', time: '8:50 PM', courtNumber: "", homeTeam: 'AIM BLOCC', awayTeam: 'Day Ones', score: "" },
+       { date: '10-12', time: '8:00 PM', courtNumber: "", homeTeam: 'Sigue Adelante', awayTeam: 'Why Not', score: "" },
+       { date: '10-12', time: '8:20 PM', courtNumber: "", homeTeam: 'AIM BLOCC', awayTeam: 'LFG', score: "" },
+       { date: '10-12', time: '8:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'White Owls', score: "" },
        
 
     ]);
@@ -71,6 +74,7 @@
     const locations = ref({
       '09-28': 'Location 1',
       '10-05': 'Location 2',
+      '10-12': 'Location 3',
       
     });
 
