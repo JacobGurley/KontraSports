@@ -37,12 +37,9 @@
             </tbody>
         </table>
     </div>
-    </div>
-    
+    </div>  
   </div>
-  
-  </template>
-    
+  </template> 
     <script scoped>
     import Nav from "./NavBar.vue";
     import { ref, onMounted, computed } from 'vue';
@@ -51,7 +48,6 @@
     export default {
       components: {
       Nav,
-    
     },
     setup() {
       const db = getDatabase();
@@ -65,20 +61,32 @@
          { date: '10-05', time: '9:10 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Young Bucs', score: "" },
          { date: '10-12', time: '7:30 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Alcoholics ', score: "" },
          { date: '10-12', time: '9:10 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Yomato', score: "" },
-         
-         
-          
-  
+         { date: '10-19', time: '7:30 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Yomato', score: "" },
+         { date: '10-19', time: '9:10 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Alcoholics', score: "" },
+         { date: '10-26', time: '7:30 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Alcoholics', score: "" },
+         { date: '10-26', time: '9:10 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Hands Down Man Down', score: "" },
+         { date: '11-02', time: '7:30 PM', courtNumber: "", homeTeam: 'Yomato', awayTeam: 'Hands Down Man Down', score: "" },
+         { date: '11-02', time: '8:50 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Alcoholics', score: "" },
+         { date: '11-09', time: '8:20 PM', courtNumber: "", homeTeam: 'Hands Down Man Down', awayTeam: 'Alcoholics', score: "" },
+         { date: '11-09', time: '9:10 PM', courtNumber: "", homeTeam: 'Young Bucs', awayTeam: 'Yomato', score: "" },
+         { date: '11-16', time: '8:00 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#4', score: "" },
+         { date: '11-30', time: '9:10 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#3', score: "" },
+         { date: '12-07', time: '8:00 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
       ]);
       const groupedGames = ref({});
       const searchDate = ref("");
       const locations = ref({
         '09-28': 'Location 1',
         '10-05': 'Location 2',
-        '10-12': 'Location 2',
-        
+        '10-12': 'Location 3',
+        '10-19': 'Location 4',
+        '10-26': 'Location 5',
+        '11-02': 'Location 6',
+        '11-09': 'Location 7',
+        '11-16': 'Location 8',
+        '11-30': 'Location 9',
+        '12-07': 'Location 10',  
       });
-  
       // Add a computed property to filter the games based on the search input
       const filteredGroupedGames = computed(() => {
         if (searchDate.value === "") {
@@ -152,10 +160,8 @@
         locations, 
       };
     },
-  };
-    
+  }; 
     </script>
-  
     <!-- Add "scoped" attribute to limit CSS to this component only -->
     <style scoped>
     .container {

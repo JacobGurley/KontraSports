@@ -66,7 +66,27 @@
        { date: '10-12', time: '8:00 PM', courtNumber: "", homeTeam: 'Sigue Adelante', awayTeam: 'Why Not', score: "" },
        { date: '10-12', time: '8:20 PM', courtNumber: "", homeTeam: 'AIM BLOCC', awayTeam: 'LFG', score: "" },
        { date: '10-12', time: '8:50 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'White Owls', score: "" },
-       
+       { date: '10-19', time: '7:30 PM', courtNumber: "", homeTeam: 'Sigue Adelante', awayTeam: 'AIM BLOCC', score: "" },
+       { date: '10-19', time: '8:20 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Why Not', score: "" },
+       { date: '10-19', time: '8:20 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'White Owls', score: "" },
+       { date: '10-19', time: '9:10 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'LFG', score: "" },
+       { date: '10-26', time: '7:30 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Why Not', score: "" },
+       { date: '10-26', time: '8:20 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Beach', score: "" },
+       { date: '10-26', time: '8:20 PM', courtNumber: "", homeTeam: 'White Owls', awayTeam: 'AIM BLOCC', score: "" },
+       { date: '10-26', time: '9:10 PM', courtNumber: "", homeTeam: 'White Owls', awayTeam: 'Sigue Adelante', score: "" },
+       { date: '11-02', time: '8:00 PM', courtNumber: "", homeTeam: 'Why Not', awayTeam: 'AIM BLOCC', score: "" },
+       { date: '11-02', time: '8:20 PM', courtNumber: "", homeTeam: 'Day Ones', awayTeam: 'Sigue Adelante', score: "" },
+       { date: '11-02', time: '9:10 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'White Owls', score: "" },
+       { date: '11-09', time: '7:30 PM', courtNumber: "", homeTeam: 'LFG', awayTeam: 'Sigue Adelante', score: "" },
+       { date: '11-09', time: '7:30 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'AIM BLOCC', score: "" },
+       { date: '11-09', time: '8:20 PM', courtNumber: "", homeTeam: 'Beach', awayTeam: 'Day Ones', score: "" },
+       { date: '11-09', time: '9:10 PM', courtNumber: "", homeTeam: 'White Owls', awayTeam: 'Why Not', score: "" },
+       { date: '11-16', time: '8:00 PM', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" },
+       { date: '11-16', time: '8:50 PM', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
+       { date: '11-16', time: '8:50 PM', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" },
+       { date: '11-30', time: '7:30 PM', courtNumber: "", homeTeam: '#1', awayTeam: '#4-#5', score: "" },
+       { date: '11-30', time: '8:20 PM', courtNumber: "", homeTeam: 'Winner of #3-#6', awayTeam: 'Winner of #4-#5', score: "" },
+       { date: '12-07', time: '8:50 PM', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
 
     ]);
     const groupedGames = ref({});
@@ -75,6 +95,13 @@
       '09-28': 'Location 1',
       '10-05': 'Location 2',
       '10-12': 'Location 3',
+      '10-19': 'Location 4',
+      '10-26': 'Location 5',
+      '11-02': 'Location 6',
+      '11-09': 'Location 7',
+      '11-16': 'Location 8',
+      '11-30': 'Location 9',
+      '12-07': 'Location 10',
       
     });
 
