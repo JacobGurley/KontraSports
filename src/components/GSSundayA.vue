@@ -60,9 +60,22 @@
     const games = ref([
        { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: 'Out Here Ballin', awayTeam: 'Tenacity Hoops', score: "" },
        { date: '10-15', time: '9:30 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Tenacity Hoops', score: "" },
-       
-       
-        
+       { date: '10-22', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Out Here Ballin', score: "" },
+       { date: '10-22', time: '8:30 PM', courtNumber: "", homeTeam: 'Tenacity Hoops', awayTeam: 'FBG', score: "" },
+       { date: '10-29', time: '8:30 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'FBG', score: "" },
+       { date: '10-29', time: '9:20 PM', courtNumber: "", homeTeam: 'Tenacity Hoops', awayTeam: 'Out Here Ballin', score: "" },
+       { date: '11-05', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Tenacity Hoops', score: "" },
+       { date: '11-05', time: '8:30 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Out Here Ballin', score: "" },
+       { date: '11-05', time: '9:20 PM', courtNumber: "", homeTeam: 'Out Here Ballin', awayTeam: 'TUBT', score: "" },
+       { date: '11-12', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Tenacity Hoops', score: "" },
+       { date: '11-12', time: '8:30 PM', courtNumber: "", homeTeam: 'The Redeem Team', awayTeam: 'TUBT', score: "" }, 
+       { date: '11-12', time: '9:20 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Out Here Ballin', score: "" },
+       { date: '11-19', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'The Redeem Team', score: "" },
+       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'Tenacity Hoops', awayTeam: 'Out Here Ballin', score: "" },
+       { date: '11-19', time: '9:20 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'TUBT', score: "" }, 
+       { date: '12-03', time: 'TBD', courtNumber: "", homeTeam: '#1', awayTeam: '#4', score: "" }, 
+       { date: '12-03', time: 'TBD', courtNumber: "", homeTeam: '#2', awayTeam: '#3', score: "" }, 
+       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
 
     ]);
     const groupedGames = ref({});
@@ -70,6 +83,13 @@
     const locations = ref({
       '10-01': 'Location 1',
       '10-15': 'Location 2',
+      '10-22': 'Location 3',
+      '10-29': 'Location 4',
+      '11-05': 'Location 5',
+      '11-12': 'Location 6',
+      '11-19': 'Location 7',
+      '12-03': 'Location 8',
+      '12-10': 'Location 9',
     });
 
     // Add a computed property to filter the games based on the search input
