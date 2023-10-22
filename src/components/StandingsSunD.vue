@@ -47,12 +47,13 @@
       const standings = ref([
           {name: "Huggies", wins: 1, losses: 1, pointDiff: 1},
           {name: "Bad News Ballerz", wins: 1, losses: 1, pointDiff: 1},
-          {name: "Volume 0", wins: 1, losses: 1, pointDiff: 1},
+          {name: "Deafies", wins: 1, losses: 1, pointDiff: 1},
           {name: "LBSU Rec", wins: 1, losses: 1, pointDiff: 1},
           {name: "Living Grace", wins: 1, losses: 1, pointDiff: 1},
           
           
       ]);
+      
       const wins = ref(0);
       const losses = ref(0);
       const pd = ref(0);
