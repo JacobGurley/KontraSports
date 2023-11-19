@@ -68,14 +68,17 @@
        { date: '11-12', time: '8:30 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Out Here Ballin', score: "" },
        { date: '11-12', time: '9:20 PM', courtNumber: "", homeTeam: 'Out Here Ballin', awayTeam: 'TUBT', score: "" },
        { date: '11-19', time: '7:40 PM', courtNumber: "", homeTeam: 'TUBT', awayTeam: 'Tenacity Hoops', score: "" },
-       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'The Redeem Team', awayTeam: 'TUBT', score: "" }, 
+       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'Cereal Killers', awayTeam: 'FBG', score: "" }, 
+       { date: '11-19', time: '9:20 PM', courtNumber: "", homeTeam: 'Cereal Killers', awayTeam: 'TUBT', score: "" },
        { date: '11-19', time: '9:20 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Out Here Ballin', score: "" },
-       { date: '12-03', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'The Redeem Team', score: "" },
+       { date: '12-03', time: '6:00 PM', courtNumber: "", homeTeam: 'Cereal Killers', awayTeam: 'The Redeem Team', score: "" },
+       { date: '12-03', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'Cereal Killers', score: "" },
        { date: '12-03', time: '8:30 PM', courtNumber: "", homeTeam: 'Tenacity Hoops', awayTeam: 'Out Here Ballin', score: "" },
        { date: '12-03', time: '9:20 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'TUBT', score: "" }, 
        { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#1', awayTeam: '#4', score: "" }, 
        { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#2', awayTeam: '#3', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '-', awayTeam: '-', score: "" },
+       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
 
     ]);
     const groupedGames = ref({});
@@ -89,6 +92,7 @@
       '11-19': 'Location 7',
       '12-03': 'Location 8',
       '12-10': 'Location 9',
+      '12-17': 'Location 10',
     });
 
     // Add a computed property to filter the games based on the search input
