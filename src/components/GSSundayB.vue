@@ -58,42 +58,13 @@
     const gamesRef = dbRef(db, 'gamesSunB');
     const locationsRef = dbRef(db, 'locationsSunB');
     const games = ref([
-       { date: '10-01', time: '6:30 PM', courtNumber: "", homeTeam: 'Hooligans', awayTeam: 'LA Dreamers', score: "" },
-       { date: '10-01', time: '8:10 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Team 1UP', score: "" },
-       { date: '10-15', time: '6:50 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'LA Dreamers', score: "" },
-       { date: '10-15', time: '8:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Mixed Bag', score: "" },
-       { date: '10-22', time: '7:40 PM', courtNumber: "", homeTeam: 'Hooligans', awayTeam: 'Team 1UP', score: "" },
-       { date: '10-22', time: '7:40 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Mixed Bag', score: "" },
-       { date: '10-22', time: '8:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Ball Dont Lie', score: "" },
-       { date: '10-22', time: '9:20 PM', courtNumber: "", homeTeam: 'Mixed Bag', awayTeam: 'Warriors Redemption', score: "" },
-       { date: '10-29', time: '6:50 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'Team 1UP', score: "" },
-       { date: '10-29', time: '7:40 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'The Redeem Team', score: "" },
-       { date: '10-29', time: '8:30 PM', courtNumber: "", homeTeam: 'Hooligans', awayTeam: 'Warriors Redemption', score: "" },
-       { date: '10-29', time: '9:20 PM', courtNumber: "", homeTeam: 'Warriors Redemption', awayTeam: 'Uncle Drews', score: "" },
-       { date: '10-29', time: '9:20 PM', courtNumber: "", homeTeam: 'Mixed Bag', awayTeam: 'Hooligans', score: "" },
-       { date: '11-12', time: '6:50 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'Mixed Bag', score: "" },
-       { date: '11-12', time: '7:40 PM', courtNumber: "", homeTeam: 'Team 1UP', awayTeam: 'The Redeem Team', score: "" },
-       { date: '11-12', time: '7:40 PM', courtNumber: "", homeTeam: 'Warriors Redemption', awayTeam: 'Ball Dont Lie', score: "" },
-       { date: '11-12', time: '8:30 PM', courtNumber: "", homeTeam: 'Hooligans', awayTeam: 'Uncle Drews', score: "" },
-       { date: '11-12', time: '9:20 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'The Redeem Team', score: "" },
-       { date: '11-12', time: '9:20 PM', courtNumber: "", homeTeam: 'Warriors Redemption', awayTeam: 'Team 1UP', score: "" },
-       { date: '11-19', time: '6:50 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Hooligans', score: "" },
-       { date: '11-19', time: '7:40 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'Warriors Redemption', score: "" }, 
-       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'Uncle Drews', awayTeam: 'Team 1UP', score: "" },
-       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'The Redeem Team', awayTeam: 'TUBT', score: "" },
-       { date: '11-19', time: '9:20 PM', courtNumber: "", homeTeam: 'Mixed Bag', awayTeam: 'The Redeem Team', score: "" },
-       { date: '12-03', time: '6:50 PM', courtNumber: "", homeTeam: 'Ball Dont Lie', awayTeam: 'Uncle Drews', score: "" },
-       { date: '12-03', time: '7:40 PM', courtNumber: "", homeTeam: 'FBG', awayTeam: 'The Redeem Team', score: "" },
-       { date: '12-03', time: '7:40 PM', courtNumber: "", homeTeam: 'Warriors Redemption', awayTeam: 'Hooligans', score: "" }, 
-       { date: '12-03', time: '8:30 PM', courtNumber: "", homeTeam: 'LA Dreamers', awayTeam: 'The Redeem Team', score: "" },
-       { date: '12-03', time: '9:20 PM', courtNumber: "", homeTeam: 'Team 1UP', awayTeam: 'Mixed Bag', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#1', awayTeam: '#8', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#2', awayTeam: '#7', score: "" },
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" }, 
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #1-#8', awayTeam: 'Winner of #4-#5', score: "" },
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #2-#7', awayTeam: 'Winner of #3-#6', score: "" },
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+       { date: '12-17', time: '6:50 PM', courtNumber: "1", homeTeam: '#1 Ball Dont Lie', awayTeam: '#8 Mixed Bag', score: "" },
+       { date: '12-17', time: '6:50 PM', courtNumber: "2", homeTeam: '#4 Warriors Redemption', awayTeam: '#5 The Redeem Team', score: "" },
+       { date: '12-17', time: '7:40 PM', courtNumber: "1", homeTeam: '#2 Uncle Drews', awayTeam: '#7 LA Dreamers', score: "" },
+       { date: '12-17', time: '7:40 PM', courtNumber: "2", homeTeam: '#3 Team 1UP', awayTeam: '#6 Hooligans', score: "" },
+       { date: '12-17', time: '8:30 PM', courtNumber: "1", homeTeam: 'Winner of #1/#8', awayTeam: 'Winner of #4/#5', score: "" },
+       { date: '12-17', time: '9:20 PM', courtNumber: "2", homeTeam: 'Winner of #2/#7', awayTeam: 'Winner of #3/#6', score: "" },
+       { date: '01-07', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
        
         
 
@@ -101,15 +72,9 @@
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '10-01': 'Location 1',
-      '10-15': 'Location 2',
-      '10-22': 'Location 3',
-      '10-29': 'Location 4',
-      '11-12': 'Location 6',
-      '11-19': 'Location 7',
-      '12-03': 'Location 8',
-      '12-10': 'Location 9',
       '12-17': 'Location 10',
+      '01-07': 'Location 11',
+
     });
 
     // Add a computed property to filter the games based on the search input

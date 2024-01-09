@@ -3,14 +3,14 @@
       <div class="color-bar"></div>
       <div class="header-content">
       <img class="header-image" src="../assets/banner.png" />
-      <router-link to="home">
+      <router-link to="/home">
           <img src="../assets/Button_1.png" class="logo">
       </router-link>
     </div>
       <nav class="navbar">
           <ul>
               <li>
-                  <router-link to="home">Home</router-link>
+                  <router-link to="/home">Home</router-link>
               </li>
               <li>
                   <router-link to="schedules">Game Schedules</router-link>

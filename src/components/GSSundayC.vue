@@ -58,49 +58,19 @@
     const gamesRef = dbRef(db, 'gamesSunC');
     const locationsRef = dbRef(db, 'locationsSunC');
     const games = ref([
-       { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Mukboys', score: "" },
-       { date: '10-01', time: '8:10 PM', courtNumber: "", homeTeam: 'Juss Hoop', awayTeam: 'True Grit', score: "" },
-       { date: '10-15', time: '6:00 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'Juss Hoop', score: "" },
-       { date: '10-22', time: '6:50 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'True Grit', score: "" },
-       { date: '10-22', time: '6:50 PM', courtNumber: "", homeTeam: 'Juss Hoop', awayTeam: 'Shot Crew', score: "" },
-       { date: '10-22', time: '9:20 PM', courtNumber: "", homeTeam: 'Mukboys', awayTeam: 'Adobros', score: "" },
-       { date: '10-29', time: '6:50 PM', courtNumber: "", homeTeam: 'Shot Crew', awayTeam: 'True Grit', score: "" },
-       { date: '10-29', time: '7:40 PM', courtNumber: "", homeTeam: 'Juss Hoop', awayTeam: 'Shot Crew', score: "" },
-       { date: '10-29', time: '7:40 PM', courtNumber: "", homeTeam: 'Mukboys', awayTeam: 'True Grit', score: "" },
-       { date: '10-29', time: '8:30 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'Mukboys', score: "" },
-       { date: '10-29', time: '9:20 PM', courtNumber: "", homeTeam: 'Adobros', awayTeam: 'LBSU Rec', score: "" },
-       { date: '11-12', time: '6:00 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'Shot Crew', score: "" },
-       { date: '11-12', time: '6:50 PM', courtNumber: "", homeTeam: 'True Grit', awayTeam: 'Mukboys', score: "" },
-       { date: '11-12', time: '6:50 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'Adobros', score: "" },
-       { date: '11-12', time: '8:30 PM', courtNumber: "", homeTeam: 'Adobros', awayTeam: 'Juss Hoop', score: "" },
-       { date: '11-19', time: '6:50 PM', courtNumber: "", homeTeam: 'Adobros', awayTeam: 'Shot Crew', score: "" },
-       { date: '11-19', time: '6:50 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'Juss Hoop', score: "" }, 
-       { date: '11-19', time: '7:40 PM', courtNumber: "", homeTeam: 'Adobros', awayTeam: 'True Grit', score: "" },
-       { date: '11-19', time: '8:30 PM', courtNumber: "", homeTeam: 'Shot Crew', awayTeam: 'Mukboys', score: "" },
-       { date: '12-03', time: '6:00 PM', courtNumber: "", homeTeam: '60pointgame', awayTeam: 'True Grit', score: "" },
-       { date: '12-03', time: '6:50 PM', courtNumber: "", homeTeam: 'Shot Crew', awayTeam: 'Adobros', score: "" },
-       { date: '12-03', time: '8:30 PM', courtNumber: "", homeTeam: 'Mukboys', awayTeam: 'Juss Hoop', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" }, 
-       { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" }, 
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #4-#5', awayTeam: '#1', score: "" },
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #3-#6', awayTeam: '#2', score: "" },
-       { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
-       
+       { date: '12-17', time: '6:50 PM', courtNumber: "", homeTeam: '#3 Juss Hoop', awayTeam: '#6 60pointgame', score: "" },
+       { date: '12-17', time: '7:40 PM', courtNumber: "", homeTeam: '#4 Mukboys', awayTeam: '#5 Adobros', score: "" },
+       { date: '12-17', time: '8:30 PM', courtNumber: "", homeTeam: 'Winner of #4/#5', awayTeam: '#1 True Grit', score: "" },
+       { date: '12-17', time: '9:20 PM', courtNumber: "", homeTeam: 'Winner of #3/#6', awayTeam: '#2 Shot Crew', score: "" },
+       { date: '01-07', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
         
 
     ]);
     const groupedGames = ref({});
     const searchDate = ref("");
     const locations = ref({
-      '10-01': 'Location 1',
-      '10-15': 'Location 2',
-      '10-22': 'Location 3',
-      '10-29': 'Location 4',
-      '11-12': 'Location 6',
-      '11-19': 'Location 7',
-      '12-03': 'Location 8',
-      '12-10': 'Location 9',
       '12-17': 'Location 10',
+      '01-07': 'Location 11',
     });
 
     // Add a computed property to filter the games based on the search input

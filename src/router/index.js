@@ -30,8 +30,19 @@ import TeamRosterWed from '../components/TeamRosterWed.vue';
 
 import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
-  {path: '/', component: Home},
-  {path: '/home', component: Home},
+  {
+    path: '/',
+    component: Home,
+    meta: {
+      title: 'Kontra Sports - Adult Basketball League based in Orange County',
+      metaTags: [
+        {
+          name: 'description',
+          content: 'Join Kontra Sports, the top destination for adult basketball leagues in Seal Beach and Orange County. Experience fun and competitive basketball with us!'
+        }
+      ]
+    }
+  },
   {path: '/home', component: Home},
   {path: '/schedules', component: GameSchedules},
   {path: '/standings', component: GameStandings},
@@ -65,7 +76,42 @@ const routes = [
 const router = createRouter({
   history: createWebHashHistory(),
   routes,
+});
 
+// This callback runs before every route change, including on page load.
+router.beforeEach((to, from, next) => {
+  // This goes through the matched routes from last to first, finding the closest route with a title.
+  const nearestWithTitle = to.matched.slice().reverse().find(r => r.meta && r.meta.title);
 
-})
+  // Find the nearest route element with meta tags.
+  const nearestWithMeta = to.matched.slice().reverse().find(r => r.meta && r.meta.metaTags);
+
+  // If a route with a title was found, set the document title to that value.
+  if(nearestWithTitle) document.title = nearestWithTitle.meta.title;
+
+  // Remove any stale meta tags from the document using the key attribute we set below.
+  Array.from(document.querySelectorAll('[data-vue-router-controlled]')).map(el => el.parentNode.removeChild(el));
+
+  // Skip rendering meta tags if there are none.
+  if(!nearestWithMeta) return next();
+
+  // Turn the meta tag definitions into actual elements in the head.
+  nearestWithMeta.meta.metaTags.map(tagDef => {
+    const tag = document.createElement('meta');
+
+    Object.keys(tagDef).forEach(key => {
+      tag.setAttribute(key, tagDef[key]);
+    });
+
+    // We use this to track which meta tags we create so we don't interfere with other ones.
+    tag.setAttribute('data-vue-router-controlled', '');
+
+    return tag;
+  })
+  // Add the meta tags to the document head.
+  .forEach(tag => document.head.appendChild(tag));
+
+  next();
+});
+
 export default router;

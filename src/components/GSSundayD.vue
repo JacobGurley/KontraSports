@@ -58,33 +58,10 @@
       const gamesRef = dbRef(db, 'gamesSunD');
       const locationsRef = dbRef(db, 'locationsSunD');
       const games = ref([
-         { date: '10-01', time: '6:30 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'Deafies', score: "" },
-         { date: '10-01', time: '7:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Mukboys', score: "" },
-         { date: '10-15', time: '5:10 PM', courtNumber: "", homeTeam: 'Deafies', awayTeam: 'Huggies', score: "" },
-         { date: '10-15', time: '7:40 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'Pre-Eminent', score: "" },
-         { date: '10-22', time: '6:50 PM', courtNumber: "", homeTeam: 'Pre-Eminent', awayTeam: 'Deafies', score: "" },
-         { date: '10-22', time: '8:30 PM', courtNumber: "", homeTeam: 'LBSU Rec', awayTeam: 'Living Grace', score: "" },
-         { date: '10-29', time: '6:50 PM', courtNumber: "", homeTeam: 'Pre-Eminent', awayTeam: 'Huggies', score: "" },
-         { date: '10-29', time: '6:50 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Living Grace', score: "" },
-         { date: '10-29', time: '7:40 PM', courtNumber: "", homeTeam: 'LBSU Rec', awayTeam: 'Pre-Eminent', score: "" },
-         { date: '10-29', time: '8:30 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'Deafies', score: "" },
-         { date: '10-29', time: '9:20 PM', courtNumber: "", homeTeam: 'Adobros', awayTeam: 'LBSU Rec', score: "" },
-         { date: '11-12', time: '6:50 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'Huggies', score: "" },
-         { date: '11-12', time: '7:40 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'Pre-Eminent', score: "" },
-         { date: '11-12', time: '8:30 PM', courtNumber: "", homeTeam: 'LBSU Rec', awayTeam: 'Deafies', score: "" },
-         { date: '11-12', time: '9:20 PM', courtNumber: "", homeTeam: 'Bad News Ballerz', awayTeam: 'LBSU Rec', score: "" },
-         { date: '11-19', time: '6:50 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'Deafies', score: "" },
-         { date: '11-19', time: '7:40 PM', courtNumber: "", homeTeam: 'Pre-Eminent', awayTeam: 'Bad News Ballerz', score: "" }, 
-         { date: '11-19', time: '8:40 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'Bad News Ballerz', score: "" },
-         { date: '11-19', time: '9:30 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'LBSU Rec', score: "" },
-         { date: '12-03', time: '6:50 PM', courtNumber: "", homeTeam: 'Pre-Eminent', awayTeam: 'Deafies', score: "" },
-         { date: '12-03', time: '7:40 PM', courtNumber: "", homeTeam: 'Living Grace', awayTeam: 'LBSU Rec', score: "" },
-         { date: '12-03', time: '9:20 PM', courtNumber: "", homeTeam: 'Huggies', awayTeam: 'Bad News Ballerz', score: "" }, 
-         { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#3', awayTeam: '#6', score: "" }, 
-         { date: '12-10', time: 'TBD', courtNumber: "", homeTeam: '#4', awayTeam: '#5', score: "" }, 
-         { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #3/#6', awayTeam: '#2', score: "" },
-         { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'Winner of #4/#5', awayTeam: '#1', score: "" },
-         { date: '12-17', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
+         { date: '12-17', time: '6:50 PM', courtNumber: "", homeTeam: '#4 Deafies', awayTeam: '#5 Bad News Ballerz', score: "" },
+         { date: '12-17', time: '7:40 PM', courtNumber: "", homeTeam: 'Winner of #4/#5', awayTeam: '#1 Living Grace', score: "" },
+         { date: '12-17', time: '8:30 PM', courtNumber: "", homeTeam: '#3 LBSU Rec', awayTeam: '#2 Huggies', score: "" },
+         { date: '01-07', time: 'TBD', courtNumber: "", homeTeam: 'FINALS', awayTeam: 'FINALS', score: "" },
          
           
   
@@ -92,15 +69,9 @@
       const groupedGames = ref({});
       const searchDate = ref("");
       const locations = ref({
-        '10-01': 'Location 1',
-        '10-15': 'Location 2',
-        '10-22': 'Location 3',
-        '10-29': 'Location 4',
-        '11-12': 'Location 6',
-        '11-19': 'Location 7',
-        '12-03': 'Location 8',
-        '12-10': 'Location 9',
         '12-17': 'Location 10',
+        '01-07': 'Location 11',
+
       });
   
       // Add a computed property to filter the games based on the search input

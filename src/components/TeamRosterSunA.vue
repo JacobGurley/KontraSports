@@ -63,6 +63,7 @@ export default {
           )
         );
       });
+      
 
     onMounted(async () => {
       // Check if the games have already been written to the database
@@ -121,6 +122,7 @@ export default {
         updateGroupedRosters();
       }
     });
+    
 
     //Listen for changes in Firebase and update the roster
     onValue(rosterRef, (snapshot) => {
