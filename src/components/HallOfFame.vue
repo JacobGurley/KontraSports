@@ -1,28 +1,38 @@
 <template>
     <Nav />
     <div class="container">
-    <div class="title">Past Champions</div>
+    <div class="title">HALL OF FAME</div>
     <section class="champions-section">
       <h2>Summer 2022 Champions</h2>
       <ul>
-        <li>Thursday Night Champs: LFG</li>
-        <li>Sunday Night Div A Champs: Practice Squad</li>
-        <li>Sunday Night Div B Champs: 9-5ers</li>
+        <li>Thursday: LFG</li>
+        <li>Sunday A: Practice Squad</li>
+        <li>Sunday B: 9-5ers</li>
       </ul>
       <h2>Winter 2023 Champions</h2>
       <ul>
-        <li>Thursday Div A Champs: Beach</li>
-        <li>Sunday Div A Champs: Strap City</li>
-        <li>Sunday Div B Champs: Trailblazians</li>
-        <li>Sunday Div C Champs: Mamba Mentality</li>
+        <li>Thursday: Beach</li>
+        <li>Sunday A: Strap City</li>
+        <li>Sunday B: Trailblazians</li>
+        <li>Sunday C: Mamba Mentality</li>
       </ul>
       <h2>Spring 2023 Champions</h2>
       <ul>
-        <li>Wednesday Div A Champs: Practice Squad</li>
-        <li>Thursday Div A Champs: Beach</li>
-        <li>Sunday Div A Champs: Strap City</li>
-        <li>Sunday Div B Champs: Rudeboyz</li>
-        <li>Sunday Div C Champs: Mamba Mentality</li>
+        <li>Wednesday: Practice Squad</li>
+        <li>Thursday: Beach</li>
+        <li>Sunday A: Strap City</li>
+        <li>Sunday B: Rudeboyz</li>
+        <li>Sunday C: Mamba Mentality</li>
+      </ul>
+      <h2>Summer 2023 Champions</h2>
+      <ul>
+        <li>Wednesday: Practice Squad</li>
+        <li>Thursday A: The Crew</li>
+        <li>Thursday B: Day Ones</li>
+        <li>Sunday A: FBG</li>
+        <li>Sunday B: Rudeboyz</li>
+        <li>Sunday C: Shot Crew</li>
+        <li>Sunday D: Adobros</li>
       </ul>
     </section>
     <div class="carousel-wrapper">
@@ -53,6 +63,13 @@ export default{
       require("../assets/SunASpringChamps.jpg"),
       require("../assets/SunBSpringChamps.jpg"),
       require("../assets/SunCSpringChamps.jpg"),
+      require("../assets/Sum2023WedA.jpg"),
+      require("../assets/Sum2023ThurA.jpg"),
+      require("../assets/Sum2023ThurB.jpg"),
+      require("../assets/Sum2023SunA.jpg"),
+      require("../assets/Sum2023SunB.jpg"),
+      require("../assets/Sum2023SunC.jpg"),
+      require("../assets/Sum2023SunD.jpg"),
     ],
   }),
 };

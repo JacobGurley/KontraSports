@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="container">
-    <h1>Welcome to the Fall 2023 Season!</h1>
+    <h1>Welcome to the Winter 2024 Season!</h1>
     <p class="reg">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSeug5mVvoRRtq7rPiWUeQcD999bQRhivoy6Pi3Gx5CUkXyc4g/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Winter Registration </a>
     </p>
@@ -12,15 +12,15 @@
       <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
     </p>
     <section class="champions-section">
-      <h2>Congratulations to the Summer 2023 Champions!</h2>
+      <h2>Congratulations to the Fall 2023 Champions!</h2>
       <ul>
-        <li>Wednesday Div A Champs: Practice Squad</li>
-        <li>Thursday Div A Champs: The Crew</li>
-        <li>Thursday Div B Champs: Day Ones</li>
-        <li>Sunday Div A Champs: FBG</li>
-        <li>Sunday Div B Champs: Rudeboyz</li>
-        <li>Sunday Div C Champs: Shot Crew</li>
-        <li>Sunday Div D Champs: Adobros</li>
+        <li>Wednesday Champions: Practice Squad</li>
+        <li>Thursday A Champions: White Owls</li>
+        <li>Thursday B Champions: Hands Down Man Down</li>
+        <li>Sunday A Champions: FBG</li>
+        <li>Sunday B Champions: Ball Don't Lie</li>
+        <li>Sunday C Champions: True Grit</li>
+        <li>Sunday D Champions: Living Grace</li>
       </ul>
     </section>
     <div class="ChampWrapper">
@@ -43,13 +43,13 @@ export default {
 
   data: () => ({
     slides: [
-      require("../assets/Sum2023WedA.jpg"),
-      require("../assets/Sum2023ThurA.jpg"),
-      require("../assets/Sum2023ThurB.jpg"),
-      require("../assets/Sum2023SunA.jpg"),
-      require("../assets/Sum2023SunB.jpg"),
-      require("../assets/Sum2023SunC.jpg"),
-      require("../assets/Sum2023SunD.jpg"),
+      require("../assets/Fall2023Wed.jpg"),
+      require("../assets/Fall2023ThursA.jpg"),
+      require("../assets/Fall2023ThursB.jpg"),
+      require("../assets/Fall2023SunA.jpg"),
+      require("../assets/Fall2023SunB.jpg"),
+      require("../assets/Fall2023SunC.jpg"),
+      require("../assets/Fall2023SunD.jpg"),
     ],
   }),
 };
