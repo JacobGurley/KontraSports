@@ -14,9 +14,9 @@
     <section class="champions-section">
       <h2>Congratulations to the Fall 2023 Champions!</h2>
       <ul>
-        <li>Wednesday Champions: Practice Squad</li>
-        <li>Thursday A Champions: White Owls</li>
-        <li>Thursday B Champions: Hands Down Man Down</li>
+        <li>Wednesday 6'2 Champions: Practice Squad</li>
+        <li>Thursday 6'3 Champions: White Owls</li>
+        <li>Thursday 6'1 Champions: Hands Down Man Down</li>
         <li>Sunday A Champions: FBG</li>
         <li>Sunday B Champions: Ball Don't Lie</li>
         <li>Sunday C Champions: True Grit</li>

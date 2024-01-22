@@ -27,7 +27,6 @@ import GSWednesday from '../components/GSWednesday.vue';
 import StandingsWed from '../components/StandingsWed';
 import TeamRosterWed from '../components/TeamRosterWed.vue';
 
-
 import { createRouter, createWebHashHistory } from 'vue-router';
 const routes = [
   {

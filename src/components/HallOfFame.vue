@@ -26,9 +26,9 @@
       </ul>
       <h2>Summer 2023 Champions</h2>
       <ul>
-        <li>Wednesday: Practice Squad</li>
-        <li>Thursday A: The Crew</li>
-        <li>Thursday B: Day Ones</li>
+        <li>Wednesday 6'2: Practice Squad</li>
+        <li>Thursday 6'3: The Crew</li>
+        <li>Thursday 6'1: Day Ones</li>
         <li>Sunday A: FBG</li>
         <li>Sunday B: Rudeboyz</li>
         <li>Sunday C: Shot Crew</li>
