@@ -11,6 +11,8 @@
     <p class="location">
       <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
     </p>
+    <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
+    
     <section class="champions-section">
       <h2>Congratulations to the Fall 2023 Champions!</h2>
       <ul>
@@ -97,6 +99,9 @@ export default {
   .reg {
     font-size: 1rem;
   }
+  .court-link {
+    font-size: 1rem;
+  }
   .carousel-wrapper{
     width: 100%;
     overflow: hidden;
@@ -178,6 +183,25 @@ export default {
   transition: all 0.3s;
 }
 .reg:hover{
+  color: #1a73e8;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+.court-link{
+  display: block;
+  font-size: 1.2rem;
+  font-family: 'Helvetica', sans-serif;
+  text-decoration: none;
+  color: #0d2d5a;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s;
+}
+.court-link:hover{
   color: #1a73e8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);
