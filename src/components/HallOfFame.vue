@@ -36,18 +36,18 @@
       </ul>
     </section>
     <div class="carousel-wrapper">
-      <carousel :slides="slides" :interval="3000" controls indicators></carousel>
+      <PhotoGalleryHOF />
     </div>
   </div>
 </template>
 
 <script scoped>
 import Nav from "./NavBar.vue";
-import Carousel from "./CarouselFinal.vue";
+import PhotoGalleryHOF from "./PhotoGalleryHOF.vue";
 export default{
     components: {
         Nav,
-        Carousel,
+        PhotoGalleryHOF,
     },
     data: () => ({
     slides: [
@@ -132,6 +132,10 @@ li {
 
   li {
     font-size: 1rem;
+  }
+  .carousel-wrapper{
+    width: 100%;
+    overflow: hidden;
   }
   
 }

@@ -3,7 +3,7 @@
   <div class="container">
     <h1>Welcome to the Winter 2024 Season!</h1>
     <p class="reg">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSeug5mVvoRRtq7rPiWUeQcD999bQRhivoy6Pi3Gx5CUkXyc4g/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Winter Registration </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdi6seDe2T7PTfNDzS458IPSCr8-cESUlgfbT8xLrFfsKkEw/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Spring Registration </a>
     </p>
     <p class="waiver">
       <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
@@ -28,19 +28,20 @@
     <div class="ChampWrapper">
       <router-link class="halloffame-link" to="/hallOfFame">Hall of Fame</router-link>
     </div>
+    
     <div class="carousel-wrapper">
-      <carousel :slides="slides" :interval="3000" controls indicators></carousel>
+    <PhotoGallery />
     </div>
   </div>
 </template>
 
 <script scoped>
 import Nav from "./NavBar.vue";
-import Carousel from "./CarouselFinal.vue";
+import PhotoGallery from "./PhotoGallery.vue";
 export default {
   components: {
     Nav,
-    Carousel,
+    PhotoGallery,
   },
 
   data: () => ({
@@ -74,32 +75,14 @@ export default {
     font-size: 1.8rem;
     margin-bottom: 20px;
   }
-
   h2 {
     font-size: 1.2rem;
     margin-bottom: 10px;
   }
-
-  li {
-    font-size: 1rem;
-  }
   .ChampWrapper {
     padding: 10px;
   }
-
-  .halloffame-link {
-    font-size: 1rem;
-  }
-  .location {
-    font-size: 1rem;
-  }
-  .waiver {
-    font-size: 1rem;
-  }
-  .reg {
-    font-size: 1rem;
-  }
-  .court-link {
+  li, .halloffame-link, .waiver, .location, .reg, .court-link {
     font-size: 1rem;
   }
   .carousel-wrapper{
@@ -114,7 +97,7 @@ export default {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.halloffame-link{
+.halloffame-link, .waiver, .location, .reg, .court-link{
   display: block;
   font-size: 1.2rem;
   font-family: 'Helvetica', sans-serif;
@@ -127,81 +110,7 @@ export default {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transition: all 0.3s;
 }
-.halloffame-link:hover {
-  color: #1a73e8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-.waiver{
-  display: block;
-  font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
-  text-decoration: none;
-  color: #0d2d5a;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-.waiver:hover{
-  color: #1a73e8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-.location{
-  display: block;
-  font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
-  text-decoration: none;
-  color: #0d2d5a;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-.location:hover{
-  color: #1a73e8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-
-.reg{
-  display: block;
-  font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
-  text-decoration: none;
-  color: #0d2d5a;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-.reg:hover{
-  color: #1a73e8;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  transform: translateY(-3px);
-}
-
-.court-link{
-  display: block;
-  font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
-  text-decoration: none;
-  color: #0d2d5a;
-  margin: 10px 0;
-  padding: 10px;
-  background-color: #ffffff;
-  border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  transition: all 0.3s;
-}
-.court-link:hover{
+.halloffame-link:hover, .waiver:hover, .location:hover, .reg:hover, .court-link:hover {
   color: #1a73e8;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transform: translateY(-3px);

@@ -1,30 +1,47 @@
 <template>
-    <!-- in vue 2.x you need wrap these buttons in a div -->
-    <button class="carousel-control left" @click="$emit('prev')">Prev</button>
-    <button class="carousel-control right" @click="$emit('next')">Next</button>
-  </template>
-  
-  <script>
-  export default {
-    emits: ["prev", "next"], // vue v3
-  };
-  </script>
-  <style scoped>
-  .carousel-control {
-    background-color: rgba(0, 0, 0, 0.5);
-    border: none;
-    display: inline-block;
-    position: absolute;
-    height: 50px;
-    width: 70px;
-    top: calc(50% - 25px);
-    color: #f3f3f3;
-    cursor: pointer;
-  }
-  .left {
-    left: 0;
-  }
-  .right {
-    right: 0;
-  }
-  </style>
+  <div>
+    <button class="carousel-control left" @click="$emit('prev')">
+      <span class="material-icons">chevron_left</span>
+    </button>
+    <button class="carousel-control right" @click="$emit('next')">
+      <span class="material-icons">chevron_right</span>
+    </button>
+  </div>
+</template>
+
+<script>
+export default {
+  emits: ["prev", "next"],
+};
+</script>
+
+<style scoped>
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+.carousel-control {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  height: 60px;
+  width: 60px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #fff;
+  cursor: pointer;
+  border-radius: 30px;
+}
+
+.left {
+  left: 20px;
+}
+
+.right {
+  right: 20px;
+}
+
+.material-icons {
+  font-size: 24px;
+}
+</style>
