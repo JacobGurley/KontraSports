@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="container">
-    <div class="title">Game Schedule</div>
+    <div class="title">GAME SCHEDULE</div>
     <div class="search-wrapper">
       <input
         type="text"
@@ -164,63 +164,73 @@ setup() {
   padding: 0 15px;
   margin: 0 auto;
   text-align: center;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .title {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: bold;
   color: #0d2d5a;
   padding: 20px 0;
 }
 
 .ChampWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 5px solid #0d2d5a;
-  padding: 20px;
-  background-color: white;
-  border-radius: 10px;
+  padding: 25px;
   min-width: 320px;
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin: 1px auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+.ChampWrapper > div {
+  width: 100%;
 }
 
 .date-title {
-  font-size: 24px;
+  font-size: 30px;
   color: #0d2d5a;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .location-title {
-  font-size: 24px;
+  font-size: 30px;
   color: #0d2d5a;
   margin-bottom: 15px;
+  font-weight: bold;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 16px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 th {
   background-color: #0d2d5a;
-  color: white;
-  padding: 10px;
+  color: #ffffff;
+  padding: 15px;
   text-align: left;
   font-weight: bold;
+  border-bottom: 3px solid #fff;
 }
 
 td {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 16px;
+  font-size: 20px;
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
 
 input[type="number"] {
@@ -263,32 +273,32 @@ input[type="number"] {
 @media (max-width: 767px) {
   .ChampWrapper {
     min-width: 100%;
-    padding: 10px;
+    padding: 0.625rem;
   }
 
   .title {
-    font-size: 24px;
+    font-size: 1.5rem;
   }
 
   .date-title {
-    font-size: 20px;
+    font-size: 1.25rem;
   }
 
   .location-title {
-    font-size: 20px; 
+    font-size: 1.25rem; 
   }
 
-  .table {
-    font-size: 14px;
+  .table, th, td {
+    font-size: 0.75rem;
   }
 
   th, td {
-    padding: 8px;
+    padding: 0.5rem;
   }
 
   .search-input {
     width: 90%;
-    font-size: 14px;
+    font-size: 0.9rem;
   }
 }
 </style>
