@@ -23,7 +23,6 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .container {
   max-width: 1200px;
@@ -36,22 +35,24 @@ export default {
 
 .title {
   font-size: 2.5rem;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color: #0d2d5a;
   margin-bottom: 20px;
   margin-top: 10px;
+  font-weight: bold;
+  
 }
 
 .ChampWrapper {
-  background-color: #f5f5f5;
   border: 5px solid #0d2d5a;
-  border-radius: 10px;
+  border-radius: 20px;
   padding: 20px;
   display: inline-block;
   text-align: center;
   width: 100%;
   box-sizing: border-box;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 .schedule-link {
@@ -77,6 +78,7 @@ export default {
 @media (max-width: 767px) {
   .container {
     padding: 10px;
+    padding-bottom: 70px;
   }
 
   .ChampWrapper {
@@ -87,5 +89,4 @@ export default {
     font-size: 1rem;
   }
 }
-
 </style>

@@ -1,15 +1,15 @@
 <template>
   <Nav />
   <div class="width">
-    <h1 class="Winter">Standings</h1>
+    <h1 class="Winter">STANDINGS</h1>
     <div class="ChampWrapper">
       <table class="table">
         <thead>
           <tr>
-            <th class="centered">Rank</th>
-            <th class="centered">Team</th>
-            <th class="centered">Wins</th>
-            <th class="centered">Losses</th>
+            <th class="centered">RANK</th>
+            <th class="centered">TEAM</th>
+            <th class="centered">WINS</th>
+            <th class="centered">LOSSES</th>
             <th class="centered">PD</th>
           </tr>
         </thead>
@@ -77,55 +77,57 @@ setup() {
 };
 </script>
 
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 .width {
   width: 100%;
   padding: 0 15px;
   margin: 0 auto;
   text-align: center;
-  background-color: #f5f5f5;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
 }
 
 .Winter {
-  font-size: 28px;
-    font-weight: bold;
-    color: #0d2d5a;
-    padding: 20px 0;
+  font-size: 35px;
+  font-weight: bold;
+  color: #0d2d5a;
+  padding: 20px 0;
 }
 
 .ChampWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   border: 5px solid #0d2d5a;
-  padding: 5px;
+  padding: 25px;
   min-width: 320px;
   max-width: 960px;
-  margin-left: auto;
-  margin-right: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  background-color: white;
+  margin: 1px auto;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 .table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 16px;
-  margin-bottom: 30px;
+  font-size: 20px;
+  margin-bottom: 35px;
 }
 
 th {
   background-color: #0d2d5a;
-  color: white;
-  padding: 10px;
+  color: #ffffff;
+  padding: 15px;
   text-align: left;
   font-weight: bold;
+  border-bottom: 3px solid #fff;
 }
 
 td {
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 16px;
+  font-size: 20px;
 }
 
 .centered {
@@ -133,23 +135,25 @@ td {
 }
 
 tr:nth-child(even) {
-  background-color: #f2f2f2;
+  background-color: #f9f9f9;
 }
+
 @media (max-width: 767px) {
-    .ChampWrapper {
-      min-width: 100%;
-      padding: 10px;
-    }
-
-    .Winter {
-      font-size: 24px;
-    }
-    .table {
-      font-size: 14px;
-    }
-
-    th, td {
-      padding: 8px;
-    }
+  .ChampWrapper {
+    min-width: 100%;
+    padding: 0.625rem;
   }
+  
+  .Winter {
+    font-size: 1.5rem;
+  }
+
+  .table, th, td {
+    font-size: 0.75rem;
+  }
+
+  th, td {
+    padding: 0.5rem;
+  }
+}
 </style>

@@ -85,16 +85,18 @@ export default{
 }
 .title {
   font-size: 2.5rem;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   color: #0d2d5a;
   margin-bottom: 20px;
   margin-top: 10px;
+  font-weight: bold;
 }
 .champions-section {
   border: 5px solid #0d2d5a;
+  border-radius: 20px;
   padding: 1rem;
   margin-bottom: 30px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 h2 {
   font-family: "Helvetica", sans-serif;
@@ -118,7 +120,8 @@ li {
 .carousel-wrapper {
   border: 5px solid #0d2d5a;
   padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  border-radius: 20px;
 }
 @media (max-width: 768px) {
   .container {
@@ -136,7 +139,6 @@ li {
   .carousel-wrapper{
     width: 100%;
     overflow: hidden;
-  }
-  
+  } 
 }
 </style>

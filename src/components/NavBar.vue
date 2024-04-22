@@ -1,13 +1,13 @@
 <template>
   <div class="header-container">
       <div class="color-bar"></div>
-      <div class="header-content">
+      <div class="header-content" ref="headerContent">
         <img class="header-image" src="../assets/banner.png" />
         <router-link to="/home">
             <img src="../assets/Button_1.png" class="logo">
         </router-link>
       </div>
-      <nav class="navbar">
+      <nav class="navbar" :class="{ 'fixed-navbar': isNavbarFixed }">
           <ul>
               <li>
                   <router-link to="/home">Home</router-link>
@@ -31,6 +31,29 @@
       </nav>
   </div>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      isNavbarFixed: false
+    };
+  },
+  mounted() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  beforeUnmount() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  methods: {
+    handleScroll() {
+      const headerContentHeight = this.$refs.headerContent.clientHeight;
+      this.isNavbarFixed = window.scrollY > headerContentHeight;
+    }
+  }
+}
+</script>
+
 <style scoped>
 html, body {
     padding: 0px;
@@ -75,11 +98,14 @@ html, body {
     display: flex;
     justify-content: center;
     margin-top: 0;
-    position: sticky;
-    top: 0;
     background-color: #0d2d5a;
     z-index: 100;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+.fixed-navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .navbar ul {
   list-style: none;
@@ -111,33 +137,73 @@ html, body {
 }
 @media (max-width: 768px) {
   .navbar ul {
-    flex-direction: column;
-    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
+
   .navbar li {
-    margin: 10px 0;
-    padding: 0;
+    margin: 5px;
+    padding: 5px;
   }
+
   .navbar a {
-    display: block;
+    font-size: 12px;
+    padding: 8px 10px;
+  }
+
+  .header-container {
     width: 100%;
-    text-align: center;
+    overflow: visible;
   }
-  .header-image{
-    height: 150px;
+
+  .color-bar {
+    width: 100%;
+    height: 15px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
-  .logo{
-    height: 150px;
-    top: 40%;
+
+  .header-content {
+    position: relative;
+    width: 100%;
+    overflow: visible;
+    padding-top: 15px;
+  }
+
+  .header-image {
+    height: 100px;
+    width: 100%;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .logo {
+    height: 120px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .navbar, .fixed-navbar {
+    position: static;
+    margin-top: 0;
   }
 }
+
 @media (min-width: 1200px) {
-    .header-image {
-        height: 300px;
-    }
-    .logo {
-        height: 300px;
-        transform: translate(-50%, -50%);
-    }
+  .header-image {
+    height: 300px;
+    background-size: cover;
+  }
+  .logo {
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 }
 </style>
