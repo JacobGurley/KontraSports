@@ -65,7 +65,6 @@ body {
   padding: 0;
   height: 100vh;
   background-color: #fafafa;
-  font-family: 'Segoe UI', Arial, sans-serif;
 }
 </style>
 
