@@ -2,7 +2,7 @@
   <Nav />
   <div class="container">
     <div class="title">
-      <h1>Rosters</h1>
+      <h1>ROSTERS</h1>
     </div>
     <div class="search-wrapper">
       <input
@@ -110,123 +110,130 @@ setup() {
 };
 </script>
 
-
-
-<!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .container {
+    width: 100%;
+    padding: 0 15px;
+    margin: 0 auto;
+    text-align: center;
+    font-family: 'Segoe UI', Arial, sans-serif;
+  }
 
-.container {
-   width: 100%;
-   padding: 0 15px;
-   margin: 0 auto;
-   text-align: center;
-   background-color: #f5f5f5;
-   font-family: Arial, sans-serif;
- }
+  .title {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0d2d5a;
+    padding: 20px 0;
+  }
 
- .title {
-   font-size: 28px;
-   font-weight: bold;
-   color: #0d2d5a;
-   padding: 20px 0;
- }
+  .roster-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: 5px solid #0d2d5a;
+    padding: 25px;
+    min-width: 320px;
+    max-width: 960px;
+    margin: 1px auto;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+  }
 
-.roster-wrapper {
- border: 5px solid #0d2d5a;
-   padding: 20px;
-   background-color: white;
-   border-radius: 10px;
-   min-width: 320px;
-   max-width: 960px;
-   margin-left: auto;
-   margin-right: auto;
-   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-.team-title{
- font-size: 24px;
-   color: #0d2d5a;
-   margin-bottom: 15px;
-}
+  .roster-wrapper > div {
+    width: 100%;
+  }
 
-.table {
-   width: 100%;
-   border-collapse: collapse;
-   font-size: 16px;
-   margin-bottom: 30px;
-}
+  .team-title {
+    font-size: 30px;
+    color: #0d2d5a;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
 
-th {
-   background-color: #0d2d5a;
-   color: white;
-   padding: 10px;
-   text-align: left;
-   font-weight: bold;
-}
+  .table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 20px;
+    margin-bottom: 35px;
+  }
 
-td {
-   border: 1px solid #ccc;
-   padding: 10px;
-}
+  th {
+    background-color: #0d2d5a;
+    color: #ffffff;
+    padding: 15px;
+    text-align: left;
+    font-weight: bold;
+    border-bottom: 3px solid #fff;
+  }
 
-tr:nth-child(even) {
-   background-color: #f2f2f2;
-}
+  td {
+    border: 1px solid #ccc;
+    padding: 16px;
+    font-size: 20px;
+  }
 
-.centered {
-   text-align: center;
-}
-.search-wrapper {
-   display: flex;
-   justify-content: center;
-   margin-bottom: 20px;
-   position: relative;
- }
+  tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
 
- .search-input {
-   width: 50%;
-   padding: 10px 40px 10px 20px;
-   border: 1px solid #ccc;
-   border-radius: 25px;
-   font-size: 16px;
-   outline: none;
-   background-color: white;
-   transition: box-shadow 0.3s, border-color 0.3s;
- }
+  .centered {
+    text-align: center;
+  }
 
- .search-input::placeholder {
-   color: #888;
- }
+  .search-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+  }
 
- .search-input:focus {
-   box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-   border-color: #0d2d5a;
- }
-/* Responsive styles */
-@media (max-width: 767px) {
-   .roster-wrapper {
-     min-width: 100%;
-     padding: 10px;
-   }
+  .search-input {
+    width: 50%;
+    padding: 10px 40px 10px 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    background-color: white;
+    transition: box-shadow 0.3s, border-color 0.3s;
+  }
 
-   .title {
-     font-size: 24px;
-   }
+  .search-input::placeholder {
+    color: #888;
+  }
 
-   .team-title {
-     font-size: 20px;
-   }
+  .search-input:focus {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    border-color: #0d2d5a;
+  }
 
-   .table {
-     font-size: 14px;
-   }
+  @media (max-width: 767px) {
+    .roster-wrapper {
+      min-width: 100%;
+      padding: 0.625rem;
+    }
 
-   th, td {
-     padding: 8px;
-   }
-   .search-input {
-     width: 90%;
-     font-size: 14px;
-   }
- }
+    .title {
+      font-size: 1.5rem;
+    }
 
+    .team-title {
+      font-size: 1.25rem;
+    }
+
+    .table, th, td {
+      font-size: 0.75rem;
+    }
+
+    th, td {
+      padding: 0.5rem;
+    }
+
+    .search-input {
+      width: 90%;
+      font-size: 0.9rem;
+    }
+  }
 </style>
