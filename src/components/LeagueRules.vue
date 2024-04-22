@@ -91,54 +91,51 @@
   
   <!-- Add "scoped" attribute to limit CSS to this component only -->
   <style scoped>
-  .rules-container {
-    font-family: "Roboto", sans-serif;
+.rules-container {
+    font-family: 'Segoe UI', Arial, sans-serif;
     max-width: 800px;
-    padding: 1rem;
-    margin: 0 auto;
+    padding: 20px;
+    margin: 20px auto;
     line-height: 1.6;
-    color: #333;
-    background-color: #f9f9f9;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  }
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
 
-  h2 {
-    font-size: 1.75rem;
-    margin: 2rem 0 1rem;
+h2 {
+    font-size: 2rem;
+    color: #0d2d5a;
+    margin-bottom: 1rem;
     font-weight: bold;
-    text-align: center;
-    color: #0a558c;
-  }
+}
 
-  ul, ol {
-    padding-left: 1rem;
-    list-style-position: inside;
-  }
+ul, ol {
+    margin-bottom: 1rem;
+}
 
-  li {
+li {
     margin-bottom: 0.5rem;
-    line-height: 1.4;
-  }
+}
 
-  .additional-notes {
-    margin-top: 1.5rem;
+.additional-notes {
     font-weight: bold;
-    font-size: 1.25rem;
-    color: #0a558c;
-  }
+    color: #0d2d5a;
+    margin-top: 2rem;
+    margin-bottom: 0.5rem;
+}
 
-  p, li {
-    text-align: justify;
-  }
+@media (max-width: 767px) {
+    .rules-container {
+        padding: 15px;
+    }
 
-  @media (max-width: 767px) {
     h2 {
-      font-size: 1.5rem;
+        font-size: 1.5rem;
     }
 
     .additional-notes {
-      font-size: 1.1rem;
+        font-size: 1.2rem;
     }
-  }
+}
 </style>

@@ -112,14 +112,16 @@ export default {
 }
 .contact-us-image {
   width: 100%;
-  max-width: 600px; /* Limit the maximum width of the image */
-  height: auto; /* Maintain the aspect ratio */
+  max-width: 600px;
+  height: auto;
   
 }
 .carousel-wrapper {
   border: 5px solid #0d2d5a;
   padding: 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 
 /* Media query for mobile responsiveness */
