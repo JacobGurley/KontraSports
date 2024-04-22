@@ -59,7 +59,8 @@ export default {
 .schedule-link {
   display: block;
   font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
   text-decoration: none;
   color: #0d2d5a;
   margin: 10px 0;

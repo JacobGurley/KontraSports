@@ -1,17 +1,19 @@
 <template>
   <Nav />
   <div class="container">
-    <h1>Welcome to the Winter 2024 Season!</h1>
-    <p class="reg">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdi6seDe2T7PTfNDzS458IPSCr8-cESUlgfbT8xLrFfsKkEw/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Spring Registration </a>
-    </p>
-    <p class="waiver">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
-    </p>
-    <p class="location">
-      <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
-    </p>
-    <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
+    <h1>Welcome to the Spring 2024 Season!</h1>
+    <div class="links">
+      <p class="reg">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdi6seDe2T7PTfNDzS458IPSCr8-cESUlgfbT8xLrFfsKkEw/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Spring Registration </a>
+      </p>
+      <p class="waiver">
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
+      </p>
+      <p class="location">
+        <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
+      </p>
+      <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
+    </div>
     
     <section class="champions-section">
       <h2>Congratulations to the Fall 2023 Champions!</h2>
@@ -82,24 +84,41 @@ body {
 
   h1 {
     font-size: 1.8rem;
-    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
+
   h2 {
     font-size: 1.2rem;
-    margin-bottom: 10px;
+    margin-bottom: 0.625rem;
   }
+
   .ChampWrapper {
-    padding: 10px;
+    padding: 0.625rem;
   }
+
+  .links {
+    padding: 0.625rem;
+  }
+
   li, .halloffame-link, .waiver, .location, .reg, .court-link {
     font-size: 1rem;
   }
-  .carousel-wrapper{
+
+  .carousel-wrapper {
     width: 100%;
     overflow: hidden;
   }
 }
+
 .ChampWrapper{
+  border: 5px solid #0d2d5a;
+  padding: 1rem;
+  margin-bottom: 30px;
+  border-radius: 20px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}
+
+.links{
   border: 5px solid #0d2d5a;
   padding: 1rem;
   margin-bottom: 30px;
@@ -110,7 +129,8 @@ body {
 .halloffame-link, .waiver, .location, .reg, .court-link{
   display: block;
   font-size: 1.2rem;
-  font-family: 'Helvetica', sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  font-weight: 500;
   text-decoration: none;
   color: #0d2d5a;
   margin: 10px 0;
@@ -126,9 +146,10 @@ body {
   transform: translateY(-3px);
 }
 h1 {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: bold;
   font-size: 2.5rem;
+  margin-top: 5px;
   margin-bottom: 30px;
 }
 
@@ -141,7 +162,7 @@ h1 {
 }
 
 h2 {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -153,7 +174,7 @@ ul {
 }
 
 li {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
 }

@@ -2,7 +2,7 @@
   <Nav />
   <div class="container">
     <div class="title">
-      <h1>ROSTERS</h1>
+      <h1>Rosters</h1>
     </div>
     <div class="search-wrapper">
       <input

@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="width">
-    <h1 class="Winter">STANDINGS</h1>
+    <h1 class="Winter">Standings</h1>
     <div class="ChampWrapper">
       <table class="table">
         <thead>

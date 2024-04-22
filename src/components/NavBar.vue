@@ -143,13 +143,13 @@ html, body {
   }
 
   .navbar li {
-    margin: 5px;
-    padding: 5px;
+    margin: 0.3125rem;
+    padding: 0.3125rem;
   }
 
   .navbar a {
-    font-size: 12px;
-    padding: 8px 10px;
+    font-size: 0.75rem;
+    padding: 0.5rem 0.625rem;
   }
 
   .header-container {
@@ -159,7 +159,7 @@ html, body {
 
   .color-bar {
     width: 100%;
-    height: 15px;
+    height: 0.9375rem;
     position: absolute;
     top: 0;
     left: 0;
@@ -170,18 +170,18 @@ html, body {
     position: relative;
     width: 100%;
     overflow: visible;
-    padding-top: 15px;
+    padding-top: 0.9375rem;
   }
 
   .header-image {
-    height: 100px;
+    height: 6.25rem;
     width: 100%;
     background-size: cover;
     background-position: center center;
   }
 
   .logo {
-    height: 120px;
+    height: 7.5rem;
     position: absolute;
     top: 50%;
     left: 50%;

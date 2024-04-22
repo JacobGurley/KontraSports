@@ -99,7 +99,7 @@ export default{
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }
 h2 {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.5rem;
   margin-bottom: 15px;
@@ -112,7 +112,7 @@ ul {
 }
 
 li {
-  font-family: "Helvetica", sans-serif;
+  font-family: 'Segoe UI', Arial, sans-serif;
   font-weight: bold;
   font-size: 1.2rem;
 }

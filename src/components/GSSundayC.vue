@@ -1,7 +1,7 @@
 <template>
   <Nav />
   <div class="container">
-    <div class="title">GAME SCHEDULE</div>
+    <div class="title">Game Schedule</div>
     <div class="search-wrapper">
       <input
         type="text"
