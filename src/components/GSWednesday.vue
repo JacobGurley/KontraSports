@@ -197,14 +197,12 @@ setup() {
   font-size: 30px;
   color: #0d2d5a;
   margin-bottom: 10px;
-  font-weight: bold;
 }
 
 .location-title {
   font-size: 30px;
   color: #0d2d5a;
   margin-bottom: 15px;
-  font-weight: bold;
 }
 
 .table {
