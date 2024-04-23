@@ -4,8 +4,8 @@
     <div class="title">Game Schedules</div>
     <div class="ChampWrapper">
       <router-link class="schedule-link wed" to="/wednesdayGameSchedule">Wednesday Division 6'2 Schedule</router-link>
-      <router-link class="schedule-link thurs" to="/thursdayAGameSchedule">Thursday Division 6'3 Schedule</router-link>
-      <router-link class="schedule-link thursB" to="/thursdayBGameSchedule">Thursday Division 6'1 Schedule</router-link>
+      <router-link class="schedule-link thurs" to="/thursdayAGameSchedule">Thursday Open Height Schedule</router-link>
+      <router-link class="schedule-link thursB" to="/thursdayBGameSchedule">Thursday 6'2 & Under Schedule</router-link>
       <router-link class="schedule-link sunA" to="/sundayAGameSchedule">Sunday Division A Schedule</router-link>
       <router-link class="schedule-link sunB" to="/sundayBGameSchedule">Sunday Division B Schedule</router-link>
       <router-link class="schedule-link sunC" to="/sundayCGameSchedule">Sunday Division C Schedule</router-link>

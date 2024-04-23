@@ -16,15 +16,15 @@
     </div>
     
     <section class="champions-section">
-      <h2>Congratulations to the Fall 2023 Champions!</h2>
+      <h2>Congratulations to the Winter 2024 Champions!</h2>
       <ul>
         <li>Wednesday 6'2 Champions: Practice Squad</li>
         <li>Thursday 6'3 Champions: White Owls</li>
-        <li>Thursday 6'1 Champions: Hands Down Man Down</li>
-        <li>Sunday A Champions: FBG</li>
-        <li>Sunday B Champions: Ball Don't Lie</li>
-        <li>Sunday C Champions: True Grit</li>
-        <li>Sunday D Champions: Living Grace</li>
+        <li>Thursday 6'1 Champions: Young Bucs</li>
+        <li>Sunday A Champions: Daddy Chill</li>
+        <li>Sunday B Champions: The Redeem Team</li>
+        <li>Sunday C Champions: Purple Cobras</li>
+        <li>Sunday D Champions: Menace 2 Society</li>
       </ul>
     </section>
     <div class="ChampWrapper">
@@ -45,18 +45,6 @@ export default {
     Nav,
     PhotoGallery,
   },
-
-  data: () => ({
-    slides: [
-      require("../assets/Fall2023Wed.jpg"),
-      require("../assets/Fall2023ThursA.jpg"),
-      require("../assets/Fall2023ThursB.jpg"),
-      require("../assets/Fall2023SunA.jpg"),
-      require("../assets/Fall2023SunB.jpg"),
-      require("../assets/Fall2023SunC.jpg"),
-      require("../assets/Fall2023SunD.jpg"),
-    ],
-  }),
 };
 </script>
 <style>

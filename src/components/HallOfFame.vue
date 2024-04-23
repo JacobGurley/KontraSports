@@ -34,6 +34,16 @@
         <li>Sunday C: Shot Crew</li>
         <li>Sunday D: Adobros</li>
       </ul>
+      <h2>Fall 2023 Champions</h2>
+      <ul>
+        <li>Wednesday 6'2: Practice Squad</li>
+        <li>Thursday 6'3: White Owls</li>
+        <li>Thursday 6'1: Hands Down Man Down</li>
+        <li>Sunday A: FBG</li>
+        <li>Sunday B: Ball Don't Lie</li>
+        <li>Sunday C: True Grit</li>
+        <li>Sunday D: Living Grace</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
@@ -49,29 +59,6 @@ export default{
         Nav,
         PhotoGalleryHOF,
     },
-    data: () => ({
-    slides: [
-      require("../assets/thursday.jpg"),
-      require("../assets/sundaydivA.jpg"),
-      require("../assets/sundaydivB.jpg"),
-      require("../assets/ThurWinterChamps.jpg"),
-      require("../assets/SunAWinterChamps.jpg"),
-      require("../assets/SunBWinterChamps.jpg"),
-      require("../assets/SunCWinterChamps.jpg"),
-      require("../assets/WedSpringChamps.jpg"),
-      require("../assets/ThursdayASpringChamps.jpg"),
-      require("../assets/SunASpringChamps.jpg"),
-      require("../assets/SunBSpringChamps.jpg"),
-      require("../assets/SunCSpringChamps.jpg"),
-      require("../assets/Sum2023WedA.jpg"),
-      require("../assets/Sum2023ThurA.jpg"),
-      require("../assets/Sum2023ThurB.jpg"),
-      require("../assets/Sum2023SunA.jpg"),
-      require("../assets/Sum2023SunB.jpg"),
-      require("../assets/Sum2023SunC.jpg"),
-      require("../assets/Sum2023SunD.jpg"),
-    ],
-  }),
 };
 
 </script>

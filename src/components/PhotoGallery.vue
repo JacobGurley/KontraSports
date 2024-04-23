@@ -23,13 +23,13 @@
       return {
         currentSlide: 0,
         images: [
-            require("../assets/Fall2023Wed.jpg"),
-            require("../assets/Fall2023ThursA.jpg"),
-            require("../assets/Fall2023ThursB.jpg"),
-            require("../assets/Fall2023SunA.jpg"),
-            require("../assets/Fall2023SunB.jpg"),
-            require("../assets/Fall2023SunC.jpg"),
-            require("../assets/Fall2023SunD.jpg"),
+            require("../assets/WedWinter2024Champs.jpg"),
+            require("../assets/ThurAWinter2024Champs.jpg"),
+            require("../assets/ThurBWinter2024Champs.jpg"),
+            require("../assets/SunAWinter2024Champs.jpg"),
+            require("../assets/SunBWinter2024Champs.jpg"),
+            require("../assets/SunCWinter2024Champs.jpg"),
+            require("../assets/SunDWinter2024Champs.jpg"),
         ],
         autoSlideInterval: null,
         touchStartX: 0,
@@ -104,7 +104,8 @@
   
   .carousel-image img {
     width: 100%;
-    display: block;
+    height: 100%;
+    object-fit: contain;
   }
   
   button {
@@ -151,11 +152,9 @@
   }
   @media (max-width: 768px) {
   .carousel-image img {
-    width: auto;
-    max-width: 100%;
-    height: auto; 
-    max-height: 50vh; 
-    object-fit: cover; 
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 
   .carousel-indicators {
