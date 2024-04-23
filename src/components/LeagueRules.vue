@@ -47,7 +47,7 @@
   </ol>
     <h2>Playoff Qualifications:</h2>
     <ol>
-    <li>In order to be eligible for the playoff games a player must have played at least 3 of the scheduled regular season games(2 of the 5 scheduled for half seasons). </li>
+    <li>In order to be eligible for the playoff games, a player must have played at least 3 of the scheduled regular season games (2 of the 5 scheduled for half seasons). Players MUST be signed in under the name on their CA ID. Forfeit games do not COUNT as a game played for any players. Players cannot be signed in and not play, and will not count if they are not shown to have any stats on their player card. ID’s will be checked in playoff play. </li>
   </ol>
     <h2>IMPORTANT ADDITIONAL RULES:</h2>
     <ol>
