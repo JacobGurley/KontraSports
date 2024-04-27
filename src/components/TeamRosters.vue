@@ -6,10 +6,9 @@
       <router-link class="schedule-link wed" to="/teamRosterWed">Wednesday Division 6'2 Rosters</router-link>
       <router-link class="schedule-link thurs" to="/teamRosterThurA">Thursday Open Height Rosters</router-link>
       <router-link class="schedule-link thursB" to="/teamRosterThurB">Thursday 6'2 & Under Rosters</router-link>
-      <router-link class="schedule-link sunA" to="/teamRosterSunA">Sunday Division A Rosters</router-link>
-      <router-link class="schedule-link sunB" to="/teamRosterSunB">Sunday Division B Rosters</router-link>
-      <router-link class="schedule-link sunC" to="/teamRosterSunC">Sunday Division C Rosters</router-link>
-      <router-link class="schedule-link sunD" to="/teamRosterSunD">Sunday Division D Rosters</router-link>
+      <router-link class="schedule-link sunA" to="/teamRosterSunA">Sunday Open Height Rosters</router-link>
+      <router-link class="schedule-link sunB" to="/teamRosterSunB">Sunday Division 6'2 Rosters</router-link>
+      <router-link class="schedule-link sunC" to="/teamRosterSunC">Sunday Division 6'0 Rosters</router-link>
     </div>
   </div>
 </template>
