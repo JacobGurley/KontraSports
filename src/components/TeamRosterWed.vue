@@ -4,6 +4,11 @@
     <div class="title">
       <h1>Rosters</h1>
     </div>
+    <div class="ChampWrapper">
+      <router-link class="division-leaders" to="/divisionLeadersWed">
+        Division Leaders
+      </router-link>
+    </div>
     <div class="search-wrapper">
       <input
         type="text"
@@ -198,6 +203,7 @@ setup() {
     outline: none;
     background-color: white;
     transition: box-shadow 0.3s, border-color 0.3s;
+    margin-top: 40px;
   }
 
   .search-input::placeholder {
@@ -207,6 +213,40 @@ setup() {
   .search-input:focus {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
     border-color: #0d2d5a;
+  }
+
+  .division-leaders {
+    display: block;
+    font-size: 1.2rem;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    color: #0d2d5a;
+    margin: 10px 0;
+    padding: 10px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s;
+  }
+
+  .division-leaders:hover {
+    color: #1a73e8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-3px);
+  }
+  
+  .ChampWrapper{
+    border: 5px solid #0d2d5a;
+    padding: 1rem;
+    margin-bottom: 30px;
+    border-radius: 20px;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    min-width: 320px;
+    max-width: 960px;
+    align-items: center;
+    margin: 1px auto;
+    background-color: #ffffff;
   }
 
   @media (max-width: 767px) {
@@ -234,6 +274,12 @@ setup() {
     .search-input {
       width: 90%;
       font-size: 0.9rem;
+    }
+    .division-leaders {
+    font-size: 1rem;
+    }
+    .ChampWrapper {
+      padding: 0.625rem;
     }
   }
 </style>

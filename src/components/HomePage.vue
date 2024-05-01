@@ -103,6 +103,7 @@ body {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 .links{
@@ -111,6 +112,7 @@ body {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 .halloffame-link, .waiver, .location, .reg, .court-link{
@@ -146,6 +148,7 @@ h1 {
   margin-bottom: 30px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 
 h2 {
@@ -171,5 +174,6 @@ li {
   padding: 5px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 </style>

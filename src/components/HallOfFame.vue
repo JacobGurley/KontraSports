@@ -84,6 +84,7 @@ export default{
   padding: 1rem;
   margin-bottom: 30px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
 }
 h2 {
   font-family: 'Segoe UI', Arial, sans-serif;
@@ -109,6 +110,7 @@ li {
   padding: 5px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
   border-radius: 20px;
+  background-color: #ffffff;
 }
 @media (max-width: 768px) {
   .container {
