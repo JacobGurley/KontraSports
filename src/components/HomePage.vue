@@ -1,10 +1,10 @@
 <template>
   <Nav />
   <div class="container">
-    <h1>Welcome to the Spring 2024 Season!</h1>
+    <h1>FALL 2024 REGISTRATION IS NOW OPEN</h1>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfdi6seDe2T7PTfNDzS458IPSCr8-cESUlgfbT8xLrFfsKkEw/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Spring Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSflO8-tbC7V5oToxfh8wdxld8jWpPUIsa6pa5Bq8VTH18bnlA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Fall Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
