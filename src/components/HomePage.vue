@@ -2,6 +2,7 @@
   <Nav />
   <div class="container">
     <h1>FALL 2024 REGISTRATION IS NOW OPEN</h1>
+    <h1>SEASON STARTS SEPTEMBER 4th</h1>
     <div class="links">
       <p class="reg">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSflO8-tbC7V5oToxfh8wdxld8jWpPUIsa6pa5Bq8VTH18bnlA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Fall Registration </a>
@@ -140,6 +141,7 @@ h1 {
   font-size: 2.5rem;
   margin-top: 5px;
   margin-bottom: 30px;
+  color: red;
 }
 
 .champions-section {
