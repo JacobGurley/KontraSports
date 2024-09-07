@@ -1,5 +1,4 @@
 <template>
-    <Nav />
     <div class="rules-container">
       <h2>KONTRA IMPORTANT RULES</h2>
       <ul>
@@ -81,11 +80,7 @@
 </template>
   
   <script scoped>
-  import Nav from "./NavBar.vue";
   export default {
-    components: {
-    Nav,
-  },
   };
   </script>
   

@@ -1,5 +1,4 @@
 <template>
-  <Nav />
   <div class="width">
     <h1 class="Winter">Standings</h1>
     <div class="ChampWrapper">
@@ -28,14 +27,10 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
 import { ref } from 'vue';
 import { getDatabase, ref as dbRef, onValue } from 'firebase/database';
 
 export default {
-components: {
-  Nav,
-},
 setup() {
   const db = getDatabase();
   const standingsRef = dbRef(db, 'standingsSunA');

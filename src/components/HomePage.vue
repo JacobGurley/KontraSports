@@ -1,8 +1,7 @@
 <template>
-  <Nav />
   <div class="container">
     <h1>FALL 2024 REGISTRATION IS NOW OPEN</h1>
-    <h1>SEASON STARTS SEPTEMBER 4th</h1>
+    <h1>SEASON STARTS SUNDAY SEPTEMBER 8th</h1>
     <div class="links">
       <p class="reg">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSflO8-tbC7V5oToxfh8wdxld8jWpPUIsa6pa5Bq8VTH18bnlA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Fall Registration </a>
@@ -11,27 +10,24 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
       </p>
       <p class="location">
-        <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
+        <a :href="mapLink" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
       </p>
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
-    
     <section class="champions-section">
-      <h2>Congratulations to the Winter 2024 Champions!</h2>
+      <h2>Congratulations to the Spring 2024 Champions!</h2>
       <ul>
-        <li>Wednesday 6'2 Champions: Practice Squad</li>
-        <li>Thursday 6'3 Champions: White Owls</li>
-        <li>Thursday 6'1 Champions: Young Bucs</li>
-        <li>Sunday A Champions: Daddy Chill</li>
-        <li>Sunday B Champions: The Redeem Team</li>
-        <li>Sunday C Champions: Purple Cobras</li>
-        <li>Sunday D Champions: Menace 2 Society</li>
+        <li>Wednesday Open Champions: Practice Squad</li>
+        <li>Thursday Open Champions: Hoops Legends</li>
+        <li>Thursday 6'2 Champions: Alcoholics</li>
+        <li>Sunday Open Champions: Outlawz</li>
+        <li>Sunday 6'2 Champions: Los Veteranos</li>
+        <li>Sunday 6'0 Champions: Menace 2 Society</li>
       </ul>
     </section>
     <div class="ChampWrapper">
       <router-link class="halloffame-link" to="/hallOfFame">Hall of Fame</router-link>
     </div>
-    
     <div class="carousel-wrapper">
     <PhotoGallery />
     </div>
@@ -39,13 +35,42 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
 import PhotoGallery from "./PhotoGallery.vue";
 export default {
   components: {
-    Nav,
     PhotoGallery,
   },
+  data() {
+    return {
+      mapLink: "",
+    };
+  },
+  mounted() {
+    this.setMapLink();
+  },
+  methods: {
+  setMapLink() {
+    const googleMapsLink = "https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740";
+    const appleMapsLink = "https://maps.apple.com/?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740";
+
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    const isAndroid = /Android/.test(navigator.userAgent);
+    const isMacOS = /Macintosh|Mac OS X/.test(navigator.userAgent);
+    const isWindows = /Windows/.test(navigator.userAgent);
+
+    if (isIOS) {
+      this.mapLink = appleMapsLink;
+    } else if (isAndroid) {
+      this.mapLink = googleMapsLink;
+    } else if (isMacOS) {
+      this.mapLink = googleMapsLink;
+    } else if (isWindows) {
+      this.mapLink = googleMapsLink;
+    } else {
+      this.mapLink = googleMapsLink;
+    }
+  }
+}
 };
 </script>
 <style>

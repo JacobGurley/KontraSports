@@ -1,5 +1,4 @@
 <template>
-  <Nav />
   <div class="container">
     <div class="title">
       <h1>Rosters</h1>
@@ -40,14 +39,10 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
 import { ref, computed } from 'vue';
 import { getDatabase, ref as dbRef, onValue } from 'firebase/database';
 
 export default {
-components: {
-  Nav,
-},
 setup() {
   const db = getDatabase();
   const rosterRef = dbRef(db, 'rostersThurB');

@@ -41,6 +41,9 @@ export default {
   },
   mounted() {
     window.addEventListener('scroll', this.handleScroll);
+    if ('ontouchstart' in window || navigator.maxTouchPoints) {
+      document.body.classList.add('no-hover');
+    }
   },
   beforeUnmount() {
     window.removeEventListener('scroll', this.handleScroll);
@@ -91,7 +94,7 @@ html, body {
     height: 250px; 
     transition: transform 0.3s ease;
 }
-.logo:hover {
+body:not(.no-hover) .logo:hover {
     transform: translate(-50%, -50%) scale(1.05);
 }
 .navbar {

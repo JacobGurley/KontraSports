@@ -1,5 +1,4 @@
 <template>
-  <Nav />
   <div class="container">
     <div class="content">
       <div class="icon-text-container">
@@ -32,13 +31,7 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
- 
-
 export default {
-  components: {
-    Nav,
-  },
 };
 </script>
 

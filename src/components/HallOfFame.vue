@@ -1,5 +1,4 @@
 <template>
-    <Nav />
     <div class="container">
     <div class="title">HALL OF FAME</div>
     <section class="champions-section">
@@ -44,6 +43,16 @@
         <li>Sunday C: True Grit</li>
         <li>Sunday D: Living Grace</li>
       </ul>
+      <h2>Winter 2024 Champions</h2>
+      <ul>
+        <li>Wednesday 6'2: Practice Squad</li>
+        <li>Thursday 6'3: White Owls</li>
+        <li>Thursday 6'1: Young Bucs</li>
+        <li>Sunday A: Daddy Chill</li>
+        <li>Sunday B: The Redeem Team</li>
+        <li>Sunday C: Purple Cobras</li>
+        <li>Sunday D: Menace 2 Society</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
@@ -52,11 +61,9 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
 import PhotoGalleryHOF from "./PhotoGalleryHOF.vue";
 export default{
     components: {
-        Nav,
         PhotoGalleryHOF,
     },
 };

@@ -1,5 +1,4 @@
 <template>
-  <Nav />
   <div class="container">
     <div class="title">Game Schedule</div>
     <div class="search-wrapper">
@@ -40,14 +39,10 @@
 </template>  
     
 <script scoped>
-import Nav from "./NavBar.vue";
 import { ref, onMounted, computed } from 'vue';
 import { getDatabase, ref as dbRef, onValue, get } from 'firebase/database';
 
 export default {
-components: {
-  Nav,
-},
 setup() {
   const db = getDatabase();
   const gamesRef = dbRef(db, 'gamesSunB');

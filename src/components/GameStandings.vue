@@ -1,9 +1,7 @@
 <template>
-  <Nav />
   <div class="container">
     <div class="title">Standings</div>
     <div class="ChampWrapper">
-      <router-link class="schedule-link wed" to="/standingsWed">Wednesday Open Height Standings</router-link>
       <router-link class="schedule-link thurs" to="/standingsThurA">Thursday Open Height Standings</router-link>
       <router-link class="schedule-link thursB" to="/standingsThurB">Thursday 6'2 Division Standings</router-link>
       <router-link class="schedule-link sunA" to="/standingsSunA">Sunday Open Height Standings</router-link>
@@ -14,11 +12,7 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
 export default {
-  components: {
-  Nav,
-},
 };
 </script>
 

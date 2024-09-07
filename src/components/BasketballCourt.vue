@@ -1,5 +1,4 @@
 <template>
-    <Nav />
     <div class="container">
         <div class="content">
             <div class="title">1709 Apollo Ct BIG GYM</div>
@@ -11,12 +10,7 @@
 </template>
 
 <script scoped>
-import Nav from "./NavBar.vue";
-
 export default{
-    components: {
-        Nav,
-    },
 };
 </script>
 

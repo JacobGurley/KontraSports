@@ -1,12 +1,19 @@
 <template>
   <div id="app-content">
+    <keep-alive>
+      <NavBar />
+    </keep-alive>
     <router-view />
   </div>
 </template>
 
 <script>
+import NavBar from './components/NavBar.vue';
 export default {
   name: "App",
+  components: {
+    NavBar,
+  },
 };
 </script>
 
