@@ -10,7 +10,7 @@
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
       </p>
       <p class="location">
-        <a :href="mapLink" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
+        <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
       </p>
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
@@ -40,37 +40,6 @@ export default {
   components: {
     PhotoGallery,
   },
-  data() {
-    return {
-      mapLink: "",
-    };
-  },
-  mounted() {
-    this.setMapLink();
-  },
-  methods: {
-  setMapLink() {
-    const googleMapsLink = "https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740";
-    const appleMapsLink = "https://maps.apple.com/?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740";
-
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
-    const isAndroid = /Android/.test(navigator.userAgent);
-    const isMacOS = /Macintosh|Mac OS X/.test(navigator.userAgent);
-    const isWindows = /Windows/.test(navigator.userAgent);
-
-    if (isIOS) {
-      this.mapLink = appleMapsLink;
-    } else if (isAndroid) {
-      this.mapLink = googleMapsLink;
-    } else if (isMacOS) {
-      this.mapLink = googleMapsLink;
-    } else if (isWindows) {
-      this.mapLink = googleMapsLink;
-    } else {
-      this.mapLink = googleMapsLink;
-    }
-  }
-}
 };
 </script>
 <style>
