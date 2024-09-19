@@ -1,7 +1,6 @@
 <template>
   <div class="container">
-    <h1>FALL 2024 REGISTRATION IS NOW OPEN</h1>
-    <h1>SEASON STARTS SUNDAY SEPTEMBER 8th</h1>
+    <h1>WELCOME TO THE FALL 2024 SEASON!</h1>
     <div class="links">
       <p class="reg">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSflO8-tbC7V5oToxfh8wdxld8jWpPUIsa6pa5Bq8VTH18bnlA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Fall Registration </a>
