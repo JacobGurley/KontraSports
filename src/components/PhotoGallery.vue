@@ -23,12 +23,11 @@
       return {
         currentSlide: 0,
         images: [
-            require("../assets/SpringWed2024.jpg"),
-            require("../assets/SpringThurA2024.jpg"),
-            require("../assets/SpringThurB2024.jpg"),
+            require("../assets/FallThurA2024.jpg"),
+            require("../assets/FallThurB2024.jpg"),
             require("../assets/SpringSunA2024.jpg"),
-            require("../assets/SpringSunB2024.jpg"),
-            require("../assets/SpringSunC2024.jpg"),
+            require("../assets/FallSunB2024.jpg"),
+            require("../assets/FallSunC2024.jpg"),
         ],
         autoSlideInterval: null,
         touchStartX: 0,

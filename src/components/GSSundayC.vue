@@ -52,8 +52,16 @@ setup() {
   const searchDate = ref("");
   const locations = ref({});
 
+  // Normalization helper for sorting games by time
+  function normalizeTime(timeStr) {
+    return timeStr.toUpperCase().replace(/([AP]M)$/, ' $1');
+  }
+
   // Utility function for sorting games by time
   const sortGamesByTime = (gamesArray) => {
+    gamesArray.forEach((game) => {
+      game.time = normalizeTime(game.time);
+    });
     return gamesArray.sort((a, b) => {
       const timeA = new Date('1970/01/01 ' + a.time);
       const timeB = new Date('1970/01/01 ' + b.time);

@@ -1,9 +1,9 @@
 <template>
   <div class="container">
-    <h1>WELCOME TO THE FALL 2024 SEASON!</h1>
+    <h1> WINTER SEASON STARTS JANUARY 16TH</h1>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSflO8-tbC7V5oToxfh8wdxld8jWpPUIsa6pa5Bq8VTH18bnlA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2024 Fall Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8O4wIs7yhRLLhaSbpEXtPJWZp5UFkDKq0-4Fqk-f3WSDn5w/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Winter Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
@@ -14,14 +14,13 @@
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
     <section class="champions-section">
-      <h2>Congratulations to the Spring 2024 Champions!</h2>
+      <h2>Congratulations to the Fall 2024 Champions!</h2>
       <ul>
-        <li>Wednesday Open Champions: Practice Squad</li>
-        <li>Thursday Open Champions: Hoops Legends</li>
-        <li>Thursday 6'2 Champions: Alcoholics</li>
+        <li>Thursday Open Champions: White Owls</li>
+        <li>Thursday 6'2 Champions: Jersey Shore</li>
         <li>Sunday Open Champions: Outlawz</li>
-        <li>Sunday 6'2 Champions: Los Veteranos</li>
-        <li>Sunday 6'0 Champions: Menace 2 Society</li>
+        <li>Sunday 6'2 Champions: Dunkin Donuts</li>
+        <li>Sunday 6'0 Champions: All Money In</li>
       </ul>
     </section>
     <div class="ChampWrapper">

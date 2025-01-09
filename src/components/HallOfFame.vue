@@ -53,6 +53,15 @@
         <li>Sunday C: Purple Cobras</li>
         <li>Sunday D: Menace 2 Society</li>
       </ul>
+      <h2>Spring 2024 Champions</h2>
+      <ul>
+        <li>Wednesday Open: Practice Squad</li>
+        <li>Thursday Open: Hoops Legends</li>
+        <li>Thursday 6'2: Alcoholics</li>
+        <li>Sunday Open: Outlawz</li>
+        <li>Sunday 6'2: Los Veteranos</li>
+        <li>Sunday 6'0: Menace 2 Society</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
