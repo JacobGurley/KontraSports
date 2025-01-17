@@ -4,7 +4,7 @@
       <ul>
     <li>1) All players must have filled out a waiver either online or in person or they will not be allowed to play.</li>
     <li>2) Only the Captain or chosen representative from the team will be allowed to sign in players and they must do this before game time.</li>
-    <li>3) Game fees ($45) must be paid in full before the game starts.</li>
+    <li>3) Game fees ($50) must be paid in full before the game starts.</li>
     <li>4) Clock will start at the scheduled game time.</li>
     <li>5) For every minute a team is late, 1 point will be added for the other team.</li>
     <li>6) Once a game ends, there will be 2 minutes put on the clock before the next game starts.</li>

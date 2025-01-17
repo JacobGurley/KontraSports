@@ -83,7 +83,9 @@ setup() {
     }
 
     // Sort team names by alphabetical order
-    const sortedTeams = Object.keys(grouped).sort();
+    const sortedTeams = Object.keys(grouped).sort((a,b) => {
+      return a.localeCompare(b, undefined, { sensitivity: 'base' });
+    });
     const sortedRosters = {};
     sortedTeams.forEach(team => {
       sortedRosters[team] = grouped[team];
