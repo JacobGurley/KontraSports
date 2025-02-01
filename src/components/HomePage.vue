@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1> WINTER SEASON STARTS JANUARY 16TH</h1>
+    <h1>WELCOME TO THE 2025 WINTER SEASON!</h1>
     <div class="links">
       <p class="reg">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8O4wIs7yhRLLhaSbpEXtPJWZp5UFkDKq0-4Fqk-f3WSDn5w/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Winter Registration </a>
