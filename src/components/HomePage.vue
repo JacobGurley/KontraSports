@@ -1,9 +1,10 @@
 <template>
   <div class="container">
-    <h1>WELCOME TO THE 2025 WINTER SEASON!</h1>
+    <h1>SPRING 2025 REGISTRATION IS NOW OPEN!</h1>
+    <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8O4wIs7yhRLLhaSbpEXtPJWZp5UFkDKq0-4Fqk-f3WSDn5w/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Winter Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeWjf84QTG7IKodGB7tzoyG9AGYTomJuESKzbES_vAiUPBAA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Spring Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
