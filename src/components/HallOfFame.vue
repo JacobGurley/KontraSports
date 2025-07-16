@@ -70,6 +70,13 @@
         <li>Sunday 6'2: Dunkin Donuts</li>
         <li>Sunday 6'0: All Money In</li>
       </ul>
+      <h2>Winter 2025 Champions</h2>
+      <ul>
+        <li>Thursday Open: White Owls</li>
+        <li>Thursday 6'2: We All Can Go</li>
+        <li>Sunday 6'2: Los Veteranos</li>
+        <li>Sunday 6'0: Barnstormers</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />

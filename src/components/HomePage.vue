@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>WELCOME TO THE SPRING 2025 SEASON!</h1>
+    <h1>SUMMER SEASON STARTS NEXT WEEK!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
@@ -15,12 +15,11 @@
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
     <section class="champions-section">
-      <h2>Congratulations to the Winter 2024 Champions!</h2>
+      <h2>CONGRATULATIONS TO THE SPRING 2025 CHAMPIONS!</h2>
       <ul>
-        <li>Thursday Open Champions: White Owls</li>
-        <li>Thursday 6'2 Champions: We All Can Go</li>
-        <li>Sunday 6'2 Champions: Los Veteranos</li>
-        <li>Sunday 6'0 Champions: Barnstormers</li>
+        <li>Thursday Open Champions: Family Ties</li>
+        <li>Sunday 6'2 Champions: Salbahe</li>
+        <li>Sunday 6'0 Champions: ALL MONEY IN</li>
       </ul>
     </section>
     <div class="ChampWrapper">
