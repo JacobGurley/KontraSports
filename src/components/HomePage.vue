@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1>SPRING 2025 REGISTRATION IS NOW OPEN!</h1>
+    <h1>WELCOME TO THE SPRING 2025 SEASON!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdeWjf84QTG7IKodGB7tzoyG9AGYTomJuESKzbES_vAiUPBAA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Spring Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSfq6D1fH3tKZMTfxS6OKKk4wOBmzC2hNUFelWsuOjE_9q6kww/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2025 Summer Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
@@ -15,13 +15,12 @@
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
     <section class="champions-section">
-      <h2>Congratulations to the Fall 2024 Champions!</h2>
+      <h2>Congratulations to the Winter 2024 Champions!</h2>
       <ul>
         <li>Thursday Open Champions: White Owls</li>
-        <li>Thursday 6'2 Champions: Jersey Shore</li>
-        <li>Sunday Open Champions: Outlawz</li>
-        <li>Sunday 6'2 Champions: Dunkin Donuts</li>
-        <li>Sunday 6'0 Champions: All Money In</li>
+        <li>Thursday 6'2 Champions: We All Can Go</li>
+        <li>Sunday 6'2 Champions: Los Veteranos</li>
+        <li>Sunday 6'0 Champions: Barnstormers</li>
       </ul>
     </section>
     <div class="ChampWrapper">

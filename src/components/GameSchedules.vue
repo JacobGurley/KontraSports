@@ -3,7 +3,6 @@
     <div class="title">Game Schedules</div>
     <div class="ChampWrapper">
       <router-link class="schedule-link thurs" to="/thursdayAGameSchedule">Thursday Open Height Schedule</router-link>
-      <router-link class="schedule-link thursB" to="/thursdayBGameSchedule">Thursday 6'2 Division Schedule</router-link>
       <router-link class="schedule-link sunB" to="/sundayBGameSchedule">Sunday 6'2 Division Schedule</router-link>
       <router-link class="schedule-link sunC" to="/sundayCGameSchedule">Sunday 6'0 Division Schedule</router-link>
     </div>

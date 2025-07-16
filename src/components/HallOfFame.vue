@@ -62,6 +62,14 @@
         <li>Sunday 6'2: Los Veteranos</li>
         <li>Sunday 6'0: Menace 2 Society</li>
       </ul>
+      <h2>Fall 2024 Champions</h2>
+      <ul>
+        <li>Thursday Open: White Owls</li>
+        <li>Thursday 6'2: Jersey Shore</li>
+        <li>Sunday Open: Outlawz</li>
+        <li>Sunday 6'2: Dunkin Donuts</li>
+        <li>Sunday 6'0: All Money In</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
