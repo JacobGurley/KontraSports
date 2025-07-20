@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>SUMMER SEASON STARTS NEXT WEEK!</h1>
+    <h1>WELCOME TO THE SUMMER 2025 SEASON!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
