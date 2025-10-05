@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>REGISTRATION FOR FALL 2025 IS NOW OPEN!</h1>
+    <h1>FALL 2025 SEASON STARTS SUNDAY OCTOBER 5TH & THURSDAY OCTOBER 9TH!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
@@ -15,11 +15,10 @@
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
     <section class="champions-section">
-      <h2>CONGRATULATIONS TO THE SPRING 2025 CHAMPIONS!</h2>
+      <h2>CONGRATULATIONS TO THE SUMMER 2025 CHAMPIONS!</h2>
       <ul>
-        <li>Thursday Open Champions: Family Ties</li>
-        <li>Sunday 6'2 Champions: Salbahe</li>
-        <li>Sunday 6'0 Champions: ALL MONEY IN</li>
+        <li>Thursday Open Champions: Beach Boyz</li>
+        <li>Sunday Champions: The Gigglers</li>
       </ul>
     </section>
     <div class="ChampWrapper">

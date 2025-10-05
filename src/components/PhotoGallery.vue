@@ -23,9 +23,8 @@
       return {
         currentSlide: 0,
         images: [
-            require("../assets/SpringThur2025.jpg"),
-            require("../assets/SpringSunA2025.jpeg"),
-            require("../assets/SpringSunB2025.jpeg"),
+            require("../assets/SummerThurs2025.jpeg"),
+            require("../assets/SummerSun2025.jpeg"),
         ],
         autoSlideInterval: null,
         touchStartX: 0,

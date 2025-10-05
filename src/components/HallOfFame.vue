@@ -77,6 +77,12 @@
         <li>Sunday 6'2: Los Veteranos</li>
         <li>Sunday 6'0: Barnstormers</li>
       </ul>
+      <h2>Spring 2025 Champions</h2>
+      <ul>
+        <li>Thursday Open: Family Ties</li>
+        <li>Sunday 6'2: Salbahe</li>
+        <li>Sunday 6'0: ALL MONEY IN</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
