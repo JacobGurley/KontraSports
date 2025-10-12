@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>FALL 2025 SEASON STARTS SUNDAY OCTOBER 5TH & THURSDAY OCTOBER 9TH!</h1>
+    <h1>FALL 2025 SEASON STARTS SUNDAY OCTOBER 5TH & THURSDAY OCTOBER 16TH!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
@@ -11,6 +11,9 @@
       </p>
       <p class="location">
         <a href="https://www.google.com/maps?q=1718+Apollo+Ct,+Seal+Beach,+CA+90740" target="_blank" rel="noopener noreferrer">Click Here for Directions to AIMS Sports Group</a>
+      </p>
+      <p class="location">
+        <a href="https://www.google.com/maps/place/14400+Chestnut+St,+Westminster,+CA+92683" target="_blank" rel="noopener noreferrer">Click Here for Directions to Boys & Girls Club Westminster</a>
       </p>
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
