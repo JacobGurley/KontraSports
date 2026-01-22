@@ -83,6 +83,11 @@
         <li>Sunday 6'2: Salbahe</li>
         <li>Sunday 6'0: ALL MONEY IN</li>
       </ul>
+      <h2>Summer 2025 Champions</h2>
+      <ul>
+        <li>Thursday Open: Beach Boyz</li>
+        <li>Sunday Champs: The Gigglers</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />
