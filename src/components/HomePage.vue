@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1>FEW MORE SPOTS OPEN FOR THE WINTER 2026 THURSDAY DIVISION!</h1>
+    <h1>REGISTRATION FOR THE SPRING 2026 SEASON IS NOW OPEN!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdQOmCHDV8hvhppvq5-bKbflQ6VIOxsQzzfHIMWe_kt7Z8yVQ/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2026 Winter Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSelUVEWq8ZP7RRgUWl2YynN2ErFvjYcEQ0eY_OMMhKWE-gmGA/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2026 Spring Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
