@@ -68,7 +68,7 @@
         <li>Thursday 6'2: Jersey Shore</li>
         <li>Sunday Open: Outlawz</li>
         <li>Sunday 6'2: Dunkin Donuts</li>
-        <li>Sunday 6'0: All Money In</li>
+        <li>Sunday 6'0: ALL MONEY IN</li>
       </ul>
       <h2>Winter 2025 Champions</h2>
       <ul>
@@ -87,6 +87,11 @@
       <ul>
         <li>Thursday Open: Beach Boyz</li>
         <li>Sunday Champs: The Gigglers</li>
+      </ul>
+      <h2>Fall 2025 Champions</h2>
+      <ul>
+        <li>Thursday Open: YVL</li>
+        <li>Sunday 6'1: Barnstormers</li>
       </ul>
     </section>
     <div class="carousel-wrapper">

@@ -4,7 +4,8 @@
     <div class="ChampWrapper">
       <router-link class="schedule-link thursA" to="/teamRosterThurA">Thursday Open Division Rosters</router-link>
       <router-link class="schedule-link thursB" to="/teamRosterThurB">Thursday 6'1 Division Rosters</router-link>
-      <router-link class="schedule-link sunC" to="/teamRosterSunC">Sunday Division Rosters</router-link>
+      <router-link class="schedule-link sunB" to="/teamRosterSunB">Sunday 6'3 Division Rosters</router-link>
+      <router-link class="schedule-link sunC" to="/teamRosterSunC">Sunday 6'1 Division Rosters</router-link>
     </div>
   </div>
 </template>

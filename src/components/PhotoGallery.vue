@@ -23,8 +23,9 @@
       return {
         currentSlide: 0,
         images: [
-            require("../assets/FallThur2025.jpeg"),
-            require("../assets/FallSun2025.jpeg"),
+            require("../assets/WinterThurA2026.jpg"),
+            require("../assets/WinterThurB2026.jpg"),
+            require("../assets/WinterSun2026.jpg"),
         ],
         autoSlideInterval: null,
         touchStartX: 0,

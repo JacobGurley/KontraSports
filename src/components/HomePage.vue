@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <h1>REGISTRATION FOR THE SPRING 2026 SEASON IS NOW OPEN!</h1>
+    <h1>WELCOME TO THE SPRING 2026 SEASON!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
@@ -18,10 +18,11 @@
       <router-link class="court-link" to="/basketballCourt">Click Here for Map of AIMS BIG GYM</router-link>
     </div>
     <section class="champions-section">
-      <h2>CONGRATULATIONS TO THE FALL 2025 CHAMPIONS!</h2>
+      <h2>CONGRATULATIONS TO THE WINTER 2026 CHAMPIONS!</h2>
       <ul>
-        <li>Thursday Open Champions: YVL</li>
-        <li>Sunday Champions: Barnstormers</li>
+        <li>Thursday Open: White Owls</li>
+        <li>Thursday 6'1: Backdoor Specialists</li>
+        <li>Sunday 6'1: ALL MONEY IN</li>
       </ul>
     </section>
     <div class="ChampWrapper">
