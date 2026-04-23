@@ -5,7 +5,7 @@
     </div>
     <div class="ChampWrapper">
       <div v-if="topPlayers.length === 0" class="no-players-message">
-        Updated when players have played 2 or more games
+        Updated when players have played 3 or more games
       </div>
       <table class="table">
         <thead>
@@ -53,7 +53,7 @@ export default {
         }))
         // Filter players with 3 or more games played
         // Change to 2 if season only 5 games
-        .filter(player => player.gamesPlayed >= 2)
+        .filter(player => player.gamesPlayed >= 3)
         .sort((a, b) => b.ppg - a.ppg)
         .slice(0, 10);
     };
