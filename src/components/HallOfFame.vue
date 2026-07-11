@@ -93,6 +93,12 @@
         <li>Thursday Open: YVL</li>
         <li>Sunday 6'1: Barnstormers</li>
       </ul>
+      <h2>Winter 2026 Champions</h2>
+      <ul>
+        <li>Thursday Open: White Owls</li>
+        <li>Thursday 6'1: Backdoor Specialists</li>
+        <li>Sunday 6'1: ALL MONEY IN</li>
+      </ul>
     </section>
     <div class="carousel-wrapper">
       <PhotoGalleryHOF />

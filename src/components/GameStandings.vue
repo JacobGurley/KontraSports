@@ -2,7 +2,7 @@
   <div class="container">
     <div class="title">Standings</div>
     <div class="ChampWrapper">
-      <router-link class="schedule-link thursB" to="/standingsThurB">Thursday 6'3 Division Standings</router-link>
+      <router-link class="schedule-link thursB" to="/standingsThurB">Thursday 6'4 Division Standings</router-link>
       <router-link class="schedule-link sunB" to="/standingsSunB">Sunday 6'3 Division Standings</router-link>
       <router-link class="schedule-link sunC" to="/standingsSunC">Sunday 6'1 Division Standings</router-link>
     </div>

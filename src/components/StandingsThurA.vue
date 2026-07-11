@@ -98,6 +98,7 @@ setup() {
   min-width: 320px;
   max-width: 960px;
   margin: 1px auto;
+  margin-bottom: 45px;
   border-radius: 20px;
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
   background-color: #ffffff;

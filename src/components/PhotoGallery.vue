@@ -23,9 +23,9 @@
       return {
         currentSlide: 0,
         images: [
-            require("../assets/WinterThurA2026.jpg"),
-            require("../assets/WinterThurB2026.jpg"),
-            require("../assets/WinterSun2026.jpg"),
+            require("../assets/SpringThur2026.jpg"),
+            require("../assets/SpringSunA2026.jpg"),
+            require("../assets/SpringSunB2026.jpg"),
         ],
         autoSlideInterval: null,
         touchStartX: 0,
