@@ -1,10 +1,10 @@
 <template>
   <div class="container">
-    <h1>WELCOME TO THE SUMMER 2026 SEASON!</h1>
+    <h1>FALL 2026 REGISTRATION IS NOW OPEN!</h1>
     <h2>Click the Registration Link Below to Reserve Your Spot</h2>
     <div class="links">
       <p class="reg">
-        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdxzykMPU28wDJ0VfpOjSc0AgmbR_m0X0_bj3C7g2aWPdUP3Q/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2026 Summer Registration </a>
+        <a href="https://docs.google.com/forms/d/e/1FAIpQLSe_I0sqbwzE7gkmcoRFeE_q7pXDJk4o6fU2oqv9KqQu7JlgQQ/viewform" target="_blank" rel="noopener noreferrer">Click Here for 2026 Fall Registration </a>
       </p>
       <p class="waiver">
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdJBicpbOetgqkq3pn8_E8mKaudZTIaLveak6eWJc_Nqru7dg/viewform?pli=1" target="_blank" rel="noopener noreferrer">Click Here for the Waiver Form </a>
